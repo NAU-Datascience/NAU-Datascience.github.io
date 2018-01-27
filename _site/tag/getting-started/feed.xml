@@ -29,20 +29,117 @@
    
 	<item>
 	  <title>Welcome to Ghost</title>
+	  <link>http://localhost:4000/welcome4</link>
+		
+				
+		
+				
+						<author>Nadide Pasali</author>
+				
+		
+				
+		
+	  <pubDate>2017-07-27T05:00:00-05:00</pubDate>
+	  <guid>http://localhost:4000/welcome4</guid>
+	  <description><![CDATA[
+	     <p>Hey! Welcome to Ghost, it’s great to have you :)</p>
+
+<p>We know that first impressions are important, so we’ve populated your new site with some initial <strong>Getting Started</strong> posts that will help you get familiar with everything in no time. This is the first one!</p>
+
+<h3 id="there-are-a-few-things-that-you-should-know-up-front">There are a few things that you should know up-front:</h3>
+<ol>
+  <li>Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That’s who it works best for. If you’re using Ghost for some other purpose, that’s fine too - but it might not be the best choice for you.</li>
+  <li>The entire platform can be modified and customized to suit your needs, which is very powerful, but doing so <strong>does</strong> require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.</li>
+  <li>For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.</li>
+</ol>
+
+<p>Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our <a href="https://ghost.org/pricing">Ghost(Pro)</a> service, and every penny we make is re-invested into funding further development of free, open source technology for modern journalism.</p>
+
+<p>The main thing you’ll want to read about next is probably: <a href="https://demo.ghost.io/the-editor/">the Ghost editor</a>.</p>
+
+<p>Once you’re done reading, you can simply delete the default <strong>Ghost</strong> user from your team to remove all of these introductory posts!</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Welcome to Ghost</title>
+	  <link>http://localhost:4000/welcome3</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2017-07-27T05:00:00-05:00</pubDate>
+	  <guid>http://localhost:4000/welcome3</guid>
+	  <description><![CDATA[
+	     <p>Hey! Welcome to Ghost, it’s great to have you :)</p>
+
+<p>We know that first impressions are important, so we’ve populated your new site with some initial <strong>Getting Started</strong> posts that will help you get familiar with everything in no time. This is the first one!</p>
+
+<h3 id="there-are-a-few-things-that-you-should-know-up-front">There are a few things that you should know up-front:</h3>
+<ol>
+  <li>Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That’s who it works best for. If you’re using Ghost for some other purpose, that’s fine too - but it might not be the best choice for you.</li>
+  <li>The entire platform can be modified and customized to suit your needs, which is very powerful, but doing so <strong>does</strong> require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.</li>
+  <li>For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.</li>
+</ol>
+
+<p>Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our <a href="https://ghost.org/pricing">Ghost(Pro)</a> service, and every penny we make is re-invested into funding further development of free, open source technology for modern journalism.</p>
+
+<p>The main thing you’ll want to read about next is probably: <a href="https://demo.ghost.io/the-editor/">the Ghost editor</a>.</p>
+
+<p>Once you’re done reading, you can simply delete the default <strong>Ghost</strong> user from your team to remove all of these introductory posts!</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Welcome to Ghost</title>
+	  <link>http://localhost:4000/welcome2</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-07-27T05:00:00-05:00</pubDate>
+	  <guid>http://localhost:4000/welcome2</guid>
+	  <description><![CDATA[
+	     <p>Hey! Welcome to Ghost, it’s great to have you :)</p>
+
+<p>We know that first impressions are important, so we’ve populated your new site with some initial <strong>Getting Started</strong> posts that will help you get familiar with everything in no time. This is the first one!</p>
+
+<h3 id="there-are-a-few-things-that-you-should-know-up-front">There are a few things that you should know up-front:</h3>
+<ol>
+  <li>Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That’s who it works best for. If you’re using Ghost for some other purpose, that’s fine too - but it might not be the best choice for you.</li>
+  <li>The entire platform can be modified and customized to suit your needs, which is very powerful, but doing so <strong>does</strong> require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.</li>
+  <li>For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.</li>
+</ol>
+
+<p>Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our <a href="https://ghost.org/pricing">Ghost(Pro)</a> service, and every penny we make is re-invested into funding further development of free, open source technology for modern journalism.</p>
+
+<p>The main thing you’ll want to read about next is probably: <a href="https://demo.ghost.io/the-editor/">the Ghost editor</a>.</p>
+
+<p>Once you’re done reading, you can simply delete the default <strong>Ghost</strong> user from your team to remove all of these introductory posts!</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Welcome to Ghost</title>
 	  <link>http://localhost:4000/welcome</link>
 		
 				
 		
 				
-						<author>Hannah Wolfe</author>
-				
-		
-				
-		
-				
-		
-				
-		
+						<author>Nadide Pasali</author>
 				
 		
 				
@@ -71,92 +168,15 @@
 	</item>
 
 	<item>
-	  <title>Using the Ghost editor</title>
-	  <link>http://localhost:4000/the-editor</link>
-		
-				
-						<author>Ghost</author>
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-	  <pubDate>2017-07-27T04:00:00-05:00</pubDate>
-	  <guid>http://localhost:4000/the-editor</guid>
-	  <description><![CDATA[
-	     <p>Ghost uses a language called <strong>Markdown</strong> to format text.</p>
-<p>When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost what to do with the words in your document. The biggest benefit of Markdown is that you can quickly apply formatting as you type, without needing to pause.</p>
-<p>At the bottom of the editor, you'll find a toolbar with basic formatting options to help you get started as easily as possible. You'll also notice that there's a <strong>?</strong> icon, which contains more advanced shortcuts.</p>
-<p>For now, though, let's run you through some of the basics. You'll want to make sure you're editing this post in order to see all the Markdown we've used.</p>
-<h2 id="formattingtext">Formatting text</h2>
-<p>The most common shortcuts are of course, <strong>bold</strong> text, <em>italic</em> text, and <a href="https://example.com">hyperlinks</a>. These generally make up the bulk of any document. You can type the characters out, but you can also use keyboard shortcuts.</p>
-<ul>
-<li><code>CMD/Ctrl + B</code> for Bold</li>
-<li><code>CMD/Ctrl + I</code> for Italic</li>
-<li><code>CMD/Ctrl + K</code> for a Link</li>
-<li><code>CMD/Ctrl + H</code> for a Heading (Press multiple times for h2/h3/h4/etc)</li>
-</ul>
-<p>With just a couple of extra characters here and there, you're well on your way to creating a beautifully formatted story.</p>
-<h2 id="insertingimages">Inserting images</h2>
-<p>Images in Markdown look just the same as links, except they're prefixed with an exclamation mark, like this:</p>
-<p><code>![Image description](/path/to/image.jpg)</code></p>
-<p><img src="https://casper.ghost.org/v1.0.0/images/computer.jpg" alt="Computer"></p>
-<p>Most Markdown editors don't make you type this out, though. In Ghost you can click on the image icon in the toolbar at the bottom of the editor, or you can just click and drag an image from your desktop directly into the editor. Both will upload the image for you and generate the appropriate Markdown.</p>
-<p><em><strong>Important Note:</strong> Ghost does not currently have automatic image resizing, so it's always a good idea to make sure your images aren't gigantic files <strong>before</strong> uploading them to Ghost.</em></p>
-<h2 id="makinglists">Making lists</h2>
-<p>Lists in HTML are a formatting nightmare, but in Markdown they become an absolute breeze with just a couple of characters and a bit of smart automation. For numbered lists, just write out the numbers. For bullet lists, just use <code>*</code> or <code>-</code> or <code>+</code>. Like this:</p>
-<ol>
-<li>Crack the eggs over a bowl</li>
-<li>Whisk them together</li>
-<li>Make an omellete</li>
-</ol>
-<p>or</p>
-<ul>
-<li>Remember to buy milk</li>
-<li>Feed the cat</li>
-<li>Come up with idea for next story</li>
-</ul>
-<h2 id="addingquotes">Adding quotes</h2>
-<p>When you want to pull out a particularly good except in the middle of a piece, you can use <code>&gt;</code> at the beginning of a paragraph to turn it into a Blockquote. You might've seen this formatting before in email clients.</p>
-<blockquote>
-<p>A well placed quote guides a reader through a story, helping them to understand the most important points being made</p>
-</blockquote>
-<p>All themes handles blockquotes slightly differently. Sometimes they'll look better kept shorter, while other times you can quote fairly hefty amounts of text and get away with it. Generally, the safest option is to use blockquotes sparingly.</p>
-<h2 id="dividingthingsup">Dividing things up</h2>
-<p>If you're writing a piece in parts and you just feel like you need to divide a couple of sections distinctly from each other, a horizontal rule might be just what you need. Dropping <code>---</code> on a new line will create a sleak divider, anywhere you want it.</p>
-<hr>
-<p>This should get you going with the vast majority of what you need to do in the editor, but if you're still curious about more advanced tips then check out the <a href="/advanced-markdown/">Advanced Markdown Guide</a> - or if you'd rather learn about how Ghost taxononomies work, we've got a overview of <a href="/using-tags/">how to use Ghost tags</a>.</p>
-
-	  ]]></description>
-	</item>
-
-	<item>
 	  <title>Organising your content with tags</title>
 	  <link>http://localhost:4000/using-tags</link>
 		
 				
-						<author>Ghost</author>
-				
 		
 				
 		
 				
-		
-				
-		
-				
-		
-				
-		
+						<author>Ahmet Hamza Emra</author>
 				
 		
 	  <pubDate>2017-07-27T03:00:00-05:00</pubDate>
@@ -189,83 +209,6 @@
 </code></pre>
 <p>You can find documentation for theme development techniques like this and many more over on Ghost's extensive <a href="https://themes.ghost.org/">theme documentation</a>.</p>
 
-
-	  ]]></description>
-	</item>
-
-	<item>
-	  <title>Making your site private</title>
-	  <link>http://localhost:4000/private-sites</link>
-		
-				
-						<author>Ghost</author>
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-	  <pubDate>2017-07-27T01:00:00-05:00</pubDate>
-	  <guid>http://localhost:4000/private-sites</guid>
-	  <description><![CDATA[
-	     <p>Sometimes you might want to put your site behind closed doors</p>
-<p>If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can hide your Ghost site behind a simple shared pass-phrase.</p>
-<p>You can toggle this preference on at the bottom of Ghost's General Settings</p>
-<p><img src="https://casper.ghost.org/v1.0.0/images/private.png" alt="private"></p>
-<p>Ghost will give you a short, randomly generated pass-phrase which you can share with anyone who needs access to the site while you're working on it. While this setting is enabled, all search engine optimisation features will be switched off to help keep the site off the radar.</p>
-<p>Do remember though, this is <em>not</em> secure authentication. You shouldn't rely on this feature for protecting important private data. It's just a simple, shared pass-phrase for very basic privacy.</p>
-
-	  ]]></description>
-	</item>
-
-	<item>
-	  <title>Setting up your own Ghost theme</title>
-	  <link>http://localhost:4000/themes</link>
-		
-				
-						<author>Ghost</author>
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-				
-		
-	  <pubDate>2017-07-26T23:00:00-05:00</pubDate>
-	  <guid>http://localhost:4000/themes</guid>
-	  <description><![CDATA[
-	     <p>Creating a totally custom design for your publication</p>
-<p>Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for most purposes. However, Ghost can also be completely themed to suit your needs. Rather than just giving you a few basic settings which act as a poor proxy for code, we just let you write code.</p>
-<p>There are a huge range of both free and premium pre-built themes which you can get from the <a href="http://marketplace.ghost.org">Ghost Theme Marketplace</a>, or you can simply create your own from scratch.</p>
-<p><a href="http://marketplace.ghost.org"><img src="https://casper.ghost.org/v1.0.0/images/marketplace.jpg" alt="marketplace"></a></p>
-<blockquote>
-<p>Anyone can write a completely custom Ghost theme, with just some solid knowledge of HTML and CSS</p>
-</blockquote>
-<p>Ghost themes are written with a templating language called handlebars, which has a bunch of dynamic helpers to insert your data into template files. Like <code></code>, for example, outputs the name of the current author.</p>
-<p>The best way to learn how to write your own Ghost theme is to have a look at <a href="https://github.com/TryGhost/Casper">the source code for Casper</a>, which is heavily commented and should give you a sense of how everything fits together.</p>
-<ul>
-<li><code>default.hbs</code> is the main template file, all contexts will load inside this file unless specifically told to use a different template.</li>
-<li><code>post.hbs</code> is the file used in the context of viewing a post.</li>
-<li><code>index.hbs</code> is the file used in the context of viewing the home page.</li>
-<li>and so on</li>
-</ul>
-<p>We've got <a href="http://themes.ghost.org/docs/about">full and extensive theme documentation</a> which outlines every template file, context and helper that you can use.</p>
-<p>If you want to chat with other people making Ghost themes to get any advice or help, there's also a <strong>#themes</strong> channel in our <a href="https://slack.ghost.org">public Slack community</a> which we always recommend joining!</p>
 
 	  ]]></description>
 	</item>

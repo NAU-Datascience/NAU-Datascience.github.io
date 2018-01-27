@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>http://localhost:4000/</title>
+   
+   <link>http://localhost:4000/</link>
+   <description>The professional publishing platform</description>
+   <language>en-uk</language>
+   
+   <title>
+   <![CDATA[ Ghost ]]>
+   </title>
+   <description>
+   <![CDATA[ The professional publishing platform ]]>
+   </description>
+   <link>http://localhost:4000/</link>
+   <image>
+   <url>http://localhost:4000/assets/images/favicon.png</url>
+   <title>Ghost</title>
+   <link>http://localhost:4000/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Welcome to Ghost</title>
+	  <link>http://localhost:4000/welcome3</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2017-07-27T05:00:00-05:00</pubDate>
+	  <guid>http://localhost:4000/welcome3</guid>
+	  <description><![CDATA[
+	     <p>Hey! Welcome to Ghost, it’s great to have you :)</p>
+
+<p>We know that first impressions are important, so we’ve populated your new site with some initial <strong>Getting Started</strong> posts that will help you get familiar with everything in no time. This is the first one!</p>
+
+<h3 id="there-are-a-few-things-that-you-should-know-up-front">There are a few things that you should know up-front:</h3>
+<ol>
+  <li>Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That’s who it works best for. If you’re using Ghost for some other purpose, that’s fine too - but it might not be the best choice for you.</li>
+  <li>The entire platform can be modified and customized to suit your needs, which is very powerful, but doing so <strong>does</strong> require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.</li>
+  <li>For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.</li>
+</ol>
+
+<p>Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our <a href="https://ghost.org/pricing">Ghost(Pro)</a> service, and every penny we make is re-invested into funding further development of free, open source technology for modern journalism.</p>
+
+<p>The main thing you’ll want to read about next is probably: <a href="https://demo.ghost.io/the-editor/">the Ghost editor</a>.</p>
+
+<p>Once you’re done reading, you can simply delete the default <strong>Ghost</strong> user from your team to remove all of these introductory posts!</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

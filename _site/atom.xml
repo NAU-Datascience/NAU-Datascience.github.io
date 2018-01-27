@@ -16,63 +16,53 @@
         
         <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
         <link>
-        http://localhost:4000/welcome</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome</guid>
+        http://localhost:4000/welcome4</link>
+        <guid isPermaLink="true">http://localhost:4000/welcome4</guid>
       </item>
       
     
       
       <item>
-        <title>Using the Ghost editor</title>
+        <title>Welcome to Ghost</title>
         
-          <description>&lt;p&gt;Ghost uses a language called &lt;strong&gt;Markdown&lt;/strong&gt; to format text.&lt;/p&gt;
-&lt;p&gt;When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost what to do with the words in your document. The biggest benefit of Markdown is that you can quickly apply formatting as you type, without needing to pause.&lt;/p&gt;
-&lt;p&gt;At the bottom of the editor, you'll find a toolbar with basic formatting options to help you get started as easily as possible. You'll also notice that there's a &lt;strong&gt;?&lt;/strong&gt; icon, which contains more advanced shortcuts.&lt;/p&gt;
-&lt;p&gt;For now, though, let's run you through some of the basics. You'll want to make sure you're editing this post in order to see all the Markdown we've used.&lt;/p&gt;
-&lt;h2 id=&quot;formattingtext&quot;&gt;Formatting text&lt;/h2&gt;
-&lt;p&gt;The most common shortcuts are of course, &lt;strong&gt;bold&lt;/strong&gt; text, &lt;em&gt;italic&lt;/em&gt; text, and &lt;a href=&quot;https://example.com&quot;&gt;hyperlinks&lt;/a&gt;. These generally make up the bulk of any document. You can type the characters out, but you can also use keyboard shortcuts.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CMD/Ctrl + B&lt;/code&gt; for Bold&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CMD/Ctrl + I&lt;/code&gt; for Italic&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CMD/Ctrl + K&lt;/code&gt; for a Link&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CMD/Ctrl + H&lt;/code&gt; for a Heading (Press multiple times for h2/h3/h4/etc)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;With just a couple of extra characters here and there, you're well on your way to creating a beautifully formatted story.&lt;/p&gt;
-&lt;h2 id=&quot;insertingimages&quot;&gt;Inserting images&lt;/h2&gt;
-&lt;p&gt;Images in Markdown look just the same as links, except they're prefixed with an exclamation mark, like this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;![Image description](/path/to/image.jpg)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://casper.ghost.org/v1.0.0/images/computer.jpg&quot; alt=&quot;Computer&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Most Markdown editors don't make you type this out, though. In Ghost you can click on the image icon in the toolbar at the bottom of the editor, or you can just click and drag an image from your desktop directly into the editor. Both will upload the image for you and generate the appropriate Markdown.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Important Note:&lt;/strong&gt; Ghost does not currently have automatic image resizing, so it's always a good idea to make sure your images aren't gigantic files &lt;strong&gt;before&lt;/strong&gt; uploading them to Ghost.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;makinglists&quot;&gt;Making lists&lt;/h2&gt;
-&lt;p&gt;Lists in HTML are a formatting nightmare, but in Markdown they become an absolute breeze with just a couple of characters and a bit of smart automation. For numbered lists, just write out the numbers. For bullet lists, just use &lt;code&gt;*&lt;/code&gt; or &lt;code&gt;-&lt;/code&gt; or &lt;code&gt;+&lt;/code&gt;. Like this:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Crack the eggs over a bowl&lt;/li&gt;
-&lt;li&gt;Whisk them together&lt;/li&gt;
-&lt;li&gt;Make an omellete&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;or&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Remember to buy milk&lt;/li&gt;
-&lt;li&gt;Feed the cat&lt;/li&gt;
-&lt;li&gt;Come up with idea for next story&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;addingquotes&quot;&gt;Adding quotes&lt;/h2&gt;
-&lt;p&gt;When you want to pull out a particularly good except in the middle of a piece, you can use &lt;code&gt;&amp;gt;&lt;/code&gt; at the beginning of a paragraph to turn it into a Blockquote. You might've seen this formatting before in email clients.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A well placed quote guides a reader through a story, helping them to understand the most important points being made&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;All themes handles blockquotes slightly differently. Sometimes they'll look better kept shorter, while other times you can quote fairly hefty amounts of text and get away with it. Generally, the safest option is to use blockquotes sparingly.&lt;/p&gt;
-&lt;h2 id=&quot;dividingthingsup&quot;&gt;Dividing things up&lt;/h2&gt;
-&lt;p&gt;If you're writing a piece in parts and you just feel like you need to divide a couple of sections distinctly from each other, a horizontal rule might be just what you need. Dropping &lt;code&gt;---&lt;/code&gt; on a new line will create a sleak divider, anywhere you want it.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;This should get you going with the vast majority of what you need to do in the editor, but if you're still curious about more advanced tips then check out the &lt;a href=&quot;/advanced-markdown/&quot;&gt;Advanced Markdown Guide&lt;/a&gt; - or if you'd rather learn about how Ghost taxononomies work, we've got a overview of &lt;a href=&quot;/using-tags/&quot;&gt;how to use Ghost tags&lt;/a&gt;.&lt;/p&gt;
+          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 04:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
         <link>
-        http://localhost:4000/the-editor</link>
-        <guid isPermaLink="true">http://localhost:4000/the-editor</guid>
+        http://localhost:4000/welcome3</link>
+        <guid isPermaLink="true">http://localhost:4000/welcome3</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Welcome to Ghost</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <link>
+        http://localhost:4000/welcome2</link>
+        <guid isPermaLink="true">http://localhost:4000/welcome2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Welcome to Ghost</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <link>
+        http://localhost:4000/welcome</link>
+        <guid isPermaLink="true">http://localhost:4000/welcome</guid>
       </item>
       
     
@@ -113,55 +103,6 @@
         <link>
         http://localhost:4000/using-tags</link>
         <guid isPermaLink="true">http://localhost:4000/using-tags</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Making your site private</title>
-        
-          <description>&lt;p&gt;Sometimes you might want to put your site behind closed doors&lt;/p&gt;
-&lt;p&gt;If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can hide your Ghost site behind a simple shared pass-phrase.&lt;/p&gt;
-&lt;p&gt;You can toggle this preference on at the bottom of Ghost's General Settings&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://casper.ghost.org/v1.0.0/images/private.png&quot; alt=&quot;private&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Ghost will give you a short, randomly generated pass-phrase which you can share with anyone who needs access to the site while you're working on it. While this setting is enabled, all search engine optimisation features will be switched off to help keep the site off the radar.&lt;/p&gt;
-&lt;p&gt;Do remember though, this is &lt;em&gt;not&lt;/em&gt; secure authentication. You shouldn't rely on this feature for protecting important private data. It's just a simple, shared pass-phrase for very basic privacy.&lt;/p&gt;
-</description>
-        
-        <pubDate>Thu, 27 Jul 2017 01:00:00 -0500</pubDate>
-        <link>
-        http://localhost:4000/private-sites</link>
-        <guid isPermaLink="true">http://localhost:4000/private-sites</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Setting up your own Ghost theme</title>
-        
-          <description>&lt;p&gt;Creating a totally custom design for your publication&lt;/p&gt;
-&lt;p&gt;Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for most purposes. However, Ghost can also be completely themed to suit your needs. Rather than just giving you a few basic settings which act as a poor proxy for code, we just let you write code.&lt;/p&gt;
-&lt;p&gt;There are a huge range of both free and premium pre-built themes which you can get from the &lt;a href=&quot;http://marketplace.ghost.org&quot;&gt;Ghost Theme Marketplace&lt;/a&gt;, or you can simply create your own from scratch.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://marketplace.ghost.org&quot;&gt;&lt;img src=&quot;https://casper.ghost.org/v1.0.0/images/marketplace.jpg&quot; alt=&quot;marketplace&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Anyone can write a completely custom Ghost theme, with just some solid knowledge of HTML and CSS&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ghost themes are written with a templating language called handlebars, which has a bunch of dynamic helpers to insert your data into template files. Like &lt;code&gt;&lt;/code&gt;, for example, outputs the name of the current author.&lt;/p&gt;
-&lt;p&gt;The best way to learn how to write your own Ghost theme is to have a look at &lt;a href=&quot;https://github.com/TryGhost/Casper&quot;&gt;the source code for Casper&lt;/a&gt;, which is heavily commented and should give you a sense of how everything fits together.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;default.hbs&lt;/code&gt; is the main template file, all contexts will load inside this file unless specifically told to use a different template.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;post.hbs&lt;/code&gt; is the file used in the context of viewing a post.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;index.hbs&lt;/code&gt; is the file used in the context of viewing the home page.&lt;/li&gt;
-&lt;li&gt;and so on&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We've got &lt;a href=&quot;http://themes.ghost.org/docs/about&quot;&gt;full and extensive theme documentation&lt;/a&gt; which outlines every template file, context and helper that you can use.&lt;/p&gt;
-&lt;p&gt;If you want to chat with other people making Ghost themes to get any advice or help, there's also a &lt;strong&gt;#themes&lt;/strong&gt; channel in our &lt;a href=&quot;https://slack.ghost.org&quot;&gt;public Slack community&lt;/a&gt; which we always recommend joining!&lt;/p&gt;
-</description>
-        
-        <pubDate>Wed, 26 Jul 2017 23:00:00 -0500</pubDate>
-        <link>
-        http://localhost:4000/themes</link>
-        <guid isPermaLink="true">http://localhost:4000/themes</guid>
       </item>
       
     
