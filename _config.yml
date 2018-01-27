@@ -9,7 +9,7 @@ baseurl: /
 
 # Website info
 title: NAU-DataScience
-description: Academic Paper Summaries 
+description: Academic Paper Summaries
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
@@ -34,8 +34,8 @@ disqus_shortname: myjekyll # replace with your disqus username
 
 # Permalinks
 permalink: /:title
-permalink: /author/:author
-permalink: /tag/:tag
+# permalink: /author/:author
+# permalink: /tag/:tag
 
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 current: post
@@ -20,17 +19,15 @@ author: hamza
 
 ## **Summary**
 
-
-
 ### <u>About the data</u>:
 
 * 14 different sets of data where saved 5 min intervals. (288 each day)
 
-### <u>About the problem</u>: 
+### <u>About the problem</u>:
 
 * When there are clear labels for anomalous data a binary classifier can be built predict anomalies and non-anomalouspoints. But in this case we dont have any label! Problem is finding anomalies without using labeled data.
 
-* Since methods like clustering analysis, isolations forests requires labeled data plus they work better when there are many features, paper provides solution using artificial neural networks. 
+* Since methods like clustering analysis, isolations forests requires labeled data plus they work better when there are many features, paper provides solution using artificial neural networks.
 
 * Another problem is because what counts as an anomaly can vary based
   on the data, each problem potentially requires its own model.
@@ -39,27 +36,27 @@ author: hamza
 
   * make prediction using model
   * take euclidean distance between predictions and true value
-  * set some threshold value 
-  * if distance bigger then threshold, it is anomanly 
+  * set some threshold value
+  * if distance bigger then threshold, it is anomanly
 
-  but this could leed to numerous false positives especially with noisy data. 
+  but this could leed to numerous false positives especially with noisy data.
 
   (false positive: actualy not anomaly but our prediction says it is anomaly)
 
 * Other two approach is
 
-  * using accumulator 
+  * using accumulator
   * using a probabilistic approach as outlined
 
 ### **<u>DETECTION RULES</u>:**
 
 1. Accumulator:
 
-The goal of the accumulator rule was to require multiple point anomalies to occur in a short period of time before signalling a sustained anomaly. They tried two different rules for how a point anomaly is detected, and then tested both of them as part of the accumulator rule.This rule involved a counter that would grow as point anomalies are detected, and shrink in cases where the predicted value is correct. The goal of this is to prevent noise that a local anomaly detection algorithm would incur, by requiring multiple anomalies in a short timeframe to cause it to reach a threshold for signaling. 
+The goal of the accumulator rule was to require multiple point anomalies to occur in a short period of time before signalling a sustained anomaly. They tried two different rules for how a point anomaly is detected, and then tested both of them as part of the accumulator rule.This rule involved a counter that would grow as point anomalies are detected, and shrink in cases where the predicted value is correct. The goal of this is to prevent noise that a local anomaly detection algorithm would incur, by requiring multiple anomalies in a short timeframe to cause it to reach a threshold for signaling.
 
 * Threshold
 
-  This algorithm defined a local anomaly as any value where the actual value is more than a given delta below the expected value, when the actual value is greater than a hardcoded threshold which says any value above it is not anomalous. 
+  This algorithm defined a local anomaly as any value where the actual value is more than a given delta below the expected value, when the actual value is greater than a hardcoded threshold which says any value above it is not anomalous.
 
 * Variance Based
 
@@ -67,9 +64,9 @@ The goal of the accumulator rule was to require multiple point anomalies to occu
 
 they found that threshold accumulator rule is working more effective on their datasets, they used that in all of anomaly detection for this paper.  observed that the accumulator rules frequently identified false positives after peaks due to an offset in the models inference compared to the ground-truth. This offset is likely due to training on a previous months where changes in periodicity could occur gradually into the next evaluation month. In an attempt to abate these false positives, we added a parameter for ‘peak values’ that would decrement the accumulator by three following a peak, and allowing the accumulator to go below 0 (down to a negative the threshold). However, we only wanted this to affect prediction immediately after peaks, so the accumulator would decay back to 0 if more non-anomalous data points are found, effectively preventing it from predicting an anomaly immediately after a peak.
 
-For all of our models we defined the threshold for a non-anomalous value at 0.3, a peak value at 0.35, had a an accumulator threshold at 15 and had the delta for a local outage at 0.1 
+For all of our models we defined the threshold for a non-anomalous value at 0.3, a peak value at 0.35, had a an accumulator threshold at 15 and had the delta for a local outage at 0.1
 
-​		
+​
 
 2. GaussianTailProbability
 
@@ -77,7 +74,7 @@ The second anomaly detection rule is the Gaussian tail probability rule. The raw
 
 the series of resulting raw anomaly scores are used to calculate the rolling mean and varience.  The rolling mean has two windows where the length of W2 < W1. The two rolling means and variance are used to calculate the tail probability which is the final anomaly likelihood score.
 
-**<u>Example pipeline for Gaussian Tail Probability</u>** 
+**<u>Example pipeline for Gaussian Tail Probability</u>**
 
 **I'm by no means certain that this implementation is correct, though!** Any assistance in verifying this would be most welcome !!!
 
@@ -89,9 +86,9 @@ y = np.zeros([4000,1])
 for i in tqdm(range(4000)):
     x[i] = data[i:i+seq_len]
     y[i] = data[i+seq_len]
-    
-    
-# LSTM 
+
+
+# LSTM
 
 net = tflearn.input_data(shape=[None, seq_len, 1])
 net = tflearn.lstm(net, 64, return_seq=True, activation='elu')
@@ -139,12 +136,12 @@ for i in rolling_mean:
 
 
 
-### **<u>PREDICTION MODELS</u>**		
+### **<u>PREDICTION MODELS</u>**
 
 * Baseline = Threshold model
 
 
-  ​	
+  ​
 
 | **Anomaly rule** | Accumulator | Tail Probabilty | Intersection |
 | :--------------: | :---------: | :-------------: | :----------: |
@@ -153,7 +150,7 @@ for i in rolling_mean:
 |        TP        |     246     |       63        |      63      |
 |        FP        |     378     |        0        |      0       |
 
-* Fourier Series (a Fourier series is a way to represent a function as the sum of simple sine waves)	
+* Fourier Series (a Fourier series is a way to represent a function as the sum of simple sine waves)
 
 ![](https://raw.githubusercontent.com/AhmetHamzaEmra/ahmethamzaemra.github.io/master/images/post5/Screen%20Shot%202018-01-27%20at%2012.38.12%20PM.png)
 
@@ -164,7 +161,7 @@ for i in rolling_mean:
 |        TP        |     54      |        0        |      0       |
 |        FP        |     414     |       202       |     139      |
 
-* DNN 
+* DNN
 
   ​	Num_layer = 10
 
@@ -172,7 +169,7 @@ for i in rolling_mean:
 
   ​	activation = Relu6
 
-  ​	batchsize = 200 
+  ​	batchsize = 200
 
   ​	num_step = 1200
 
@@ -197,7 +194,7 @@ for i in rolling_mean:
 
   ​	activation =  ELU
 
-  ​	batchsize = 200 
+  ​	batchsize = 200
 
   ​	num_step = 2500
 
@@ -216,17 +213,17 @@ for i in rolling_mean:
 
   Num_layer = 10
 
-​	Layer_size = 70
+  ​Layer_size = 70
 
-​	activation =  ELU
+  ​activation =  ELU
 
-​	batchsize = 200 
+  ​batchsize = 200
 
-​	num_step = 2500
+  ​num_step = 2500
 
-​	optimizer = Adam
+  ​optimizer = Adam
 
-​	learning_rate = 0.001
+  ​learning_rate = 0.001
 
 | **Anomaly rule** | Accumulator | Tail Probabilty | Intersection |
 | :--------------: | :---------: | :-------------: | :----------: |
@@ -240,11 +237,11 @@ for i in rolling_mean:
 ### **<u>Findings</u>**
 
 1.  The first is that in every instance, the intersection between the accumulator method and the tail probability method reduced the amount of false positives flagged by the model. However, since the intersection makes a tighter bound around anomalous regions, the true positive rate is also decreased.
-2. The second important finding is that there is a very small difference between all of our neural network models with regards to their detection confusion matrices.		
+2.  The second important finding is that there is a very small difference between all of our neural network models with regards to their detection confusion matrices.
 
 ### **<u>Conclusion</u>**
 
-*  the Fourier was slightly more effective than the others, this can also be due to the data itself	
-* With access to more features, deep learning could provide even more accurate results. Results
+*  the Fourier was slightly more effective than the others, this can also be due to the data itself
+*  With access to more features, deep learning could provide even more accurate results. Results
   suggest that due to the limited set of features available it didn’t provide significant advantages to simpler periodic models.
-* Room for further experimentation can be done by trying even more anomaly detection methods and seeing if another combination can work even better than the two we propose here.
+*  Room for further experimentation can be done by trying even more anomaly detection methods and seeing if another combination can work even better than the two we propose here.

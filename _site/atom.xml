@@ -2,9 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>The professional publishing platform</description>
+    <description>Academic Paper Summaries</description>
     <link>
     http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Time Series Anomaly Detection</title>
+        
+          <description>&lt;h3 id=&quot;detection-of-anomalous-drops-with-limited-features-and-sparse-examples-in-noisyhighly-periodic-data&quot;&gt;Detection of Anomalous Drops with Limited Features and Sparse Examples in NoisyHighly Periodic Data&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sat, 27 Jan 2018 04:00:00 -0600</pubDate>
+        <link>
+        http://localhost:4000/Time-Series-Anomaly-Detection</link>
+        <guid isPermaLink="true">http://localhost:4000/Time-Series-Anomaly-Detection</guid>
+      </item>
+      
     
       
       <item>

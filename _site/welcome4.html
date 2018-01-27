@@ -22,13 +22,13 @@
     <style>.hljs { background: none; }</style>
 
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="The professional publishing platform" />
+    <meta name="description" content="Academic Paper Summaries" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
     <link rel="canonical" href="http://localhost:4000/welcome4" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="Ghost" />
+    <meta property="og:site_name" content="NAU-DataScience" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Welcome to Ghost" />
     <meta property="og:description" content="Hey! Welcome to Ghost, it’s great to have you :) We know that first impressions are important, so we’ve populated your new site with some initial Getting Started posts that will help you get familiar with everything in no time. This is the first one! There are a few things" />
@@ -45,7 +45,7 @@
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Ghost" />
+    <meta name="twitter:data1" content="NAU-DataScience" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Getting Started" />
     <meta name="twitter:site" content="@" />
@@ -59,7 +59,7 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "Ghost",
+        "name": "NAU-DataScience",
         "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
     "url": "http://localhost:4000/welcome4",
@@ -105,7 +105,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="Ghost" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="NAU-DataScience" /></a>
             
         
         
@@ -123,8 +123,6 @@ into the {body} of the default.hbs template -->
             
             
         </div>
-        
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
         
     </div>
 </nav>
@@ -181,21 +179,6 @@ into the {body} of the default.hbs template -->
 
             <!-- Email subscribe form at the bottom of the page -->
             
-                <section class="subscribe-form">
-                    <h3 class="subscribe-form-title">Subscribe to Ghost</h3>
-                    <p>Get the latest posts delivered right to your inbox</p>
-                    <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
-
-    <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
-    </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-                </section>
-            
 
             <footer class="post-full-footer">
                 <!-- Everything inside the #author tags pulls data from the author -->
@@ -250,7 +233,7 @@ into the {body} of the default.hbs template -->
                         
                     >
                         <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; Ghost &mdash;</small>
+                            <small class="read-next-card-header-sitetitle">&mdash; NAU-DataScience &mdash;</small>
                             
                                 <h3 class="read-next-card-header-title"><a href="/tag/getting-started/">Getting started</a></h3>
                             
@@ -260,6 +243,8 @@ into the {body} of the default.hbs template -->
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -300,6 +285,50 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Time-Series-Anomaly-Detection">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Summary</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Data science</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Time Series Anomaly Detection</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>### Detection of Anomalous Drops with Limited Features and Sparse Examples in NoisyHighly Periodic Data *Dominique T. Shipmon, Jason M. Gurevitch, Paolo M. Piselli, Steve Edwards* [Link to paper](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46283.pdf) ## **Summary** ### About</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/hamza.jpg" alt="Ahmet Hamza Emra" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/hamza/">Ahmet Hamza Emra</a>
+                        </span>
+                    
+                
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -358,9 +387,9 @@ into the {body} of the default.hbs template -->
     <div class="floating-header-logo">
         <a href="http://localhost:4000/">
             
-                <img src="/assets/images/favicon.png" alt="Ghost icon" />
+                <img src="/assets/images/favicon.png" alt="NAU-DataScience icon" />
             
-            <span>Ghost</span>
+            <span>NAU-DataScience</span>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
@@ -400,7 +429,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">Ghost</a> &copy; 2018</section>
+                <section class="copyright"><a href="http://localhost:4000/">NAU-DataScience</a> &copy; 2018</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/myJekyll/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -416,27 +445,6 @@ into the {body} of the default.hbs template -->
     </div>
 
     <!-- The big email subscribe modal content -->
-    
-        <div id="subscribe" class="subscribe-overlay">
-            <a class="subscribe-overlay-close" href="#"></a>
-            <div class="subscribe-overlay-content">
-                
-                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Ghost" />
-                
-                <h1 class="subscribe-overlay-title">Subscribe to Ghost</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
-
-    <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
-    </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-            </div>
-        </div>
     
 
     <!-- highlight.js -->
@@ -472,7 +480,7 @@ into the {body} of the default.hbs template -->
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-69281367-1', 'auto');
+  ga('create', '', 'auto');
   ga('send', 'pageview');
 
  </script>

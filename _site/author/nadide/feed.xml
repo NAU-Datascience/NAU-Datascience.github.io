@@ -6,7 +6,7 @@
       <title>http://localhost:4000/</title>
    
    <link>http://localhost:4000/</link>
-   <description>The professional publishing platform</description>
+   <description>Academic Paper Summaries</description>
    <language>en-uk</language>
    
       
@@ -22,15 +22,15 @@
       
    
    <title>
-   <![CDATA[ Nadide Pasali - Ghost ]]>
+   <![CDATA[ Nadide Pasali - NAU-DataScience ]]>
    </title>
    <description>
-   <![CDATA[ The professional publishing platform ]]>
+   <![CDATA[ Academic Paper Summaries ]]>
    </description>
    <link>http://localhost:4000/</link>
    <image>
    <url>http://localhost:4000/assets/images/favicon.png</url>
-   <title>Nadide Pasali - Ghost</title>
+   <title>Nadide Pasali - NAU-DataScience</title>
    <link>http://localhost:4000/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
