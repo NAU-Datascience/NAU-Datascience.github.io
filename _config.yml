@@ -15,7 +15,7 @@ logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 production_url: https://myJekyll.github.io/jasper2/
-source_url: https://github.com/myJekyll/jasper2/
+source_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
 
 # Social info
 navigation: True # show the navbar links
@@ -37,8 +37,8 @@ permalink: /:title
 permalink: /author/:author
 permalink: /tag/:tag
 
-Authors' info in `_data/authors.yml`
-Tags' info in `_data/tags_info.yml`
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
 
 # gems and other configs
 plugins: [jekyll-paginate, jekyll-feed]
