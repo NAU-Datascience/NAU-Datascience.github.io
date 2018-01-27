@@ -14,10 +14,40 @@
 
 </description>
         
-        <pubDate>Sat, 27 Jan 2018 04:00:00 -0600</pubDate>
+        <pubDate>Sat, 27 Jan 2018 10:00:00 +0000</pubDate>
         <link>
         http://localhost:4000/Time-Series-Anomaly-Detection</link>
         <guid isPermaLink="true">http://localhost:4000/Time-Series-Anomaly-Detection</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Anomaly Detection of Time Series Data using Machine Learning &amp; Deep Learning</title>
+        
+          <description>&lt;p&gt;&lt;em&gt;This is a summary of a blog post, published on medium.com.&lt;/em&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 27 Jan 2018 09:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/Anomaly-Detection-using-ml</link>
+        <guid isPermaLink="true">http://localhost:4000/Anomaly-Detection-using-ml</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Anomaly Detection</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/anomaly-detection&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 27 Jan 2018 08:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/Anomaly-Detection</link>
+        <guid isPermaLink="true">http://localhost:4000/Anomaly-Detection</guid>
       </item>
       
     
@@ -29,7 +59,7 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 10:00:00 +0000</pubDate>
         <link>
         http://localhost:4000/welcome4</link>
         <guid isPermaLink="true">http://localhost:4000/welcome4</guid>
@@ -44,7 +74,7 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 10:00:00 +0000</pubDate>
         <link>
         http://localhost:4000/welcome3</link>
         <guid isPermaLink="true">http://localhost:4000/welcome3</guid>
@@ -59,7 +89,7 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 10:00:00 +0000</pubDate>
         <link>
         http://localhost:4000/welcome2</link>
         <guid isPermaLink="true">http://localhost:4000/welcome2</guid>
@@ -74,7 +104,7 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 10:00:00 +0000</pubDate>
         <link>
         http://localhost:4000/welcome</link>
         <guid isPermaLink="true">http://localhost:4000/welcome</guid>
@@ -114,7 +144,7 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 03:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 08:00:00 +0000</pubDate>
         <link>
         http://localhost:4000/using-tags</link>
         <guid isPermaLink="true">http://localhost:4000/using-tags</guid>

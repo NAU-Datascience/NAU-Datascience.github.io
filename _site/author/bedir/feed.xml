@@ -40,6 +40,256 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Anomaly Detection of Time Series Data using Machine Learning & Deep Learning</title>
+	  <link>http://localhost:4000/Anomaly-Detection-using-ml</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-01-27T03:00:00-06:00</pubDate>
+	  <guid>http://localhost:4000/Anomaly-Detection-using-ml</guid>
+	  <description><![CDATA[
+	     <p><em>This is a summary of a blog post, published on medium.com.</em></p>
+
+<p><strong>Original Blog Post:</strong> <a href="https://medium.com/@xenonstack/anomaly-detection-of-time-series-data-using-machine-learning-deep-learning-c248061ea4f5?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D">XenonStack - Jul 3, 2017</a></p>
+
+<h2 id="what-is-time-series-data">What is Time Series Data</h2>
+
+<p>Time series data is informations taken at a particular duration. For instance, having a set of sensor data observed at particular equal paces, each sensor can be classified as time series. If the data is collected without any order in time, or at once, it is not time series data.</p>
+
+<p>There are two types of time series data:</p>
+
+<p><strong>1- Stock Series</strong> (Measure of attribute, in particular point of time)</p>
+
+<p><strong>2- Flow Series</strong> (Measure of activity, in a time interval)</p>
+
+<p><strong>PS:</strong> Most common application of time series, is forecasting.</p>
+
+<h2 id="components-of-time-series-data">Components of Time Series Data</h2>
+
+<p>For us to analyse time series data, we need to know the different pattern types. These patterns will together create the set of observations on time series.</p>
+
+<p><strong>1- Trend</strong>: A long pattern present in the time series. It represents the variations of low, medium and high frequency filtered out from the time series. (-)</p>
+
+<p>If there is no increasing or decreasing pattern in the time series data, it is taken as <strong>stationary</strong> in the mean.</p>
+
+<p>There are two types of trend pattern:</p>
+
+<ul>
+  <li><strong>Deterministic</strong> In this case, the effects of shocks present in the time series are eliminated. (-)</li>
+  <li><strong>Stochastic</strong> It is the process in which the effects of shocks are never eliminated as they have permanently changed the level of the time series.</li>
+</ul>
+
+<p><strong>2- Cyclic:</strong> The pattern exhibit up and down movements around a specified trend. The period of time is not fixed and usually composed of at least 2 months in duration.</p>
+
+<p><strong>3- Seasonal:</strong> Pattern that reflects regular fluctuations. These short-term movements occur due to the seasonal and custom factors of people. The data faces regular and predictable changes which occurs on regular intervals of calendar. It always consist of fixed and known period.</p>
+
+<p>The main sources of seasonality:</p>
+
+<ul>
+  <li>Climate</li>
+  <li>Institutions</li>
+  <li>Social habits and practices</li>
+  <li>Calendar</li>
+</ul>
+
+<p><strong>Models</strong> to create a seasonal component in time series:</p>
+
+<ul>
+  <li><strong>Additive Model </strong>— It is the model in which the seasonal component is added with the trend component.</li>
+  <li><strong>Multiplicative</strong> <strong>Model </strong>— In this model seasonal component is multiplied with the intercept if trend component is not present in the time series.</li>
+</ul>
+
+<p><strong>4- Irregular:</strong>  It is an unpredictable component of time series.</p>
+
+<h2 id="time-series-data-vs-cross-section-data">Time Series Data vs Cross-Section Data</h2>
+
+<p>Time Series Data is composed of collection of data of one specific variable at particular interval of time. On the other hand, Cross-Section Data is consist of collection of data on multiple variables from different sources at a particular interval of time.</p>
+
+<p>Collection of company’s stock market data at regular interval of year is an example of time series data. But when the collection of company’s sales revenue, sales volume is collected for the past 3 months then it is taken as an example of cross-section data.</p>
+
+<p>Time series data is mainly used for obtaining results over an extended period of time but, cross-section data focuses on the information received from surveys at a particular time.</p>
+
+<h2 id="what-is-time-series-analysis">What is Time Series Analysis?</h2>
+
+<p>Analysis is performed in order to understand the structure and functions produced by the time series.</p>
+
+<p>Two approaches are used for analyzing time series data are -</p>
+
+<ul>
+  <li>In the time domain</li>
+  <li>In the frequency domain</li>
+</ul>
+
+<p>Time series analysis is mainly used for -</p>
+
+<ul>
+  <li>Decomposing the time series</li>
+  <li>Identifying and modeling the time-based dependencies</li>
+  <li>Forecasting</li>
+  <li>Identifying and model the system variation</li>
+</ul>
+
+<h2 id="need-of-time-series-analysis">Need of Time Series Analysis</h2>
+
+<p>In order to model successfully, the time series is important in machine learning and deep learning. Time series analysis is used to understand the internal structure and functions that are used for producing the observations. Time Series analysis is used for -</p>
+
+<ul>
+  <li><strong>Descriptive </strong>  Patterns are identified in correlated data. In other words, the variations in trends and seasonality in the time series are identified.</li>
+  <li><strong>Explanation </strong> Understanding and modeling of data is performed.</li>
+  <li><strong>Forecasting </strong> The prediction from previous observations are performed for short term trends.</li>
+  <li><strong>Invention An alysis </strong> Effect performed by any event in time series data, is analyzed.</li>
+  <li><strong>Quality Control </strong>  When the specific size deviates, it provides an alert. (-)</li>
+</ul>
+
+<h2 id="applications-of-time-series-analysis">Applications of Time Series Analysis</h2>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*LxaU50nxL1Kx6M_0K49JOg.jpeg" alt="img" /></p>
+
+<h2 id="time-series-database">Time Series Database</h2>
+
+<p>Time series database is a software which is used for handling the time series data. Highly complex data such as higher transactional data, is not feasible for the relational database management system. Many relational systems does not work properly for time series data. Therefore, time series databases are optimised for the time series data. Various time series databases are given below -</p>
+
+<ul>
+  <li>CrateDB</li>
+  <li>Graphite</li>
+  <li>InfluxDB</li>
+  <li>Informix TimeSeries</li>
+  <li>Kx kdb+</li>
+  <li>Riak-TS</li>
+  <li>RRDtool</li>
+  <li>OpenTSDB</li>
+</ul>
+
+<h2 id="what-is-anomaly">What is Anomaly?</h2>
+
+<p><strong>Anomaly</strong> is defined as something that deviates from the normal behaviour or what is expected. The anomaly is a kind of contradictory observation in the data. It gives the proof that certain model or assumption does not fit into the problem statement.</p>
+
+<h3 id="different-types-of-anomalies">Different Types of Anomalies</h3>
+
+<ul>
+  <li><strong>Point Anomalies </strong> If the specific value within the dataset is anomalous with respect to the complete data then it is known as Point Anomalies.</li>
+  <li><strong>Contextual Anomalies </strong> If the occurrence of data is anomalous for specific circumstances, then it is known as Contextual Anomalies. For example, the anomaly occurs at a specific interval of period.</li>
+  <li><strong>Collective Anomalies  </strong>If the collection of occurrence of data is anomalous with respect to the rest of the dataset then it is known as Collective Anomalies. For example, breaking the trend observed in ECG.</li>
+</ul>
+
+<h2 id="models-of-time-series-data">Models of Time Series Data</h2>
+
+<p><strong>ARIMA Model </strong>  ARIMA stands for Autoregressive Integrated Moving Average. Auto Regressive (AR) refers as lags of the differenced series, Moving Average (MA) is lags of errors and it represents the number of difference used to make the time series stationary. (-)</p>
+
+<p><strong>Assumptions</strong> followed while implementing ARIMA Model</p>
+
+<ul>
+  <li><strong>Time series data should posses stationary property:</strong> this means that the data should be independent of time. Time series consist of cyclic behaviour and white noise is also taken as stationary.</li>
+  <li><strong>ARIMA model is used for a single variable.</strong> The process is meant for regression with the past values. (-)</li>
+</ul>
+
+<p>In order to <strong>remove non-stationarity</strong> from the time series data the steps given below are followed</p>
+
+<ul>
+  <li>Find the difference between the consecutive observations.</li>
+  <li>For stabilizing the variance log or square root of the time series data is computed.</li>
+  <li>If the time series consists of the trend, then the residual from the fitted curve is modulated.</li>
+</ul>
+
+<p>ARIMA model is used for predicting the future values by taking the linear combination of past values and past errors. The ARIMA models are used for modeling time series having random walk processes and characteristics such as trend, seasonal and nonseasonal time series.</p>
+
+<p><strong>Holt-Winters </strong>  It is a model which is used for <strong>forecasting</strong> the <strong>short term period</strong>. It is usually applied to achieve exponential smoothing using additive and multiplicative models along with increasing or decreasing trends and seasonality. Smoothing is measured by beta and gamma parameters in the holt’s method.</p>
+
+<ul>
+  <li>When the beta parameter is set to FALSE, the function performs exponential smoothing.</li>
+  <li>The gamma parameter is used for the seasonal component. If the gamma parameter is set to FALSE, a non-seasonal model is fitted.</li>
+</ul>
+
+<h2 id="how-to-find-anomaly-in-time-series-data">How to find Anomaly in Time Series Data</h2>
+
+<p>**AnomalyDetection R package **</p>
+
+<p>It is a robust open source package used to find anomalies in the presence of seasonality and trend. This package is build on Generalised E-Test and uses Seasonal Hybrid ESD (S-H-ESD) algorithm. S-H-ESD is used to find both local and global anomalies. This package is also used to detect anomalies present in a vector of numerical variables. Is also provides better visualization such that the user can specify the direction of anomalies.</p>
+
+<p>**Principal Component Analysis **</p>
+
+<p><strong>It is a statistical technique used to reduce higher dimensional data into lower dimensional data without any loss of information.</strong> Therefore, this technique can be used for developing the model of anomaly detection. This technique is <strong>useful</strong> at that time of situation <strong>when sufficient samples are difficult to obtain</strong>. So, PCA is used in which model is trained using available features to obtain a normal class and then distance metrics is used to determine the anomalies.</p>
+
+<p>**Chisq Square distribution **</p>
+
+<p>It is a kind of statistical distribution that constitutes 0 as minimum value and no bound for the maximum value. Chisq square test is implemented for detecting outliers from univariate variables. It detects both lowest and highest values due to the presence of outliers on both side of the data.</p>
+
+<h2 id="what-are-breakouts-in-time-series-data">What are Breakouts in Time Series Data?</h2>
+
+<ul>
+  <li><strong>Mean shift </strong>  Sudden change in time series. For example the usage of CPU is increased from 35% to 70%. It is added when the time series move from one steady state to another state.</li>
+  <li><strong>Ramp Up </strong> Sudden increase in the value of the metric from one steady state to another. It is a slow process as compared with the mean shift. It is a slow transition process from one stable state to another.</li>
+</ul>
+
+<p><strong>PS:</strong> In Time series often more than one breakouts are observed.</p>
+
+<h2 id="how-to-detect-breakouts-in-time-series-data">How to detect Breakouts in Time Series Data?</h2>
+
+<p>In order to detect breakouts in time series <strong>Twitter</strong> has introduced a package known as <strong>BreakoutDetection</strong> package (opensource). It uses E-Divisive with Medians (EDM) algorithm to detect the divergence within the mean.</p>
+
+<h2 id="need-of-machine-learning-and-deep-learning-in-time-series-data">Need of Machine Learning and Deep Learning in Time Series Data</h2>
+
+<p>Machine learning techniques are more effective as compared with the statistical techniques. This is because machine learning have two important features such as feature engineering and prediction. The feature engineering aspect is used to address the trend and seasonality issues of time series data. The issues of fitting the model to time series data can also be resolved by it.</p>
+
+<p>Deep Learning is used to combine the feature extraction of time series with the non-linear autoregressive model for higher level prediction. It is used to extract the useful information from the features automatically without using any human effort or complex statistical techniques.</p>
+
+<h2 id="anomaly-detection-using-machine-learning">Anomaly Detection using Machine Learning</h2>
+
+<p>Firstly, supervised learning is performed for training data points so that they can be classified into anomalous and non-anomalous data points. But, for supervised learning, there should be labeled anomalous data points.</p>
+
+<p><strong>Another approach for detecting anomaly is unsupervised learning. One can apply unsupervised learning to train CART so that prediction of next data points in the series could be made. To implement this, confidence interval or prediction error is made. Therefore, to detect anomalous data points Generalised ESD-Test is implemented to check which data points are present within or outside the confidence interval</strong></p>
+
+<p>The most common supervised learning algorithms are</p>
+
+<ul>
+  <li>Supervised neural networks</li>
+  <li>Support vector machine</li>
+  <li>K-nearest neighbors</li>
+  <li>Bayesian networks</li>
+  <li>Decision trees</li>
+</ul>
+
+<p>The most common unsupervised algorithms are</p>
+
+<ul>
+  <li>Self-organizing maps (SOM)</li>
+  <li>K-means</li>
+  <li>C-means</li>
+  <li>Expectation-maximization meta-algorithm (EM)</li>
+  <li>Adaptive resonance theory (ART)</li>
+  <li>One-class support vector machine</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*FWN896X6mtQLOdq77KqNog.jpeg" alt="img" /></p>
+
+<h3 id="anomaly-detection-using-deep-learning">Anomaly Detection using Deep Learning</h3>
+
+<p>Recurrent neural network is one of the deep learning algorithm for detecting anomalous data points within the time series. It consist of input layer, hidden layer and output layer. The nodes within hidden layer are responsible for handling internal state and memory. They both will be updated as the new input is fed into the network.  The internal state of RNN is used to process the sequence of inputs. <strong>The important feature of memory is that it can automatically learn the time-dependent features.</strong></p>
+
+<p><img src="https://www.xenonstack.com/blog/static/public/uploads/media/Anamoly-detection-using-Deep-learning.jpg" alt="Anomaly Detection using Deep Learning" /></p>
+
+<h2 id="summary-from-website">Summary from website</h2>
+
+<ul>
+  <li>Time Series is defined as the sequence of data points. The components of time series are responsible for the understanding of patterns of data. In time series, anomalous data points can also be there.</li>
+  <li>Therefore, there is a need to detect them. Various statistical techniques are mentioned in the blog that is used but machine learning and deep learning are essential.</li>
+  <li>In machine learning, supervised learning and unsupervised learning is used for detecting anomalous data. On the other hand, in deep learning recurrent neural network is used.</li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] XenonStack. “Anomaly Detection of Time Series Data using Machine Learning &amp; Deep Learning.” <em>Medium</em>, Medium, 3 July 2017, medium.com/@xenonstack/anomaly-detection-of-time-series-data-using-machine-learning-deep-learning-c248061ea4f5?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Welcome to Ghost</title>
 	  <link>http://localhost:4000/welcome2</link>
 		
