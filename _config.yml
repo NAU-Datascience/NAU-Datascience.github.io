@@ -5,7 +5,7 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper2/
+baseurl: /
 
 # Website info
 title: Ghost
@@ -22,8 +22,8 @@ navigation: True # show the navbar links
 subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: tryghost # replace by your username
-facebook: ghost # replace by your username
+# twitter: tryghost # replace by your username
+# facebook: ghost # replace by your username
 
 # Disqus
 disqus: False
@@ -67,13 +67,13 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
-username: myJekyll
-repo: jasper2
+username: NAU-Datascience
+repo: NAU-Datascience.github.io
 branch: master
-relative_source: ../jasper2/
-destination: ../jasper2-pages/
-production_url:  https://myJekyll.github.io/jasper2/
-source_url:  https://github.com/myJekyll/jasper2/
+# relative_source: ../jasper2/
+# destination: ../jasper2-pages/
+# production_url:  https://myJekyll.github.io/jasper2/
+# source_url:  https://github.com/myJekyll/jasper2/
 
 exclude:
   - README.md
