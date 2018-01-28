@@ -40,6 +40,158 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Time Series Anomaly Detection Algorithms</title>
+	  <link>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-01-27T11:49:00-06:00</pubDate>
+	  <guid>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</guid>
+	  <description><![CDATA[
+	     <h1 id="time-series-anomaly-detection-algorithms-blog-summary">Time Series Anomaly Detection Algorithms, Blog Summary</h1>
+
+<p>​	<em>This is a summary of a blog post, published on medium.com.</em></p>
+
+<p><strong>Original Blog Post:</strong> <a href="https://blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D">Pavel Tiunov - Jun 8, 2017</a></p>
+
+<h2 id="important-types-of-anomalies">Important Types of Anomalies</h2>
+
+<p>Anomaly detection problem for time series is usually formulated as finding outlier data points relative to some standard or usual signal. Some types of anomalies:</p>
+
+<ul>
+  <li>Additive Outliers</li>
+  <li>Temporal Changes</li>
+  <li>Level shifts or seasonal level shifts</li>
+</ul>
+
+<p>An anamoly detection algorithm should either label each time point as anomaly/not anomaly, or forecast a signal for some point and test if this point value varies from the forecasted enough to deem it as an anomaly.</p>
+
+<p>Using the second approach, you would be able to visualize a confidence interval, which will help a lot in understanding why an anomaly occurs and validate it.</p>
+
+<h2 id="stl-decomposition">STL Decomposition</h2>
+
+<ul>
+  <li>STL (Seasonal Trend Decomposition based on Loess).</li>
+  <li>Gives you ability to split your time series signal into three parts: <strong>Seasonal, Trend, Residue</strong></li>
+  <li>Suitable for seasonal time series, which is the most popular case</li>
+</ul>
+
+<p><strong>If you analyze deviation of residue and itroduce some threshold for it, you’ll get an anomaly detection algorithm</strong></p>
+
+<ul>
+  <li>You should use <strong>median absolute deviation</strong> to get a more robust detection of anomalies</li>
+  <li>Twitter Anomaly detection library (<a href="https://github.com/twitter/AnomalyDetection">AnomalyDetection</a>)</li>
+</ul>
+
+<h3 id="pros">Pros</h3>
+
+<ul>
+  <li>Simplicity</li>
+  <li>Robust</li>
+  <li>Can handle a lot of different situations</li>
+  <li>All anomalies can still be intuitively interpreted</li>
+  <li>Good for detecting <strong>Additive outliers</strong></li>
+  <li>To detect level changes you can use rolling average signal instead of the original one</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+  <li>Rigidity regarding tweaking options. All you can tweak is your confidence interval using the significance level</li>
+  <li>It doesn’t work well when characteristics of your signal have changed dramatically</li>
+</ul>
+
+<h2 id="classification-and-regression-trees">Classification and Regression Trees</h2>
+
+<h3 id="supervised-learning">Supervised Learning</h3>
+
+<ul>
+  <li>To teach trees to classify anomaly/non-anomaly data points.</li>
+  <li>You need to have <strong>labeled</strong> anomaly data points.</li>
+</ul>
+
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+
+<ul>
+  <li>To teach CART to predict next data point in your series and have some confidence interval or prediction error as in the case of STL decomposition.</li>
+  <li>Check if data points lie inside or outside of the confidence interval. (Generalized ESD test, or Grubbs’ test)</li>
+</ul>
+
+<p>Most popular implementation  to perform learning for trees is the <strong>xgboost</strong> library.</p>
+
+<h3 id="pros-1">Pros</h3>
+
+<ul>
+  <li>It is not bound in any sense, to the structre of the signal</li>
+  <li>You can introduce many feature parameters</li>
+</ul>
+
+<h3 id="cons-1">Cons</h3>
+
+<ul>
+  <li>Growing number of features can start to impact your computational performance fairly quickly. (Choose your features carefully)</li>
+</ul>
+
+<h2 id="arima">ARIMA</h2>
+
+<p>It’s based on an approach that several points from the past generate a forecast of the next point with the addition of some random variable, which is usually <strong>white noise</strong>. As you can imagine, forecasted points in the future will generate new points and so on. Its obvious effect on the forecast horizon: <strong>the signal gets smoother.</strong></p>
+
+<p>The difficult part in appliance of this method is that you should <a href="https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method">select</a> the number of <strong>differences</strong>, number of <strong>autoregressions</strong>, and <strong>forecast error coefficients</strong>.</p>
+
+<p>​	<em>PS: Each time you work with a new signal you should build a new ARIMA model.</em></p>
+
+<ul>
+  <li>Your signal shouldn’t be dependent on the time.</li>
+</ul>
+
+<p>Anomaly detection is done by creating an adjusted model of a signal by using outlier points and checking if it is a better fit than original model by using <strong>t-statistics</strong>.<img src="https://cdn-images-1.medium.com/max/1600/0*ObqneGx8Dcla8biC." alt="img" /></p>
+
+<p><em>Two time series built using original ARIMA model and adjusted for outliers ARIMA model.</em></p>
+
+<ul>
+  <li>Use tsoutliers (R Package). It is suitable to detect all types of anomalies in the case that you can find a suitable ARIMA model for your signal.</li>
+</ul>
+
+<h2 id="exponential-smoothing">Exponential Smoothing</h2>
+
+<p>Exponential Smoothing techniques are very similar to ARIMA.</p>
+
+<ul>
+  <li>Holt-Winters Seasonal method for anomaly detection. You should define your seasonal period which can be weeks, months or year, etc.</li>
+  <li>In this case you will need to track several seasonal periods such as having both week and year dependencies together. You should only select one. Usually, it will be the shortest one possible. <strong>(Drawback)</strong></li>
+  <li>Anomaly detection can be done by same statistical tests, as STL or CARTs.</li>
+</ul>
+
+<h2 id="neural-networks">Neural Networks</h2>
+
+<ul>
+  <li>The most suitable type of NN is <strong>LSTM</strong> since we are working with time series.</li>
+  <li>This type of <strong>RNN</strong> will allow you to model the <strong>most sophisticated dependencies</strong> in your time series as well as advanced <strong>seasonality dependencies</strong>.</li>
+  <li>Can be helpful if you have <strong>multiple</strong> time series <strong>coupled</strong> with each other</li>
+</ul>
+
+<h2 id="to-keep-in-minds-from-website">To Keep In Mind’s From Website</h2>
+
+<ol>
+  <li>Try the simplest model and algorithm that fit your problem the best.</li>
+  <li>Switch to more advanced techniques if it doesn’t work out.</li>
+  <li>Starting with more general solutions that cover all the cases is a tempting option, but it’s not always the best.</li>
+</ol>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] Tiunov, Pavel. “Time Series Anomaly Detection Algorithms – Stats and Bots.” <em>Stats and Bots</em>, Stats and Bots, 8 June 2017, blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Anomaly Detection of Time Series Data using Machine Learning & Deep Learning</title>
 	  <link>http://localhost:4000/Anomaly-Detection-using-ml</link>
 		

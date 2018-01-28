@@ -5,7 +5,7 @@ current: post
 navigation: True
 title: Time Series Anomaly Detection Algorithms
 date: 2018-01-27 17:49:00
-tags: [Blog Summary, Summary, Data Science, Machine Learning]
+tags: [Summary, Data Science]
 class: post-template
 subclass: 'post tag-data-science'
 author: bedir

@@ -1,4 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-27T17:44:59-06:00</updated><id>http://localhost:4000/</id><title type="html">NAU-DataScience</title><subtitle>Academic Paper Summaries</subtitle><entry><title type="html">Time Series Anomaly Detection</title><link href="http://localhost:4000/Time-Series-Anomaly-Detection" rel="alternate" type="text/html" title="Time Series Anomaly Detection" /><published>2018-01-27T04:00:00-06:00</published><updated>2018-01-27T04:00:00-06:00</updated><id>http://localhost:4000/Time%20Series%20Anomaly%20Detection</id><content type="html" xml:base="http://localhost:4000/Time-Series-Anomaly-Detection">&lt;h3 id=&quot;detection-of-anomalous-drops-with-limited-features-and-sparse-examples-in-noisyhighly-periodic-data&quot;&gt;Detection of Anomalous Drops with Limited Features and Sparse Examples in NoisyHighly Periodic Data&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-27T18:02:52-06:00</updated><id>http://localhost:4000/</id><title type="html">NAU-DataScience</title><subtitle>Academic Paper Summaries</subtitle><entry><title type="html">Time Series Anomaly Detection Algorithms</title><link href="http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms" rel="alternate" type="text/html" title="Time Series Anomaly Detection Algorithms" /><published>2018-01-27T11:49:00-06:00</published><updated>2018-01-27T11:49:00-06:00</updated><id>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</id><content type="html" xml:base="http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms">&lt;h1 id=&quot;time-series-anomaly-detection-algorithms-blog-summary&quot;&gt;Time Series Anomaly Detection Algorithms, Blog Summary&lt;/h1&gt;
+
+&lt;p&gt;​	&lt;em&gt;This is a summary of a blog post, published on medium.com.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Original Blog Post:&lt;/strong&gt; &lt;a href=&quot;https://blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D&quot;&gt;Pavel Tiunov - Jun 8, 2017&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;important-types-of-anomalies&quot;&gt;Important Types of Anomalies&lt;/h2&gt;
+
+&lt;p&gt;Anomaly detection problem for time series is usually formulated as finding outlier data points relative to some standard or usual signal. Some types of anomalies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Additive Outliers&lt;/li&gt;
+  &lt;li&gt;Temporal Changes&lt;/li&gt;
+  &lt;li&gt;Level shifts or seasonal level shifts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An anamoly detection algorithm should either label each time point as anomaly/not anomaly, or forecast a signal for some point and test if this point value varies from the forecasted enough to deem it as an anomaly.&lt;/p&gt;
+
+&lt;p&gt;Using the second approach, you would be able to visualize a confidence interval, which will help a lot in understanding why an anomaly occurs and validate it.&lt;/p&gt;
+
+&lt;h2 id=&quot;stl-decomposition&quot;&gt;STL Decomposition&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;STL (Seasonal Trend Decomposition based on Loess).&lt;/li&gt;
+  &lt;li&gt;Gives you ability to split your time series signal into three parts: &lt;strong&gt;Seasonal, Trend, Residue&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Suitable for seasonal time series, which is the most popular case&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;If you analyze deviation of residue and itroduce some threshold for it, you’ll get an anomaly detection algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You should use &lt;strong&gt;median absolute deviation&lt;/strong&gt; to get a more robust detection of anomalies&lt;/li&gt;
+  &lt;li&gt;Twitter Anomaly detection library (&lt;a href=&quot;https://github.com/twitter/AnomalyDetection&quot;&gt;AnomalyDetection&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pros&quot;&gt;Pros&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simplicity&lt;/li&gt;
+  &lt;li&gt;Robust&lt;/li&gt;
+  &lt;li&gt;Can handle a lot of different situations&lt;/li&gt;
+  &lt;li&gt;All anomalies can still be intuitively interpreted&lt;/li&gt;
+  &lt;li&gt;Good for detecting &lt;strong&gt;Additive outliers&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;To detect level changes you can use rolling average signal instead of the original one&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cons&quot;&gt;Cons&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rigidity regarding tweaking options. All you can tweak is your confidence interval using the significance level&lt;/li&gt;
+  &lt;li&gt;It doesn’t work well when characteristics of your signal have changed dramatically&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;classification-and-regression-trees&quot;&gt;Classification and Regression Trees&lt;/h2&gt;
+
+&lt;h3 id=&quot;supervised-learning&quot;&gt;Supervised Learning&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To teach trees to classify anomaly/non-anomaly data points.&lt;/li&gt;
+  &lt;li&gt;You need to have &lt;strong&gt;labeled&lt;/strong&gt; anomaly data points.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;unsupervised-learning&quot;&gt;Unsupervised Learning&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To teach CART to predict next data point in your series and have some confidence interval or prediction error as in the case of STL decomposition.&lt;/li&gt;
+  &lt;li&gt;Check if data points lie inside or outside of the confidence interval. (Generalized ESD test, or Grubbs’ test)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most popular implementation  to perform learning for trees is the &lt;strong&gt;xgboost&lt;/strong&gt; library.&lt;/p&gt;
+
+&lt;h3 id=&quot;pros-1&quot;&gt;Pros&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is not bound in any sense, to the structre of the signal&lt;/li&gt;
+  &lt;li&gt;You can introduce many feature parameters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cons-1&quot;&gt;Cons&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Growing number of features can start to impact your computational performance fairly quickly. (Choose your features carefully)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;arima&quot;&gt;ARIMA&lt;/h2&gt;
+
+&lt;p&gt;It’s based on an approach that several points from the past generate a forecast of the next point with the addition of some random variable, which is usually &lt;strong&gt;white noise&lt;/strong&gt;. As you can imagine, forecasted points in the future will generate new points and so on. Its obvious effect on the forecast horizon: &lt;strong&gt;the signal gets smoother.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The difficult part in appliance of this method is that you should &lt;a href=&quot;https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method&quot;&gt;select&lt;/a&gt; the number of &lt;strong&gt;differences&lt;/strong&gt;, number of &lt;strong&gt;autoregressions&lt;/strong&gt;, and &lt;strong&gt;forecast error coefficients&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;​	&lt;em&gt;PS: Each time you work with a new signal you should build a new ARIMA model.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Your signal shouldn’t be dependent on the time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Anomaly detection is done by creating an adjusted model of a signal by using outlier points and checking if it is a better fit than original model by using &lt;strong&gt;t-statistics&lt;/strong&gt;.&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/0*ObqneGx8Dcla8biC.&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Two time series built using original ARIMA model and adjusted for outliers ARIMA model.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use tsoutliers (R Package). It is suitable to detect all types of anomalies in the case that you can find a suitable ARIMA model for your signal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;exponential-smoothing&quot;&gt;Exponential Smoothing&lt;/h2&gt;
+
+&lt;p&gt;Exponential Smoothing techniques are very similar to ARIMA.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Holt-Winters Seasonal method for anomaly detection. You should define your seasonal period which can be weeks, months or year, etc.&lt;/li&gt;
+  &lt;li&gt;In this case you will need to track several seasonal periods such as having both week and year dependencies together. You should only select one. Usually, it will be the shortest one possible. &lt;strong&gt;(Drawback)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Anomaly detection can be done by same statistical tests, as STL or CARTs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;neural-networks&quot;&gt;Neural Networks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The most suitable type of NN is &lt;strong&gt;LSTM&lt;/strong&gt; since we are working with time series.&lt;/li&gt;
+  &lt;li&gt;This type of &lt;strong&gt;RNN&lt;/strong&gt; will allow you to model the &lt;strong&gt;most sophisticated dependencies&lt;/strong&gt; in your time series as well as advanced &lt;strong&gt;seasonality dependencies&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Can be helpful if you have &lt;strong&gt;multiple&lt;/strong&gt; time series &lt;strong&gt;coupled&lt;/strong&gt; with each other&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;to-keep-in-minds-from-website&quot;&gt;To Keep In Mind’s From Website&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Try the simplest model and algorithm that fit your problem the best.&lt;/li&gt;
+  &lt;li&gt;Switch to more advanced techniques if it doesn’t work out.&lt;/li&gt;
+  &lt;li&gt;Starting with more general solutions that cover all the cases is a tempting option, but it’s not always the best.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sources&quot;&gt;Sources&lt;/h2&gt;
+
+&lt;p&gt;[1] Tiunov, Pavel. “Time Series Anomaly Detection Algorithms – Stats and Bots.” &lt;em&gt;Stats and Bots&lt;/em&gt;, Stats and Bots, 8 June 2017, blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.&lt;/p&gt;</content><author><name>Bedir Tapkan</name></author><category term="Summary" /><category term="Data Science" /><summary type="html">Time Series Anomaly Detection Algorithms, Blog Summary</summary></entry><entry><title type="html">Time Series Anomaly Detection</title><link href="http://localhost:4000/Time-Series-Anomaly-Detection" rel="alternate" type="text/html" title="Time Series Anomaly Detection" /><published>2018-01-27T04:00:00-06:00</published><updated>2018-01-27T04:00:00-06:00</updated><id>http://localhost:4000/Time%20Series%20Anomaly%20Detection</id><content type="html" xml:base="http://localhost:4000/Time-Series-Anomaly-Detection">&lt;h3 id=&quot;detection-of-anomalous-drops-with-limited-features-and-sparse-examples-in-noisyhighly-periodic-data&quot;&gt;Detection of Anomalous Drops with Limited Features and Sparse Examples in NoisyHighly Periodic Data&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Dominique T. Shipmon, Jason M. Gurevitch, Paolo M. Piselli, Steve Edwards&lt;/em&gt;&lt;/p&gt;
 
