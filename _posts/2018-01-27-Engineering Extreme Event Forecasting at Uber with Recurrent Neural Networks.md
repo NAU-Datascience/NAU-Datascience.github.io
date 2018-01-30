@@ -18,13 +18,13 @@ author: hamza
 
 [Link to full post](https://eng.uber.com/neural-networks/)
 
-the goal of the experiment is predict where, when, and how many ride requests Uber will receive at any given time. Creating this model is challenging because for special days in the year, there are numerous unexpected activities. For example NYE (new years eve) is very busy day for uber, but it is not correlated with the month or anyhing also this kind of days happens once in a year so hard to get in data. In addition to historical data, extreme event prediction also depends on numerous external factors, including weather, population growth etc.
+The goal of the experiment is predicted where, when, and how many rides requests Uber will receive at any given time. Creating this model is challenging because for special days in the year, there are numerous unexpected activities. For example, NYE (new years eve) is a very busy day for uber, but it is not correlated with the month or anything also this kind of days happens once in a year so hard to get in data. In addition to historical data, extreme event prediction also depends on numerous external factors, including weather, population growth etc.
 
 ![](http://eng.uber.com/wp-content/uploads/2017/06/image2-2.png)
 
 ## Creating Uber’s new extreme event forecasting model
 
-They decided to use LSTD and because of data shortages they use data from many cities at once, which greatly improved our accuracy.
+They decided to use LSTD and because of data shortages, they use data from many cities at once, which greatly improved our accuracy.
 
 ## Building a new architecture with neural networks
 
@@ -40,7 +40,7 @@ This raw data was used in our training model to conduct simple preprocessing, in
 
 ### Tailoring our LSTM model 
 
-During testing, vanilla (not costimized form of) LSTM did not perform superior performance compared to the baseline model, which included a combination of univariate forecasting and machine learning elements.
+During testing, vanilla (the not customized form of) LSTM did not perform superior performance compared to the baseline model, which included a combination of univariate forecasting and machine learning elements.
 
 To improve our accuracy, they incorporated an automatic feature extraction module into our model, depicted below:
 
@@ -48,9 +48,9 @@ To improve our accuracy, they incorporated an automatic feature extraction modul
 
 
 
-the model first primes the network by automatic, ensemble-based (combining multiple models) [feature extraction](https://en.wikipedia.org/wiki/Feature_extraction). After feature vectors are extracted, they are averaged using a standard ensemble technique. The final vector is then concatenated with the input to produce the final forecast.
+the model first primes the network by automatic, ensemble-based (combining multiple models) feature extraction. After feature vectors are extracted, they are averaged using a standard ensemble technique. The final vector is then concatenated with the input to produce the final forecast.
 
-During testing, they were able to achieve a 14.09 percent [symmetric mean absolute percentage error](https://en.wikipedia.org/wiki/Symmetric_mean_absolute_percentage_error) (SMAPE) improvement over the base LSTM architecture.
+During testing, they were able to achieve a 14.09 percent symmetric mean absolute percentage error (SMAPE) improvement over the base LSTM architecture.
 
 ## Using the new forecasting model
 
@@ -66,4 +66,4 @@ From our experience, they define three dimensions for deciding if the neural net
 
 ### Forecasting in the Future
 
-If this type of research excites you (and you happen to be Down Under, check out Uber’s [time series workshop](http://roseyu.com/time-series-workshop/) during the [International Machine Learning Convention](https://2017.icml.cc/) on August 6, 2017 in Sydney.
+If this type of research excites you (and you happen to be Down Under, check out Uber’s time series workshop during the International Machine Learning Convention on August 6, 2017, in Sydney.
