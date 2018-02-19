@@ -3,8 +3,8 @@ layout: post
 current: post
 <!-- cover:  assets/images/welcome.jpg -->
 navigation: True
-title: Book Summary Ch 1: The Machine Learning Landscape
-date: 2018-02-19 16:55
+title: "Book Summary Ch 1: The Machine Learning Landscape"
+date: 2018-02-19 16:55:00
 tags: [Summary, Data Science]
 class: post-template
 subclass: 'post tag-data-science'

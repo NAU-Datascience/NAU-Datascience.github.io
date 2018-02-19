@@ -28,6 +28,362 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Book Summary Ch 1: The Machine Learning Landscape</title>
+	  <link>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-02-19T10:55:00-06:00</pubDate>
+	  <guid>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</guid>
+	  <description><![CDATA[
+	     <h1 id="summary-hands-on-machine-learning-with-scikit-learn--tensorflow">Summary: Hands-On Machine Learning with Scikit-Learn &amp; TensorFlow</h1>
+
+<p>I am thinking of creating series of blog posts throughout my journey following this wonderful book. I will try to include everything that I find interesting, useful or really important. I will not change the content a lot, mostly I will summarize with authors (Aurelien Geron) own words, but in places that I see that needs additional comments or if the part is too long to take into summary I will add my own words (I will try to do it as less as possible.) Enjoy…</p>
+
+<h1 id="chapter-1-the-machine-learning-landscape">Chapter 1: The Machine Learning Landscape</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#What is Machine Learning">What is Machine Learning</a></li>
+  <li><a href="#Why use Machine Learning">Why use Machine Learning</a></li>
+  <li><a href="#Types of Machine Learning Systems">Types of Machine Learning Systems</a>
+    <ol>
+      <li><a href="#Supervised/Unsupervised Learning">Supervised/Unsupervised Learning</a>
+        <ol>
+          <li><a href="#Supervised learning">Supervised learning</a></li>
+          <li><a href="#Unsupervised Learning">Unsupervised Learning</a></li>
+          <li><a href="#Semisupervised Learning">Semisupervised Learning</a></li>
+          <li><a href="#Reinforcement Learning">Reinforcement Learning</a></li>
+        </ol>
+      </li>
+      <li><a href="#Batch and Online Learning">Batch and Online Learning</a>
+        <ol>
+          <li><a href="#Batch learning">Batch learning</a></li>
+          <li><a href="#Batch learning">Online learning</a></li>
+        </ol>
+      </li>
+      <li><a href="#Instance Based vs Model Based Learning">Instance Based vs Model Based Learning</a>
+        <ol>
+          <li><a href="#Instance Based learning">Instance Based learning</a></li>
+          <li><a href="#Model Based Learning">Model Based Learning</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#Main Challenges of Machine Learning">Main Challenges of Machine Learning</a>
+    <ol>
+      <li><a href="#Insufficient Quantity of Training Data">Insufficient Quantity of Training Data</a></li>
+      <li><a href="#Nonrepresentative Training Data">Nonrepresentative Training Data</a></li>
+      <li><a href="#Poor Quality Data">Poor Quality Data</a></li>
+      <li><a href="#Irrelevant Features">Irrelevant Features</a></li>
+      <li><a href="#Overfitting the Training data">Overfitting the Training data</a></li>
+      <li><a href="#Underfitting the Training data">Underfitting the Training data</a></li>
+    </ol>
+  </li>
+  <li><a href="#Testing and Validating">Testing and Validating</a></li>
+</ol>
+
+<h2 id="what-is-machine-learning">What is Machine Learning</h2>
+
+<blockquote>
+  <p>Field of study that gives computer the ability to learn without being explicitly programmed.</p>
+
+  <p>​												<em>— Arthur Samuel, 1959</em></p>
+</blockquote>
+
+<h2 id="why-use-machine-learning">Why use Machine Learning</h2>
+
+<ul>
+  <li>Problems for which existing solutions require a lot of hand tuning or long list of rules: One ML algorithm can often simplify code and perform better.</li>
+  <li>Complex problems for which there is no good solution at all using traditional approaches: The best ML techniques can find a solution.</li>
+  <li>Fluctuating environments: A ML system can adapt to new data.</li>
+  <li>Getting insights about complex problems and large amounts of data.</li>
+</ul>
+
+<h2 id="types-of-machine-learning-systems">Types of Machine Learning Systems</h2>
+
+<ul>
+  <li>We categorize them according to three identities:
+    <ul>
+      <li>Trained with human supervision (How much): Supervised, unsupervised, semi-supervised and reinforcement learning.</li>
+      <li>Incrementally or on the fly: Online vs Batch learning</li>
+      <li>Comparing data points or detecting patterns and build a model for predictions: Instance-based vs model-based learning</li>
+    </ul>
+  </li>
+  <li>The categories are not distinct from each other, they can be combined. ex. Online, model-based, supervised system.</li>
+</ul>
+
+<h3 id="supervisedunsupervised-learning">Supervised/Unsupervised Learning</h3>
+
+<h4 id="supervised-learning">Supervised learning</h4>
+
+<ul>
+  <li>The training data includes the desired solutions, called labels.</li>
+  <li>Classification and Regression are two typical tasks.</li>
+  <li>Some regression algorithms can be used for classification and vice versa.</li>
+  <li>Some important supervised algorithms are:
+    <ul>
+      <li>kNN</li>
+      <li>Linear Regression</li>
+      <li>Logistic Regression</li>
+      <li>SVMs</li>
+      <li>Decision Trees and Random Forests</li>
+      <li>Neural Networks</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="unsupervised-learning">Unsupervised Learning</h4>
+
+<ul>
+  <li>The training data is unlabeled</li>
+  <li>Some important unsupervised algorithms are:
+    <ul>
+      <li>Clustering: Try to detect similar groups.
+        <ul>
+          <li>k-Means</li>
+          <li>Hierarchical Cluster Analysis (HCA)</li>
+          <li>Expectation Maximization</li>
+        </ul>
+      </li>
+      <li>Visualization: Understand how the data is organized and perhaps identify some unsuspected patterns. and dimensionality reduction: Simplify the data without losing too much information.
+        <ul>
+          <li>Principal Component Analysis (PCA)</li>
+          <li>Kernel PCA</li>
+          <li>Locally-Linear Embedding (LLE)</li>
+          <li>t-distributed Stochastic Neighbor Embedding (t-SNE)</li>
+        </ul>
+      </li>
+      <li>Association rule Learning: Dig into large data and discover the interesting relation between attributes.
+        <ul>
+          <li>Apriori</li>
+          <li>Eclat</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Another important unsupervised task is anomaly detection. Helps to determine outliers and unusualities in data.</li>
+</ul>
+
+<h4 id="semisupervised-learning">Semisupervised Learning</h4>
+
+<ul>
+  <li>Semisupervised algorithms can deal with partially labeled data. ex. Google Photos</li>
+</ul>
+
+<h4 id="reinforcement-learning">Reinforcement Learning</h4>
+
+<ul>
+  <li>The learning system, called an agent, can observe the environment, select and perform actions, and get reward in return. It must learn the best strategy called policy.</li>
+  <li>ex. Deepmind - AlphaGo</li>
+</ul>
+
+<h3 id="batch-and-online-learning">Batch and Online Learning</h3>
+
+<ul>
+  <li>Whether or not the system can learn incrementally from a stream of incoming data.</li>
+</ul>
+
+<h4 id="batch-learning">Batch learning</h4>
+
+<ul>
+  <li>The system is incapable of learning incrementally; it must be trained using all the data available.</li>
+  <li>Generally takes a lot of time and computing resources.</li>
+  <li>First trained and then launched.</li>
+  <li>All the data is needed to retrain the system.</li>
+  <li>May not be able to use if the data is really huge.</li>
+</ul>
+
+<h4 id="online-learning">Online learning</h4>
+
+<ul>
+  <li>You train the system incrementally by feeding it data instances sequentially, either individually or by small groups called mini-batches. Each step is fast and cheap, so the system can learn on the fly.</li>
+  <li>Great system for continuous flow.</li>
+  <li>You can get rid of the data after using it.</li>
+  <li>One important parameter of this system is how fast they should adapt to changing data: this is called learning rate. If it is high, the system will adapt better but will forget quickly. If it is low, will learn slower, but less sensitive to noise in the new data.</li>
+  <li>With new data, your system’s performance may decrease.</li>
+</ul>
+
+<h3 id="instance-based-vs-model-based-learning">Instance-Based vs Model-Based Learning</h3>
+
+<h4 id="instance-based-learning">Instance-Based learning</h4>
+
+<ul>
+  <li>The system learns examples by heart and then generalizes to new cases using similarity measure.</li>
+</ul>
+
+<h4 id="model-based-learning">Model-Based learning</h4>
+
+<ul>
+  <li>Another way to generalize from a set of examples is to build a model of these examples, then use that to make predictions. This is called mode based learning.</li>
+  <li>How can you know which values will make your model perform best? To answer this question, you need to specify a performance measure. You can either define a utility function (fitness function) that measures how good your model is, or you can define a cost function that measures how bad it is.</li>
+  <li>Typical ML project:
+    <ul>
+      <li>You study the data</li>
+      <li>You select a model</li>
+      <li>You train in on the training data</li>
+      <li>Finally, you apply the model to make predictions on new cases (inference)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="main-challenges-of-machine-learning">Main Challenges of Machine Learning</h2>
+
+<p>Two things that can go wrong are Bad Data, Bad Algorithm…</p>
+
+<h3 id="insufficient-quantity-of-training-data">Insufficient Quantity of Training Data</h3>
+
+<ul>
+  <li>It takes a lot of data for most Machine Learning algorithms to work properly.</li>
+  <li>If you don’t have enough data, none of the other things that you can do can save your system…</li>
+</ul>
+
+<h3 id="nonrepresentative-training-data">Nonrepresentative Training Data</h3>
+
+<ul>
+  <li>In order to generalize well, it is crucial that your training data be representative of the new cases you want to generalize to.</li>
+  <li>Sampling bias: Systematic error due to a non-random sample of a population</li>
+  <li>ex. US Presidental Election 1936, the Literary Digest’s biased poll</li>
+</ul>
+
+<h3 id="poor-quality-data">Poor Quality Data</h3>
+
+<ul>
+  <li>If your training data is full of errors, outliers, and noise, it will make it harder for system to detect underlying patterns, so your system is less likely to perform well.</li>
+</ul>
+
+<h3 id="irrelevant-features">Irrelevant Features</h3>
+
+<ul>
+  <li>A critical part of the Machine Learning project is coming up with a good set of features to train on. This process called feature engineering involves:
+    <ul>
+      <li>Feature selection: Selecting the most useful features.</li>
+      <li>Feature extraction: Combining existing features to produce a more useful one.</li>
+      <li>Creating new features by gathering new data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="overfitting-the-training-data">Overfitting the Training data</h3>
+
+<ul>
+  <li>The model performs well on the training data, but it does not generalize well.</li>
+  <li>Overfitting happens when the model is too complex relative to the amount and noisiness of the training data. The possible solutions are:
+    <ul>
+      <li>To simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data or by constructing the model.</li>
+      <li>To gather more training data</li>
+      <li>To reduce the noise in the training data</li>
+    </ul>
+  </li>
+  <li>Constraining a model to make it simpler and reduce the risk of overfitting is called regularization.</li>
+  <li>You want to find the balance between fitting the data perfectly and keeping the model simple enough to ensure that it will generalize well.</li>
+  <li>The amount of regularization to apply during learning can be controlled by a hyperparameter. A hyperparameter is a parameter of a learning algorithm (not of the model).</li>
+  <li>Tuning hyperparameters is an important part of building a Machine Learning system.</li>
+</ul>
+
+<h3 id="underfitting-the-training-data">Underfitting the Training data</h3>
+
+<ul>
+  <li>Opposite of overfitting the data.</li>
+  <li>It occurs when your model is too simple to learn the underlying structure of the data.</li>
+  <li>Main options to fix this problem are:
+    <ul>
+      <li>Selecting more powerful model, with more parameters.</li>
+      <li>Feeding better features to the learning algorithm.</li>
+      <li>Reducing the constraints on the model.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="testing-and-validating">Testing and Validating</h2>
+
+<ul>
+  <li>The only way to know how well a model will generalize to new cases is to actually try it out on new cases.</li>
+  <li>Split the data: Training set and test set</li>
+  <li>The error rate on new cases is called the generalization error (or out of sample error), and by evaluating your model on the test set, you get an estimation of this error. This value tells you how well your model performs on instances that it has never seen before.</li>
+  <li>If the training error is low and generalization error is high that means that your model is overfitting.</li>
+  <li>It is common to use 80% of the data for training and hold out 20% for testing.</li>
+  <li>To solve the issue of overfitting hyperparameters for the test data, you can divide the data to 3, adding validation set to existing ones.</li>
+  <li>Train multiple models with various hyperparameters using the training set, you select the model and hyperparameters that perform best on the validation set, and when you are happy with your model you run a single final test against the test set to get an estimate of the generalization error.</li>
+  <li>To avoid ‘wasting’ too much training data in validation sets, use cross-validation: The training set is split into complementary subsets, and each model is trained against a different combination of these subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts. Next final model is trained using these hyperparameters on the full training set.</li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks</title>
+	  <link>http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2018-01-29T17:05:00-06:00</pubDate>
+	  <guid>http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
+	  <description><![CDATA[
+	     <h3 id="by-nikolay-laptev-slawek-smyl--santhosh-shanmugam"><em>By Nikolay Laptev, Slawek Smyl, &amp; Santhosh Shanmugam</em></h3>
+
+<p><a href="https://eng.uber.com/neural-networks/">Link to full post</a></p>
+
+<p>The goal of the experiment is predicted where, when, and how many rides requests Uber will receive at any given time. Creating this model is challenging because for special days in the year, there are numerous unexpected activities. For example, NYE (new years eve) is a very busy day for uber, but it is not correlated with the month or anything also this kind of days happens once in a year so hard to get in data. In addition to historical data, extreme event prediction also depends on numerous external factors, including weather, population growth etc.</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image2-2.png" alt="" /></p>
+
+<h2 id="creating-ubers-new-extreme-event-forecasting-model">Creating Uber’s new extreme event forecasting model</h2>
+
+<p>They decided to use LSTD and because of data shortages, they use data from many cities at once, which greatly improved our accuracy.</p>
+
+<h2 id="building-a-new-architecture-with-neural-networks">Building a new architecture with neural networks</h2>
+
+<p>This raw data was used in our training model to conduct simple preprocessing, including log transformation, scaling, and data detrending.</p>
+
+<h3 id="training-with-sliding-windows">Training with sliding windows</h3>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image2-e1496957521819.png" alt="" /></p>
+
+<h3 id="tailoring-our-lstm-model">Tailoring our LSTM model</h3>
+
+<p>During testing, vanilla (the not customized form of) LSTM did not perform superior performance compared to the baseline model, which included a combination of univariate forecasting and machine learning elements.</p>
+
+<p>To improve our accuracy, they incorporated an automatic feature extraction module into our model, depicted below:</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.33.18-PM-e1496957645776.png" alt="" /></p>
+
+<p>the model first primes the network by automatic, ensemble-based (combining multiple models) feature extraction. After feature vectors are extracted, they are averaged using a standard ensemble technique. The final vector is then concatenated with the input to produce the final forecast.</p>
+
+<p>During testing, they were able to achieve a 14.09 percent symmetric mean absolute percentage error (SMAPE) improvement over the base LSTM architecture.</p>
+
+<h2 id="using-the-new-forecasting-model">Using the new forecasting model</h2>
+
+<p>For the purpose of this article, they built a model using the five-year daily history of completed Uber trips across the U.S. over the course of seven days before, during, and after major holidays like Christmas Day and New Year’s Day.</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.45.13-PM.png" alt="" /></p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image3-1.png" alt="" /></p>
+
+<p>From our experience, they define three dimensions for deciding if the neural network model is right for your use case: (a) number of time series, (b) length of time series, and (c) correlation among time series. All three of these dimensions increase the likelihood that the neural network approach will forecast more accurately relative to the classical time series model.</p>
+
+<h3 id="forecasting-in-the-future">Forecasting in the Future</h3>
+
+<p>If this type of research excites you (and you happen to be Down Under, check out Uber’s time series workshop during the International Machine Learning Convention on August 6, 2017, in Sydney.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Time Series Anomaly Detection Algorithms</title>
 	  <link>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</link>
 		

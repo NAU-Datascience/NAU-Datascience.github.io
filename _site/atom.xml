@@ -8,13 +8,43 @@
     
       
       <item>
+        <title>Book Summary Ch 1: The Machine Learning Landscape</title>
+        
+          <description>&lt;h1 id=&quot;summary-hands-on-machine-learning-with-scikit-learn--tensorflow&quot;&gt;Summary: Hands-On Machine Learning with Scikit-Learn &amp;amp; TensorFlow&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Feb 2018 10:55:00 -0600</pubDate>
+        <link>
+        http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</link>
+        <guid isPermaLink="true">http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks</title>
+        
+          <description>&lt;h3 id=&quot;by-nikolay-laptev-slawek-smyl--santhosh-shanmugam&quot;&gt;&lt;em&gt;By Nikolay Laptev, Slawek Smyl, &amp;amp; Santhosh Shanmugam&lt;/em&gt;&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 29 Jan 2018 17:05:00 -0600</pubDate>
+        <link>
+        http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
+        <guid isPermaLink="true">http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Time Series Anomaly Detection Algorithms</title>
         
           <description>&lt;h1 id=&quot;time-series-anomaly-detection-algorithms-blog-summary&quot;&gt;Time Series Anomaly Detection Algorithms, Blog Summary&lt;/h1&gt;
 
 </description>
         
-        <pubDate>Sat, 27 Jan 2018 17:49:00 +0000</pubDate>
+        <pubDate>Sat, 27 Jan 2018 11:49:00 -0600</pubDate>
         <link>
         http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</link>
         <guid isPermaLink="true">http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</guid>
@@ -29,7 +59,7 @@
 
 </description>
         
-        <pubDate>Sat, 27 Jan 2018 10:00:00 +0000</pubDate>
+        <pubDate>Sat, 27 Jan 2018 04:00:00 -0600</pubDate>
         <link>
         http://localhost:4000/Time-Series-Anomaly-Detection</link>
         <guid isPermaLink="true">http://localhost:4000/Time-Series-Anomaly-Detection</guid>
@@ -44,7 +74,7 @@
 
 </description>
         
-        <pubDate>Sat, 27 Jan 2018 09:00:00 +0000</pubDate>
+        <pubDate>Sat, 27 Jan 2018 03:00:00 -0600</pubDate>
         <link>
         http://localhost:4000/Anomaly-Detection-using-ml</link>
         <guid isPermaLink="true">http://localhost:4000/Anomaly-Detection-using-ml</guid>
@@ -59,7 +89,7 @@
 
 </description>
         
-        <pubDate>Sat, 27 Jan 2018 08:00:00 +0000</pubDate>
+        <pubDate>Sat, 27 Jan 2018 02:00:00 -0600</pubDate>
         <link>
         http://localhost:4000/Anomaly-Detection</link>
         <guid isPermaLink="true">http://localhost:4000/Anomaly-Detection</guid>

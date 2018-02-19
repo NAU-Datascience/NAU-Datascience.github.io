@@ -1,4 +1,319 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-27T18:02:52-06:00</updated><id>http://localhost:4000/</id><title type="html">NAU-DataScience</title><subtitle>Academic Paper Summaries</subtitle><entry><title type="html">Time Series Anomaly Detection Algorithms</title><link href="http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms" rel="alternate" type="text/html" title="Time Series Anomaly Detection Algorithms" /><published>2018-01-27T11:49:00-06:00</published><updated>2018-01-27T11:49:00-06:00</updated><id>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</id><content type="html" xml:base="http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms">&lt;h1 id=&quot;time-series-anomaly-detection-algorithms-blog-summary&quot;&gt;Time Series Anomaly Detection Algorithms, Blog Summary&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-19T17:29:20-06:00</updated><id>http://localhost:4000/</id><title type="html">NAU-DataScience</title><subtitle>Academic Paper Summaries</subtitle><entry><title type="html">Book Summary Ch 1: The Machine Learning Landscape</title><link href="http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape" rel="alternate" type="text/html" title="Book Summary Ch 1: The Machine Learning Landscape" /><published>2018-02-19T10:55:00-06:00</published><updated>2018-02-19T10:55:00-06:00</updated><id>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</id><content type="html" xml:base="http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape">&lt;h1 id=&quot;summary-hands-on-machine-learning-with-scikit-learn--tensorflow&quot;&gt;Summary: Hands-On Machine Learning with Scikit-Learn &amp;amp; TensorFlow&lt;/h1&gt;
+
+&lt;p&gt;I am thinking of creating series of blog posts throughout my journey following this wonderful book. I will try to include everything that I find interesting, useful or really important. I will not change the content a lot, mostly I will summarize with authors (Aurelien Geron) own words, but in places that I see that needs additional comments or if the part is too long to take into summary I will add my own words (I will try to do it as less as possible.) Enjoy…&lt;/p&gt;
+
+&lt;h1 id=&quot;chapter-1-the-machine-learning-landscape&quot;&gt;Chapter 1: The Machine Learning Landscape&lt;/h1&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#What is Machine Learning&quot;&gt;What is Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Why use Machine Learning&quot;&gt;Why use Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Types of Machine Learning Systems&quot;&gt;Types of Machine Learning Systems&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#Supervised/Unsupervised Learning&quot;&gt;Supervised/Unsupervised Learning&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#Supervised learning&quot;&gt;Supervised learning&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Unsupervised Learning&quot;&gt;Unsupervised Learning&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Semisupervised Learning&quot;&gt;Semisupervised Learning&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Reinforcement Learning&quot;&gt;Reinforcement Learning&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Batch and Online Learning&quot;&gt;Batch and Online Learning&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#Batch learning&quot;&gt;Batch learning&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Batch learning&quot;&gt;Online learning&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Instance Based vs Model Based Learning&quot;&gt;Instance Based vs Model Based Learning&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#Instance Based learning&quot;&gt;Instance Based learning&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Model Based Learning&quot;&gt;Model Based Learning&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Main Challenges of Machine Learning&quot;&gt;Main Challenges of Machine Learning&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#Insufficient Quantity of Training Data&quot;&gt;Insufficient Quantity of Training Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Nonrepresentative Training Data&quot;&gt;Nonrepresentative Training Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Poor Quality Data&quot;&gt;Poor Quality Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Irrelevant Features&quot;&gt;Irrelevant Features&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Overfitting the Training data&quot;&gt;Overfitting the Training data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Underfitting the Training data&quot;&gt;Underfitting the Training data&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Testing and Validating&quot;&gt;Testing and Validating&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-is-machine-learning&quot;&gt;What is Machine Learning&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Field of study that gives computer the ability to learn without being explicitly programmed.&lt;/p&gt;
+
+  &lt;p&gt;​												&lt;em&gt;— Arthur Samuel, 1959&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;why-use-machine-learning&quot;&gt;Why use Machine Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Problems for which existing solutions require a lot of hand tuning or long list of rules: One ML algorithm can often simplify code and perform better.&lt;/li&gt;
+  &lt;li&gt;Complex problems for which there is no good solution at all using traditional approaches: The best ML techniques can find a solution.&lt;/li&gt;
+  &lt;li&gt;Fluctuating environments: A ML system can adapt to new data.&lt;/li&gt;
+  &lt;li&gt;Getting insights about complex problems and large amounts of data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;types-of-machine-learning-systems&quot;&gt;Types of Machine Learning Systems&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We categorize them according to three identities:
+    &lt;ul&gt;
+      &lt;li&gt;Trained with human supervision (How much): Supervised, unsupervised, semi-supervised and reinforcement learning.&lt;/li&gt;
+      &lt;li&gt;Incrementally or on the fly: Online vs Batch learning&lt;/li&gt;
+      &lt;li&gt;Comparing data points or detecting patterns and build a model for predictions: Instance-based vs model-based learning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The categories are not distinct from each other, they can be combined. ex. Online, model-based, supervised system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;supervisedunsupervised-learning&quot;&gt;Supervised/Unsupervised Learning&lt;/h3&gt;
+
+&lt;h4 id=&quot;supervised-learning&quot;&gt;Supervised learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The training data includes the desired solutions, called labels.&lt;/li&gt;
+  &lt;li&gt;Classification and Regression are two typical tasks.&lt;/li&gt;
+  &lt;li&gt;Some regression algorithms can be used for classification and vice versa.&lt;/li&gt;
+  &lt;li&gt;Some important supervised algorithms are:
+    &lt;ul&gt;
+      &lt;li&gt;kNN&lt;/li&gt;
+      &lt;li&gt;Linear Regression&lt;/li&gt;
+      &lt;li&gt;Logistic Regression&lt;/li&gt;
+      &lt;li&gt;SVMs&lt;/li&gt;
+      &lt;li&gt;Decision Trees and Random Forests&lt;/li&gt;
+      &lt;li&gt;Neural Networks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;unsupervised-learning&quot;&gt;Unsupervised Learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The training data is unlabeled&lt;/li&gt;
+  &lt;li&gt;Some important unsupervised algorithms are:
+    &lt;ul&gt;
+      &lt;li&gt;Clustering: Try to detect similar groups.
+        &lt;ul&gt;
+          &lt;li&gt;k-Means&lt;/li&gt;
+          &lt;li&gt;Hierarchical Cluster Analysis (HCA)&lt;/li&gt;
+          &lt;li&gt;Expectation Maximization&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Visualization: Understand how the data is organized and perhaps identify some unsuspected patterns. and dimensionality reduction: Simplify the data without losing too much information.
+        &lt;ul&gt;
+          &lt;li&gt;Principal Component Analysis (PCA)&lt;/li&gt;
+          &lt;li&gt;Kernel PCA&lt;/li&gt;
+          &lt;li&gt;Locally-Linear Embedding (LLE)&lt;/li&gt;
+          &lt;li&gt;t-distributed Stochastic Neighbor Embedding (t-SNE)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Association rule Learning: Dig into large data and discover the interesting relation between attributes.
+        &lt;ul&gt;
+          &lt;li&gt;Apriori&lt;/li&gt;
+          &lt;li&gt;Eclat&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Another important unsupervised task is anomaly detection. Helps to determine outliers and unusualities in data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;semisupervised-learning&quot;&gt;Semisupervised Learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Semisupervised algorithms can deal with partially labeled data. ex. Google Photos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reinforcement-learning&quot;&gt;Reinforcement Learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The learning system, called an agent, can observe the environment, select and perform actions, and get reward in return. It must learn the best strategy called policy.&lt;/li&gt;
+  &lt;li&gt;ex. Deepmind - AlphaGo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;batch-and-online-learning&quot;&gt;Batch and Online Learning&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Whether or not the system can learn incrementally from a stream of incoming data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;batch-learning&quot;&gt;Batch learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The system is incapable of learning incrementally; it must be trained using all the data available.&lt;/li&gt;
+  &lt;li&gt;Generally takes a lot of time and computing resources.&lt;/li&gt;
+  &lt;li&gt;First trained and then launched.&lt;/li&gt;
+  &lt;li&gt;All the data is needed to retrain the system.&lt;/li&gt;
+  &lt;li&gt;May not be able to use if the data is really huge.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;online-learning&quot;&gt;Online learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You train the system incrementally by feeding it data instances sequentially, either individually or by small groups called mini-batches. Each step is fast and cheap, so the system can learn on the fly.&lt;/li&gt;
+  &lt;li&gt;Great system for continuous flow.&lt;/li&gt;
+  &lt;li&gt;You can get rid of the data after using it.&lt;/li&gt;
+  &lt;li&gt;One important parameter of this system is how fast they should adapt to changing data: this is called learning rate. If it is high, the system will adapt better but will forget quickly. If it is low, will learn slower, but less sensitive to noise in the new data.&lt;/li&gt;
+  &lt;li&gt;With new data, your system’s performance may decrease.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;instance-based-vs-model-based-learning&quot;&gt;Instance-Based vs Model-Based Learning&lt;/h3&gt;
+
+&lt;h4 id=&quot;instance-based-learning&quot;&gt;Instance-Based learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The system learns examples by heart and then generalizes to new cases using similarity measure.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;model-based-learning&quot;&gt;Model-Based learning&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Another way to generalize from a set of examples is to build a model of these examples, then use that to make predictions. This is called mode based learning.&lt;/li&gt;
+  &lt;li&gt;How can you know which values will make your model perform best? To answer this question, you need to specify a performance measure. You can either define a utility function (fitness function) that measures how good your model is, or you can define a cost function that measures how bad it is.&lt;/li&gt;
+  &lt;li&gt;Typical ML project:
+    &lt;ul&gt;
+      &lt;li&gt;You study the data&lt;/li&gt;
+      &lt;li&gt;You select a model&lt;/li&gt;
+      &lt;li&gt;You train in on the training data&lt;/li&gt;
+      &lt;li&gt;Finally, you apply the model to make predictions on new cases (inference)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;main-challenges-of-machine-learning&quot;&gt;Main Challenges of Machine Learning&lt;/h2&gt;
+
+&lt;p&gt;Two things that can go wrong are Bad Data, Bad Algorithm…&lt;/p&gt;
+
+&lt;h3 id=&quot;insufficient-quantity-of-training-data&quot;&gt;Insufficient Quantity of Training Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It takes a lot of data for most Machine Learning algorithms to work properly.&lt;/li&gt;
+  &lt;li&gt;If you don’t have enough data, none of the other things that you can do can save your system…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;nonrepresentative-training-data&quot;&gt;Nonrepresentative Training Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In order to generalize well, it is crucial that your training data be representative of the new cases you want to generalize to.&lt;/li&gt;
+  &lt;li&gt;Sampling bias: Systematic error due to a non-random sample of a population&lt;/li&gt;
+  &lt;li&gt;ex. US Presidental Election 1936, the Literary Digest’s biased poll&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;poor-quality-data&quot;&gt;Poor Quality Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If your training data is full of errors, outliers, and noise, it will make it harder for system to detect underlying patterns, so your system is less likely to perform well.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;irrelevant-features&quot;&gt;Irrelevant Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A critical part of the Machine Learning project is coming up with a good set of features to train on. This process called feature engineering involves:
+    &lt;ul&gt;
+      &lt;li&gt;Feature selection: Selecting the most useful features.&lt;/li&gt;
+      &lt;li&gt;Feature extraction: Combining existing features to produce a more useful one.&lt;/li&gt;
+      &lt;li&gt;Creating new features by gathering new data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;overfitting-the-training-data&quot;&gt;Overfitting the Training data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The model performs well on the training data, but it does not generalize well.&lt;/li&gt;
+  &lt;li&gt;Overfitting happens when the model is too complex relative to the amount and noisiness of the training data. The possible solutions are:
+    &lt;ul&gt;
+      &lt;li&gt;To simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data or by constructing the model.&lt;/li&gt;
+      &lt;li&gt;To gather more training data&lt;/li&gt;
+      &lt;li&gt;To reduce the noise in the training data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Constraining a model to make it simpler and reduce the risk of overfitting is called regularization.&lt;/li&gt;
+  &lt;li&gt;You want to find the balance between fitting the data perfectly and keeping the model simple enough to ensure that it will generalize well.&lt;/li&gt;
+  &lt;li&gt;The amount of regularization to apply during learning can be controlled by a hyperparameter. A hyperparameter is a parameter of a learning algorithm (not of the model).&lt;/li&gt;
+  &lt;li&gt;Tuning hyperparameters is an important part of building a Machine Learning system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;underfitting-the-training-data&quot;&gt;Underfitting the Training data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Opposite of overfitting the data.&lt;/li&gt;
+  &lt;li&gt;It occurs when your model is too simple to learn the underlying structure of the data.&lt;/li&gt;
+  &lt;li&gt;Main options to fix this problem are:
+    &lt;ul&gt;
+      &lt;li&gt;Selecting more powerful model, with more parameters.&lt;/li&gt;
+      &lt;li&gt;Feeding better features to the learning algorithm.&lt;/li&gt;
+      &lt;li&gt;Reducing the constraints on the model.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;testing-and-validating&quot;&gt;Testing and Validating&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The only way to know how well a model will generalize to new cases is to actually try it out on new cases.&lt;/li&gt;
+  &lt;li&gt;Split the data: Training set and test set&lt;/li&gt;
+  &lt;li&gt;The error rate on new cases is called the generalization error (or out of sample error), and by evaluating your model on the test set, you get an estimation of this error. This value tells you how well your model performs on instances that it has never seen before.&lt;/li&gt;
+  &lt;li&gt;If the training error is low and generalization error is high that means that your model is overfitting.&lt;/li&gt;
+  &lt;li&gt;It is common to use 80% of the data for training and hold out 20% for testing.&lt;/li&gt;
+  &lt;li&gt;To solve the issue of overfitting hyperparameters for the test data, you can divide the data to 3, adding validation set to existing ones.&lt;/li&gt;
+  &lt;li&gt;Train multiple models with various hyperparameters using the training set, you select the model and hyperparameters that perform best on the validation set, and when you are happy with your model you run a single final test against the test set to get an estimate of the generalization error.&lt;/li&gt;
+  &lt;li&gt;To avoid ‘wasting’ too much training data in validation sets, use cross-validation: The training set is split into complementary subsets, and each model is trained against a different combination of these subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts. Next final model is trained using these hyperparameters on the full training set.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Bedir Tapkan</name></author><category term="Summary" /><category term="Data Science" /><summary type="html">Summary: Hands-On Machine Learning with Scikit-Learn &amp;amp; TensorFlow</summary></entry><entry><title type="html">Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks</title><link href="http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks" rel="alternate" type="text/html" title="Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks" /><published>2018-01-29T17:05:00-06:00</published><updated>2018-01-29T17:05:00-06:00</updated><id>http://localhost:4000/Engineering%20Extreme%20Event%20Forecasting%20at%20Uber%20with%20Recurrent%20Neural%20Networks</id><content type="html" xml:base="http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks">&lt;h3 id=&quot;by-nikolay-laptev-slawek-smyl--santhosh-shanmugam&quot;&gt;&lt;em&gt;By Nikolay Laptev, Slawek Smyl, &amp;amp; Santhosh Shanmugam&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eng.uber.com/neural-networks/&quot;&gt;Link to full post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The goal of the experiment is predicted where, when, and how many rides requests Uber will receive at any given time. Creating this model is challenging because for special days in the year, there are numerous unexpected activities. For example, NYE (new years eve) is a very busy day for uber, but it is not correlated with the month or anything also this kind of days happens once in a year so hard to get in data. In addition to historical data, extreme event prediction also depends on numerous external factors, including weather, population growth etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://eng.uber.com/wp-content/uploads/2017/06/image2-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-ubers-new-extreme-event-forecasting-model&quot;&gt;Creating Uber’s new extreme event forecasting model&lt;/h2&gt;
+
+&lt;p&gt;They decided to use LSTD and because of data shortages, they use data from many cities at once, which greatly improved our accuracy.&lt;/p&gt;
+
+&lt;h2 id=&quot;building-a-new-architecture-with-neural-networks&quot;&gt;Building a new architecture with neural networks&lt;/h2&gt;
+
+&lt;p&gt;This raw data was used in our training model to conduct simple preprocessing, including log transformation, scaling, and data detrending.&lt;/p&gt;
+
+&lt;h3 id=&quot;training-with-sliding-windows&quot;&gt;Training with sliding windows&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://eng.uber.com/wp-content/uploads/2017/06/image2-e1496957521819.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tailoring-our-lstm-model&quot;&gt;Tailoring our LSTM model&lt;/h3&gt;
+
+&lt;p&gt;During testing, vanilla (the not customized form of) LSTM did not perform superior performance compared to the baseline model, which included a combination of univariate forecasting and machine learning elements.&lt;/p&gt;
+
+&lt;p&gt;To improve our accuracy, they incorporated an automatic feature extraction module into our model, depicted below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.33.18-PM-e1496957645776.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;the model first primes the network by automatic, ensemble-based (combining multiple models) feature extraction. After feature vectors are extracted, they are averaged using a standard ensemble technique. The final vector is then concatenated with the input to produce the final forecast.&lt;/p&gt;
+
+&lt;p&gt;During testing, they were able to achieve a 14.09 percent symmetric mean absolute percentage error (SMAPE) improvement over the base LSTM architecture.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-the-new-forecasting-model&quot;&gt;Using the new forecasting model&lt;/h2&gt;
+
+&lt;p&gt;For the purpose of this article, they built a model using the five-year daily history of completed Uber trips across the U.S. over the course of seven days before, during, and after major holidays like Christmas Day and New Year’s Day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.45.13-PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://eng.uber.com/wp-content/uploads/2017/06/image3-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From our experience, they define three dimensions for deciding if the neural network model is right for your use case: (a) number of time series, (b) length of time series, and (c) correlation among time series. All three of these dimensions increase the likelihood that the neural network approach will forecast more accurately relative to the classical time series model.&lt;/p&gt;
+
+&lt;h3 id=&quot;forecasting-in-the-future&quot;&gt;Forecasting in the Future&lt;/h3&gt;
+
+&lt;p&gt;If this type of research excites you (and you happen to be Down Under, check out Uber’s time series workshop during the International Machine Learning Convention on August 6, 2017, in Sydney.&lt;/p&gt;</content><author><name>Ahmet Hamza Emra</name></author><category term="Summary" /><category term="Data Science" /><category term="Anomaly" /><summary type="html">By Nikolay Laptev, Slawek Smyl, &amp;amp; Santhosh Shanmugam</summary></entry><entry><title type="html">Time Series Anomaly Detection Algorithms</title><link href="http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms" rel="alternate" type="text/html" title="Time Series Anomaly Detection Algorithms" /><published>2018-01-27T11:49:00-06:00</published><updated>2018-01-27T11:49:00-06:00</updated><id>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</id><content type="html" xml:base="http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms">&lt;h1 id=&quot;time-series-anomaly-detection-algorithms-blog-summary&quot;&gt;Time Series Anomaly Detection Algorithms, Blog Summary&lt;/h1&gt;
 
 &lt;p&gt;​	&lt;em&gt;This is a summary of a blog post, published on medium.com.&lt;/em&gt;&lt;/p&gt;
 

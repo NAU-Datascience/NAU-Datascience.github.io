@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>http://localhost:4000/</title>
+   
+   <link>http://localhost:4000/</link>
+   <description>Academic Paper Summaries</description>
+   <language>en-uk</language>
+   
+   <title>
+   <![CDATA[ NAU-DataScience ]]>
+   </title>
+   <description>
+   <![CDATA[ Academic Paper Summaries ]]>
+   </description>
+   <link>http://localhost:4000/</link>
+   <image>
+   <url>http://localhost:4000/assets/images/favicon.png</url>
+   <title>NAU-DataScience</title>
+   <link>http://localhost:4000/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks</title>
+	  <link>http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2018-01-29T17:05:00-06:00</pubDate>
+	  <guid>http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
+	  <description><![CDATA[
+	     <h3 id="by-nikolay-laptev-slawek-smyl--santhosh-shanmugam"><em>By Nikolay Laptev, Slawek Smyl, &amp; Santhosh Shanmugam</em></h3>
+
+<p><a href="https://eng.uber.com/neural-networks/">Link to full post</a></p>
+
+<p>The goal of the experiment is predicted where, when, and how many rides requests Uber will receive at any given time. Creating this model is challenging because for special days in the year, there are numerous unexpected activities. For example, NYE (new years eve) is a very busy day for uber, but it is not correlated with the month or anything also this kind of days happens once in a year so hard to get in data. In addition to historical data, extreme event prediction also depends on numerous external factors, including weather, population growth etc.</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image2-2.png" alt="" /></p>
+
+<h2 id="creating-ubers-new-extreme-event-forecasting-model">Creating Uber’s new extreme event forecasting model</h2>
+
+<p>They decided to use LSTD and because of data shortages, they use data from many cities at once, which greatly improved our accuracy.</p>
+
+<h2 id="building-a-new-architecture-with-neural-networks">Building a new architecture with neural networks</h2>
+
+<p>This raw data was used in our training model to conduct simple preprocessing, including log transformation, scaling, and data detrending.</p>
+
+<h3 id="training-with-sliding-windows">Training with sliding windows</h3>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image2-e1496957521819.png" alt="" /></p>
+
+<h3 id="tailoring-our-lstm-model">Tailoring our LSTM model</h3>
+
+<p>During testing, vanilla (the not customized form of) LSTM did not perform superior performance compared to the baseline model, which included a combination of univariate forecasting and machine learning elements.</p>
+
+<p>To improve our accuracy, they incorporated an automatic feature extraction module into our model, depicted below:</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.33.18-PM-e1496957645776.png" alt="" /></p>
+
+<p>the model first primes the network by automatic, ensemble-based (combining multiple models) feature extraction. After feature vectors are extracted, they are averaged using a standard ensemble technique. The final vector is then concatenated with the input to produce the final forecast.</p>
+
+<p>During testing, they were able to achieve a 14.09 percent symmetric mean absolute percentage error (SMAPE) improvement over the base LSTM architecture.</p>
+
+<h2 id="using-the-new-forecasting-model">Using the new forecasting model</h2>
+
+<p>For the purpose of this article, they built a model using the five-year daily history of completed Uber trips across the U.S. over the course of seven days before, during, and after major holidays like Christmas Day and New Year’s Day.</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.45.13-PM.png" alt="" /></p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image3-1.png" alt="" /></p>
+
+<p>From our experience, they define three dimensions for deciding if the neural network model is right for your use case: (a) number of time series, (b) length of time series, and (c) correlation among time series. All three of these dimensions increase the likelihood that the neural network approach will forecast more accurately relative to the classical time series model.</p>
+
+<h3 id="forecasting-in-the-future">Forecasting in the Future</h3>
+
+<p>If this type of research excites you (and you happen to be Down Under, check out Uber’s time series workshop during the International Machine Learning Convention on August 6, 2017, in Sydney.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
