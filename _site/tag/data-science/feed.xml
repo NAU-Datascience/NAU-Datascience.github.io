@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>http://localhost:4000/</title>
+      <title>/</title>
    
-   <link>http://localhost:4000/</link>
+   <link>/</link>
    <description>Academic Paper Summaries</description>
    <language>en-uk</language>
    
@@ -15,21 +15,21 @@
    <description>
    <![CDATA[ Academic Paper Summaries ]]>
    </description>
-   <link>http://localhost:4000/</link>
+   <link>/</link>
    <image>
-   <url>http://localhost:4000/assets/images/favicon.png</url>
+   <url>/assets/images/favicon.png</url>
    <title>NAU-DataScience</title>
-   <link>http://localhost:4000/</link>
+   <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Book Summary Ch 1: The Machine Learning Landscape</title>
-	  <link>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</link>
+	  <link>/Chapter-1-The-Machine-Learning-Landscape</link>
 		
 				
 						<author>Bedir Tapkan</author>
@@ -40,7 +40,7 @@
 				
 		
 	  <pubDate>2018-02-19T10:55:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</guid>
+	  <guid>/Chapter-1-The-Machine-Learning-Landscape</guid>
 	  <description><![CDATA[
 	     <h1 id="summary-hands-on-machine-learning-with-scikit-learn--tensorflow">Summary: Hands-On Machine Learning with Scikit-Learn &amp; TensorFlow</h1>
 
@@ -321,7 +321,7 @@
 
 	<item>
 	  <title>Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks</title>
-	  <link>http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
+	  <link>/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
 		
 				
 		
@@ -332,7 +332,7 @@
 				
 		
 	  <pubDate>2018-01-29T17:05:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
+	  <guid>/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
 	  <description><![CDATA[
 	     <h3 id="by-nikolay-laptev-slawek-smyl--santhosh-shanmugam"><em>By Nikolay Laptev, Slawek Smyl, &amp; Santhosh Shanmugam</em></h3>
 
@@ -385,7 +385,7 @@
 
 	<item>
 	  <title>Time Series Anomaly Detection Algorithms</title>
-	  <link>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</link>
+	  <link>/Time-Series-Anomaly-Detection-Algorithms</link>
 		
 				
 						<author>Bedir Tapkan</author>
@@ -396,7 +396,7 @@
 				
 		
 	  <pubDate>2018-01-27T11:49:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</guid>
+	  <guid>/Time-Series-Anomaly-Detection-Algorithms</guid>
 	  <description><![CDATA[
 	     <h1 id="time-series-anomaly-detection-algorithms-blog-summary">Time Series Anomaly Detection Algorithms, Blog Summary</h1>
 
@@ -537,7 +537,7 @@
 
 	<item>
 	  <title>Time Series Anomaly Detection</title>
-	  <link>http://localhost:4000/Time-Series-Anomaly-Detection</link>
+	  <link>/Time-Series-Anomaly-Detection</link>
 		
 				
 		
@@ -548,7 +548,7 @@
 				
 		
 	  <pubDate>2018-01-27T04:00:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Time-Series-Anomaly-Detection</guid>
+	  <guid>/Time-Series-Anomaly-Detection</guid>
 	  <description><![CDATA[
 	     <h3 id="detection-of-anomalous-drops-with-limited-features-and-sparse-examples-in-noisyhighly-periodic-data">Detection of Anomalous Drops with Limited Features and Sparse Examples in NoisyHighly Periodic Data</h3>
 
@@ -974,7 +974,7 @@ on the data, each problem potentially requires its own model.</p>
 
 	<item>
 	  <title>Anomaly Detection of Time Series Data using Machine Learning & Deep Learning</title>
-	  <link>http://localhost:4000/Anomaly-Detection-using-ml</link>
+	  <link>/Anomaly-Detection-using-ml</link>
 		
 				
 						<author>Bedir Tapkan</author>
@@ -985,7 +985,7 @@ on the data, each problem potentially requires its own model.</p>
 				
 		
 	  <pubDate>2018-01-27T03:00:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Anomaly-Detection-using-ml</guid>
+	  <guid>/Anomaly-Detection-using-ml</guid>
 	  <description><![CDATA[
 	     <p><em>This is a summary of a blog post, published on medium.com.</em></p>
 
@@ -1224,7 +1224,7 @@ on the data, each problem potentially requires its own model.</p>
 
 	<item>
 	  <title>Anomaly Detection</title>
-	  <link>http://localhost:4000/Anomaly-Detection</link>
+	  <link>/Anomaly-Detection</link>
 		
 				
 		
@@ -1235,7 +1235,7 @@ on the data, each problem potentially requires its own model.</p>
 				
 		
 	  <pubDate>2018-01-27T02:00:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Anomaly-Detection</guid>
+	  <guid>/Anomaly-Detection</guid>
 	  <description><![CDATA[
 	     <p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/anomaly-detection">LINK</a></p>
 

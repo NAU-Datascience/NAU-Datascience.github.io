@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>/</title>
+   
+   <link>/</link>
+   <description>Academic Paper Summaries</description>
+   <language>en-uk</language>
+   
+   <title>
+   <![CDATA[ NAU-DataScience ]]>
+   </title>
+   <description>
+   <![CDATA[ Academic Paper Summaries ]]>
+   </description>
+   <link>/</link>
+   <image>
+   <url>/assets/images/favicon.png</url>
+   <title>NAU-DataScience</title>
+   <link>/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Learning Representations by back-propagating errors</title>
+	  <link>/Learning-Representations-by-back-propagating-errors</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2018-02-20T02:48:00-06:00</pubDate>
+	  <guid>/Learning-Representations-by-back-propagating-errors</guid>
+	  <description><![CDATA[
+	     <h3 id="by-david-e-rumelhart-geoffrey-e-hinton--ronald-j-williams">By <em>David E. Rumelhart, Geoffrey E. Hinton &amp; Ronald J Williams</em></h3>
+
+<p><a href="http://www.cs.toronto.edu/~hinton/absps/naturebp.pdf">Original Paper</a></p>
+
+<p>There have been many attempts to neural network models. But non of them are capable of learning representaions with using hidden layers. If the input is directly connected to output unit, it is relatively easy to find learning rules that iteratively adjust the weight of the vector to progressively reduce the difference between the actual and desired output. But with the hidden units, learning becomes more interesting and more difficult. In perceptron, there are ‘feature analysers’ but these are hand design so they do not learn the representations. To get the simplest learning procedure, what one can do is;</p>
+
+<p>First, compute the linear function for state of neuron,</p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_1.PNG" alt="" /></p>
+
+<p>Then, calculate the output of that layer by using non-linear function. In this paper what has been introduced is sigmoid function, but they also note that any function with has a bounded derivative will do.</p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_2.PNG" alt="" /></p>
+
+<p>The aim is to find a set of weights that ensure that for each input vector the output vector as same as desired output vector. If there is a fixed, finite set of input-output cases, the total error in the performance of the network with a particular set of weights can be computed by comparing the actual output and what network calculate.</p>
+
+<p>To minimize E by gradient decent, it is necessary to compute the partial derivative of E with respect to each weight in the network. This procedure of computing partial derivative from top to bottom, is called backward pass.</p>
+
+<p>After computing derivative of E, we can find the other derivatives by using chain rule. This means that we know how much a change in the total input (or any other unit in network) to an output unit will affect the error. Then, change each weight by an amount proportional to the accumulated derivative of E with respect to w.</p>
+
+<p>Family Tree</p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_3.PNG" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_4.PNG" alt="" /></p>
+
+<p>The most oblivious draw back of the learning procedure is that the error surface may contain, so gradient decent is not guaranteed to find a global minimum. However, experience with many task shows that the network very rarely get stuck in poor local minima that are significantly worse than the global minimum. They found this kind of undesirable behavior in networks that have just enough connection to perform task. Adding few more connection, adds a new dimension which provide paths around the local minima.</p>
+
+<p><strong>The learning procedure, in its current form, is not plausible model of learning in brains. However, applying the procedure to various tasks shows that interning internal representations can be constructed by gradient decent in weight-space, and this suggest that it is worth looking for more biologically plausible ways of doing gradient decent in neural network.</strong></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>http://localhost:4000/</title>
+      <title>/</title>
    
-   <link>http://localhost:4000/</link>
+   <link>/</link>
    <description>Academic Paper Summaries</description>
    <language>en-uk</language>
    
@@ -27,21 +27,21 @@
    <description>
    <![CDATA[ Academic Paper Summaries ]]>
    </description>
-   <link>http://localhost:4000/</link>
+   <link>/</link>
    <image>
-   <url>http://localhost:4000/assets/images/favicon.png</url>
+   <url>/assets/images/favicon.png</url>
    <title>Bedir Tapkan - NAU-DataScience</title>
-   <link>http://localhost:4000/</link>
+   <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="http://localhost:4000/author/bedir/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/author/bedir/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Book Summary Ch 1: The Machine Learning Landscape</title>
-	  <link>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</link>
+	  <link>/Chapter-1-The-Machine-Learning-Landscape</link>
 		
 				
 						<author>Bedir Tapkan</author>
@@ -52,7 +52,7 @@
 				
 		
 	  <pubDate>2018-02-19T10:55:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</guid>
+	  <guid>/Chapter-1-The-Machine-Learning-Landscape</guid>
 	  <description><![CDATA[
 	     <h1 id="summary-hands-on-machine-learning-with-scikit-learn--tensorflow">Summary: Hands-On Machine Learning with Scikit-Learn &amp; TensorFlow</h1>
 
@@ -333,7 +333,7 @@
 
 	<item>
 	  <title>Time Series Anomaly Detection Algorithms</title>
-	  <link>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</link>
+	  <link>/Time-Series-Anomaly-Detection-Algorithms</link>
 		
 				
 						<author>Bedir Tapkan</author>
@@ -344,7 +344,7 @@
 				
 		
 	  <pubDate>2018-01-27T11:49:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</guid>
+	  <guid>/Time-Series-Anomaly-Detection-Algorithms</guid>
 	  <description><![CDATA[
 	     <h1 id="time-series-anomaly-detection-algorithms-blog-summary">Time Series Anomaly Detection Algorithms, Blog Summary</h1>
 
@@ -485,7 +485,7 @@
 
 	<item>
 	  <title>Anomaly Detection of Time Series Data using Machine Learning & Deep Learning</title>
-	  <link>http://localhost:4000/Anomaly-Detection-using-ml</link>
+	  <link>/Anomaly-Detection-using-ml</link>
 		
 				
 						<author>Bedir Tapkan</author>
@@ -496,7 +496,7 @@
 				
 		
 	  <pubDate>2018-01-27T03:00:00-06:00</pubDate>
-	  <guid>http://localhost:4000/Anomaly-Detection-using-ml</guid>
+	  <guid>/Anomaly-Detection-using-ml</guid>
 	  <description><![CDATA[
 	     <p><em>This is a summary of a blog post, published on medium.com.</em></p>
 

@@ -4,7 +4,22 @@
     <title> - Articles</title>
     <description>Academic Paper Summaries</description>
     <link>
-    http://localhost:4000</link>
+    </link>
+    
+      
+      <item>
+        <title>Learning Representations by back-propagating errors</title>
+        
+          <description>&lt;h3 id=&quot;by-david-e-rumelhart-geoffrey-e-hinton--ronald-j-williams&quot;&gt;By &lt;em&gt;David E. Rumelhart, Geoffrey E. Hinton &amp;amp; Ronald J Williams&lt;/em&gt;&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 20 Feb 2018 02:48:00 -0600</pubDate>
+        <link>
+        /Learning-Representations-by-back-propagating-errors</link>
+        <guid isPermaLink="true">/Learning-Representations-by-back-propagating-errors</guid>
+      </item>
+      
     
       
       <item>
@@ -16,8 +31,8 @@
         
         <pubDate>Mon, 19 Feb 2018 10:55:00 -0600</pubDate>
         <link>
-        http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</link>
-        <guid isPermaLink="true">http://localhost:4000/Chapter-1-The-Machine-Learning-Landscape</guid>
+        /Chapter-1-The-Machine-Learning-Landscape</link>
+        <guid isPermaLink="true">/Chapter-1-The-Machine-Learning-Landscape</guid>
       </item>
       
     
@@ -31,8 +46,8 @@
         
         <pubDate>Mon, 29 Jan 2018 17:05:00 -0600</pubDate>
         <link>
-        http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
-        <guid isPermaLink="true">http://localhost:4000/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
+        /Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
+        <guid isPermaLink="true">/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
       </item>
       
     
@@ -46,8 +61,8 @@
         
         <pubDate>Sat, 27 Jan 2018 11:49:00 -0600</pubDate>
         <link>
-        http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</link>
-        <guid isPermaLink="true">http://localhost:4000/Time-Series-Anomaly-Detection-Algorithms</guid>
+        /Time-Series-Anomaly-Detection-Algorithms</link>
+        <guid isPermaLink="true">/Time-Series-Anomaly-Detection-Algorithms</guid>
       </item>
       
     
@@ -61,8 +76,8 @@
         
         <pubDate>Sat, 27 Jan 2018 04:00:00 -0600</pubDate>
         <link>
-        http://localhost:4000/Time-Series-Anomaly-Detection</link>
-        <guid isPermaLink="true">http://localhost:4000/Time-Series-Anomaly-Detection</guid>
+        /Time-Series-Anomaly-Detection</link>
+        <guid isPermaLink="true">/Time-Series-Anomaly-Detection</guid>
       </item>
       
     
@@ -76,8 +91,8 @@
         
         <pubDate>Sat, 27 Jan 2018 03:00:00 -0600</pubDate>
         <link>
-        http://localhost:4000/Anomaly-Detection-using-ml</link>
-        <guid isPermaLink="true">http://localhost:4000/Anomaly-Detection-using-ml</guid>
+        /Anomaly-Detection-using-ml</link>
+        <guid isPermaLink="true">/Anomaly-Detection-using-ml</guid>
       </item>
       
     
@@ -91,8 +106,8 @@
         
         <pubDate>Sat, 27 Jan 2018 02:00:00 -0600</pubDate>
         <link>
-        http://localhost:4000/Anomaly-Detection</link>
-        <guid isPermaLink="true">http://localhost:4000/Anomaly-Detection</guid>
+        /Anomaly-Detection</link>
+        <guid isPermaLink="true">/Anomaly-Detection</guid>
       </item>
       
     
