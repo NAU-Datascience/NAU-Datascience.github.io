@@ -30,7 +30,7 @@ Then, calculate the output of that layer by using non-linear function. In this p
 
 The aim is to find a set of weights that ensure that for each input vector the output vector as same as desired output vector. If there is a fixed, finite set of input-output cases, the total error in the performance of the network with a particular set of weights can be computed by comparing the actual output and what network calculate. 
 
-To minimize R by gradient decent, it is necessary to compute the partial derivative of E with respect to each weight in the network. This procedure of computing partial derivative from top to bottom, is called backward pass. 
+To minimize E by gradient decent, it is necessary to compute the partial derivative of E with respect to each weight in the network. This procedure of computing partial derivative from top to bottom, is called backward pass. 
 
 After computing derivative of E, we can find the other derivatives by using chain rule. This means that we know how much a change in the total input (or any other unit in network) to an output unit will affect the error. Then, change each weight by an amount proportional to the accumulated derivative of E with respect to w.  
 
