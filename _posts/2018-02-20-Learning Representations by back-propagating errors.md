@@ -20,7 +20,7 @@ author: hamza
 
 [Original Paper](http://www.cs.toronto.edu/~hinton/absps/naturebp.pdf)
 
-There have been many attempts to neural network models. If the input is directly connected to output unit, it is relatively easy to find learning rules that iteratively adjust the weight of the vector to progressively reduce the difference between the actual and desired output. But with the hidden units, learning becomes more interesting and more difficult. In perceptron, there are 'feature analysers' but these are hand design so they do not learn the representations. 
+There have been many attempts to neural network models. But non of them are capable of learning representaions with using more layer. If the input is directly connected to output unit, it is relatively easy to find learning rules that iteratively adjust the weight of the vector to progressively reduce the difference between the actual and desired output. But with the hidden units, learning becomes more interesting and more difficult. In perceptron, there are 'feature analysers' but these are hand design so they do not learn the representations. 
 
 To get the simplest learning procedure, what one can do is;
 
