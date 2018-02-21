@@ -46,7 +46,7 @@ module Jekyll
       @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), "author.html")
+      self.read_yaml(File.join(base, '_layouts'), "author.xml")
       self.data["grouptype"] = type
       self.data[type] = val
     end
