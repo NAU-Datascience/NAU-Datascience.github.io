@@ -8,29 +8,29 @@ language: 'en-uk'
 baseurl: /
 
 # Website info
-title: NAU-DataScience
-description: Academic Paper Summaries
+title: Ghost
+description: The professional publishing platform
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url: https://myJekyll.github.io/jasper2/
+production_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
 source_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
 
 # Social info
 navigation: True # show the navbar links
-subscribers: False # you need to connect an external service for this to work,
+subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-# twitter: tryghost # replace by your username
-# facebook: ghost # replace by your username
+twitter: tryghost # replace by your username
+facebook: ghost # replace by your username
 
 # Disqus
 disqus: False
-disqus_shortname: myjekyll # replace with your disqus username
+disqus_shortname: jekyller # replace with your disqus username
 
 # Google Analytics
-# google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title
@@ -42,7 +42,6 @@ permalink: /:title
 
 # gems and other configs
 plugins: [jekyll-paginate, jekyll-feed]
-exclude: [vendor]
 
 feed:
   path: feed.xml
@@ -72,15 +71,23 @@ repo: NAU-Datascience.github.io
 branch: master
 # relative_source: ../jasper2/
 # destination: ../jasper2-pages/
-# production_url:  https://myJekyll.github.io/jasper2/
-# source_url:  https://github.com/myJekyll/jasper2/
+# production_url:  https://nau-datascience.github.io
+# source_url:  https://nau-datascience.github.io
 
 exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
+  - assets/css
+  - node_modules
   - vendor
   - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*

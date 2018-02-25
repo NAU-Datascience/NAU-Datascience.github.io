@@ -1,8 +1,16 @@
-summary:
-  name: summary
-  description: Perhaps the best test of a man's intelligence is his capacity for making a summary - Lytton Strachey
-  cover: assets/images/summary.jpg
-data-science:
-  name: data-science
-  description: Without data you are just another person with opinion
-  cover: assets/images/data-science.jpg
+speeches:
+  name: speeches
+  description: Some of the greatest words ever spoken.
+  cover: assets/images/speeches.jpg
+fiction:
+  name: fiction
+  description: False
+  cover: False
+fables:
+  name: fables
+  description: A series of short stories that make you think.
+  cover: assets/images/fables.jpg
+getting-started:
+  name: getting-started
+  description: False
+  cover: False
