@@ -14,7 +14,7 @@ cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url: https://myJekyll.github.io/jasper2/
+production_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
 source_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
 
 # Social info
