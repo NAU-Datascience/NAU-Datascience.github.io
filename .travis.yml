@@ -1,0 +1,15 @@
+sudo: false
+language: ruby
+cache: bundler
+rvm:
+- 2.4.2
+install:
+- bundle install
+script: "bundle exec rake neo4j:install['community-2.2.0-M02'] neo4j:start default --trace"
+  # bundle exec rake site:deploy --quiet
+env:
+  global:
+    secure: YQgqSlaXUKm9bE4+y7FfJTgjsrqgeGczMkb2uSXtGHYYSqBQ6PdjTihfFcabHnLVRG+TCmHyhaDnbmS7XOUbK5+WJZnLLXiq6Kh2l6Vb1e4NtUVhGiPyuJIWrKTRbCbKkABP4yG8nRQVqy/N+3Lh/BFbg28dxyOBMkzGO5lb5sVmTX2lzwn0HhOX2A+WPEBbdX09sdmFF6TreZ5CCFiA7FOutcbZZNpQz0vPpYS9rC6BdGLSBXBFGF/53t0v0zKFSfoMKujulqcI8t3EGekAG2ieZBvqc6fPl9Ki+azwCSZAMcT3o521B8onipG+E8RppvUG8zs0k2YVscuvvD7T1BLlgCFmMEz76exz4UvhxfradXfGIacZ4+h6Ua+eWlmbetfUmjyCq0UNcDlws2ZbmA2d8rPDdkOaxI9GtyUaRrQQ6WnV6YCTqMuX1vlAbpbAq0GEvea33qzwDDcwfk/x/Eh37d6RKuz/KqJ3MpnsRJOVk1cYg6Dp06jZfEeS4mn+d+Ow/kPjQS90afDmb71tEIiXVjpLVUtUb66XvEtBRjxjnUnR/bCVbiq/SF6iAUG2xS/J5m8mPg0mnaG4dWDCYdfVsGwQQApSlDIvRcIuL4K7ZlTSc0w1PWoQNbEs+35nxU/Kldbq22ArKWKzodjTWTg/A3Pi/iRhWpCcpcrvk4M=
+branches:
+  only:
+  - master
