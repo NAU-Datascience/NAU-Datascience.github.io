@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>Academic Paper Summaries</description>
     <link>
-    http://localhost:4000</link>
+    </link>
     
       
       <item>
@@ -14,10 +14,10 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 05:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 10:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/welcome</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome</guid>
+        /welcome</link>
+        <guid isPermaLink="true">/welcome</guid>
       </item>
       
     
@@ -69,10 +69,10 @@
 &lt;p&gt;This should get you going with the vast majority of what you need to do in the editor, but if you're still curious about more advanced tips then check out the &lt;a href=&quot;/advanced-markdown/&quot;&gt;Advanced Markdown Guide&lt;/a&gt; - or if you'd rather learn about how Ghost taxononomies work, we've got a overview of &lt;a href=&quot;/using-tags/&quot;&gt;how to use Ghost tags&lt;/a&gt;.&lt;/p&gt;
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 04:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 09:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/the-editor</link>
-        <guid isPermaLink="true">http://localhost:4000/the-editor</guid>
+        /the-editor</link>
+        <guid isPermaLink="true">/the-editor</guid>
       </item>
       
     
@@ -109,10 +109,10 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 03:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 08:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/using-tags</link>
-        <guid isPermaLink="true">http://localhost:4000/using-tags</guid>
+        /using-tags</link>
+        <guid isPermaLink="true">/using-tags</guid>
       </item>
       
     
@@ -133,10 +133,10 @@
 &lt;p&gt;It's a good idea to ask all of your users to fill out their user profiles, including bio and social links. These will populate rich structured data for posts and generally create more opportunities for themes to fully populate their design.&lt;/p&gt;
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 02:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 07:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/managing-users</link>
-        <guid isPermaLink="true">http://localhost:4000/managing-users</guid>
+        /managing-users</link>
+        <guid isPermaLink="true">/managing-users</guid>
       </item>
       
     
@@ -152,10 +152,10 @@
 &lt;p&gt;Do remember though, this is &lt;em&gt;not&lt;/em&gt; secure authentication. You shouldn't rely on this feature for protecting important private data. It's just a simple, shared pass-phrase for very basic privacy.&lt;/p&gt;
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 01:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 06:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/private-sites</link>
-        <guid isPermaLink="true">http://localhost:4000/private-sites</guid>
+        /private-sites</link>
+        <guid isPermaLink="true">/private-sites</guid>
       </item>
       
     
@@ -208,10 +208,10 @@
 &lt;/ol&gt;
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 05:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/advanced-markdown</link>
-        <guid isPermaLink="true">http://localhost:4000/advanced-markdown</guid>
+        /advanced-markdown</link>
+        <guid isPermaLink="true">/advanced-markdown</guid>
       </item>
       
     
@@ -238,10 +238,10 @@
 &lt;p&gt;If you want to chat with other people making Ghost themes to get any advice or help, there's also a &lt;strong&gt;#themes&lt;/strong&gt; channel in our &lt;a href=&quot;https://slack.ghost.org&quot;&gt;public Slack community&lt;/a&gt; which we always recommend joining!&lt;/p&gt;
 </description>
         
-        <pubDate>Wed, 26 Jul 2017 23:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Jul 2017 04:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/themes</link>
-        <guid isPermaLink="true">http://localhost:4000/themes</guid>
+        /themes</link>
+        <guid isPermaLink="true">/themes</guid>
       </item>
       
     
@@ -253,10 +253,10 @@
 
 </description>
         
-        <pubDate>Tue, 12 Aug 2014 05:18:00 -0500</pubDate>
+        <pubDate>Tue, 12 Aug 2014 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/the-businessman-and-fisherman</link>
-        <guid isPermaLink="true">http://localhost:4000/the-businessman-and-fisherman</guid>
+        /the-businessman-and-fisherman</link>
+        <guid isPermaLink="true">/the-businessman-and-fisherman</guid>
       </item>
       
     
@@ -268,10 +268,10 @@
 
 </description>
         
-        <pubDate>Sat, 01 Sep 2012 05:00:00 -0500</pubDate>
+        <pubDate>Sat, 01 Sep 2012 10:00:00 +0000</pubDate>
         <link>
-        http://localhost:4000/a-full-and-comprehensive-style-test</link>
-        <guid isPermaLink="true">http://localhost:4000/a-full-and-comprehensive-style-test</guid>
+        /a-full-and-comprehensive-style-test</link>
+        <guid isPermaLink="true">/a-full-and-comprehensive-style-test</guid>
       </item>
       
     
@@ -283,10 +283,10 @@
 
 </description>
         
-        <pubDate>Wed, 28 Aug 1963 05:18:00 -0500</pubDate>
+        <pubDate>Wed, 28 Aug 1963 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/i-have-a-dream</link>
-        <guid isPermaLink="true">http://localhost:4000/i-have-a-dream</guid>
+        /i-have-a-dream</link>
+        <guid isPermaLink="true">/i-have-a-dream</guid>
       </item>
       
     
@@ -298,10 +298,10 @@
 
 </description>
         
-        <pubDate>Sun, 12 Dec 1948 04:18:00 -0600</pubDate>
+        <pubDate>Sun, 12 Dec 1948 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/the-purpose-of-education</link>
-        <guid isPermaLink="true">http://localhost:4000/the-purpose-of-education</guid>
+        /the-purpose-of-education</link>
+        <guid isPermaLink="true">/the-purpose-of-education</guid>
       </item>
       
     
@@ -313,10 +313,10 @@
 
 </description>
         
-        <pubDate>Wed, 24 Jul 1912 04:18:00 -0600</pubDate>
+        <pubDate>Wed, 24 Jul 1912 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/out-to-sea</link>
-        <guid isPermaLink="true">http://localhost:4000/out-to-sea</guid>
+        /out-to-sea</link>
+        <guid isPermaLink="true">/out-to-sea</guid>
       </item>
       
     
@@ -330,10 +330,10 @@ But the black kitten had been finished with earlier in the afternoon, and so, wh
 
 </description>
         
-        <pubDate>Sat, 18 Mar 1871 04:18:00 -0600</pubDate>
+        <pubDate>Sat, 18 Mar 1871 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/looking-glass-house</link>
-        <guid isPermaLink="true">http://localhost:4000/looking-glass-house</guid>
+        /looking-glass-house</link>
+        <guid isPermaLink="true">/looking-glass-house</guid>
       </item>
       
     
@@ -345,10 +345,10 @@ But the black kitten had been finished with earlier in the afternoon, and so, wh
 
 </description>
         
-        <pubDate>Sun, 26 Nov 1865 04:18:00 -0600</pubDate>
+        <pubDate>Sun, 26 Nov 1865 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/down-the-rabbit-hole</link>
-        <guid isPermaLink="true">http://localhost:4000/down-the-rabbit-hole</guid>
+        /down-the-rabbit-hole</link>
+        <guid isPermaLink="true">/down-the-rabbit-hole</guid>
       </item>
       
     
@@ -360,10 +360,10 @@ But the black kitten had been finished with earlier in the afternoon, and so, wh
 
 </description>
         
-        <pubDate>Thu, 19 Nov 1863 04:18:00 -0600</pubDate>
+        <pubDate>Thu, 19 Nov 1863 10:18:00 +0000</pubDate>
         <link>
-        http://localhost:4000/gettysburg-address</link>
-        <guid isPermaLink="true">http://localhost:4000/gettysburg-address</guid>
+        /gettysburg-address</link>
+        <guid isPermaLink="true">/gettysburg-address</guid>
       </item>
       
     
