@@ -1,0 +1,33 @@
+bedir:
+  username: bedir
+  name: Bedir Tapkan
+  location: Stafford, TX
+  url_full: http://bedirtapkan.com
+  url: bedirtapkan.com
+  bio: Software Engineering Student, who wants to be successful in Artificial intelligence.
+  picture: assets/images/bedir.jpg
+  facebook: False
+  twitter: False
+  cover: assets/images/kido.jpg
+nadide:
+  username: nadide
+  name: Nadide Pasali
+  location: Stafford, TX
+  url_full: http://nadide.github.io
+  url: nadide.github.io
+  bio: Bioinformatics | Data Science | Algorithms | Competitive Programing
+  picture: assets/images/nadide.jpg
+  facebook: False
+  twitter: False
+  cover: assets/images/writing.jpg
+hamza:
+  username: hamza
+  name: Ahmet Hamza Emra
+  location: Stafford, TX
+  url_full: http://ahmethamzaemra.github.io
+  url: ahmethamzaemra.github.io
+  bio: Enthusiastic Machine Learning Engineer with experience in Data Analyze. Passionate about community and technology.
+  picture: assets/images/hamza.jpg
+  facebook: False
+  twitter: False
+  cover: assets/images/speeches.jpg

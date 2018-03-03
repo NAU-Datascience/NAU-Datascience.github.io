@@ -1,0 +1,1430 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>https://nau-datascience.github.io/</title>
+   
+   <link>https://nau-datascience.github.io/</link>
+   <description>Academic Paper Summaries</description>
+   <language>en-uk</language>
+   
+   <title>
+   <![CDATA[ NAU-DataScience ]]>
+   </title>
+   <description>
+   <![CDATA[ Academic Paper Summaries ]]>
+   </description>
+   <link>https://nau-datascience.github.io/</link>
+   <image>
+   <url>https://nau-datascience.github.io/assets/images/favicon.png</url>
+   <title>NAU-DataScience</title>
+   <link>https://nau-datascience.github.io/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="https://nau-datascience.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Learning Representations by back-propagating errors</title>
+	  <link>https://nau-datascience.github.io/Learning-Representations-by-back-propagating-errors</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2018-02-20T02:48:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Learning-Representations-by-back-propagating-errors</guid>
+	  <description><![CDATA[
+	     <h3 id="by-david-e-rumelhart-geoffrey-e-hinton--ronald-j-williams">By <em>David E. Rumelhart, Geoffrey E. Hinton &amp; Ronald J Williams</em></h3>
+
+<p><a href="http://www.cs.toronto.edu/~hinton/absps/naturebp.pdf">Original Paper</a></p>
+
+<p>There have been many attempts to neural network models. But non of them are capable of learning representaions with using hidden layers. If the input is directly connected to output unit, it is relatively easy to find learning rules that iteratively adjust the weight of the vector to progressively reduce the difference between the actual and desired output. But with the hidden units, learning becomes more interesting and more difficult. In perceptron, there are ‘feature analysers’ but these are hand design so they do not learn the representations. To get the simplest learning procedure, what one can do is;</p>
+
+<p>First, compute the linear function for state of neuron,</p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_1.PNG" alt="" /></p>
+
+<p>Then, calculate the output of that layer by using non-linear function. In this paper what has been introduced is sigmoid function, but they also note that any function with has a bounded derivative will do.</p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_2.PNG" alt="" /></p>
+
+<p>The aim is to find a set of weights that ensure that for each input vector the output vector as same as desired output vector. If there is a fixed, finite set of input-output cases, the total error in the performance of the network with a particular set of weights can be computed by comparing the actual output and what network calculate.</p>
+
+<p>To minimize E by gradient decent, it is necessary to compute the partial derivative of E with respect to each weight in the network. This procedure of computing partial derivative from top to bottom, is called backward pass.</p>
+
+<p>After computing derivative of E, we can find the other derivatives by using chain rule. This means that we know how much a change in the total input (or any other unit in network) to an output unit will affect the error. Then, change each weight by an amount proportional to the accumulated derivative of E with respect to w.</p>
+
+<p>Family Tree</p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_3.PNG" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/NAU-Datascience/NAU-Datascience.github.io/master/assets/images/posts/post2_4.PNG" alt="" /></p>
+
+<p>The most oblivious draw back of the learning procedure is that the error surface may contain, so gradient decent is not guaranteed to find a global minimum. However, experience with many task shows that the network very rarely get stuck in poor local minima that are significantly worse than the global minimum. They found this kind of undesirable behavior in networks that have just enough connection to perform task. Adding few more connection, adds a new dimension which provide paths around the local minima.</p>
+
+<p><strong>The learning procedure, in its current form, is not plausible model of learning in brains. However, applying the procedure to various tasks shows that interning internal representations can be constructed by gradient decent in weight-space, and this suggest that it is worth looking for more biologically plausible ways of doing gradient decent in neural network.</strong></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Book Summary Ch 1: The Machine Learning Landscape</title>
+	  <link>https://nau-datascience.github.io/Chapter-1-The-Machine-Learning-Landscape</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-02-19T10:55:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Chapter-1-The-Machine-Learning-Landscape</guid>
+	  <description><![CDATA[
+	     <h1 id="summary-hands-on-machine-learning-with-scikit-learn--tensorflow">Summary: Hands-On Machine Learning with Scikit-Learn &amp; TensorFlow</h1>
+
+<p>I am thinking of creating series of blog posts throughout my journey following this wonderful book. I will try to include everything that I find interesting, useful or really important. I will not change the content a lot, mostly I will summarize with authors (Aurelien Geron) own words, but in places that I see that needs additional comments or if the part is too long to take into summary I will add my own words (I will try to do it as less as possible.) Enjoy…</p>
+
+<h1 id="chapter-1-the-machine-learning-landscape">Chapter 1: The Machine Learning Landscape</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#What is Machine Learning">What is Machine Learning</a></li>
+  <li><a href="#Why use Machine Learning">Why use Machine Learning</a></li>
+  <li><a href="#Types of Machine Learning Systems">Types of Machine Learning Systems</a>
+    <ol>
+      <li><a href="#Supervised/Unsupervised Learning">Supervised/Unsupervised Learning</a>
+        <ol>
+          <li><a href="#Supervised learning">Supervised learning</a></li>
+          <li><a href="#Unsupervised Learning">Unsupervised Learning</a></li>
+          <li><a href="#Semisupervised Learning">Semisupervised Learning</a></li>
+          <li><a href="#Reinforcement Learning">Reinforcement Learning</a></li>
+        </ol>
+      </li>
+      <li><a href="#Batch and Online Learning">Batch and Online Learning</a>
+        <ol>
+          <li><a href="#Batch learning">Batch learning</a></li>
+          <li><a href="#Batch learning">Online learning</a></li>
+        </ol>
+      </li>
+      <li><a href="#Instance Based vs Model Based Learning">Instance Based vs Model Based Learning</a>
+        <ol>
+          <li><a href="#Instance Based learning">Instance Based learning</a></li>
+          <li><a href="#Model Based Learning">Model Based Learning</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#Main Challenges of Machine Learning">Main Challenges of Machine Learning</a>
+    <ol>
+      <li><a href="#Insufficient Quantity of Training Data">Insufficient Quantity of Training Data</a></li>
+      <li><a href="#Nonrepresentative Training Data">Nonrepresentative Training Data</a></li>
+      <li><a href="#Poor Quality Data">Poor Quality Data</a></li>
+      <li><a href="#Irrelevant Features">Irrelevant Features</a></li>
+      <li><a href="#Overfitting the Training data">Overfitting the Training data</a></li>
+      <li><a href="#Underfitting the Training data">Underfitting the Training data</a></li>
+    </ol>
+  </li>
+  <li><a href="#Testing and Validating">Testing and Validating</a></li>
+</ol>
+
+<h2 id="what-is-machine-learning">What is Machine Learning</h2>
+
+<blockquote>
+  <p>Field of study that gives computer the ability to learn without being explicitly programmed.</p>
+
+  <p>​												<em>— Arthur Samuel, 1959</em></p>
+</blockquote>
+
+<h2 id="why-use-machine-learning">Why use Machine Learning</h2>
+
+<ul>
+  <li>Problems for which existing solutions require a lot of hand tuning or long list of rules: One ML algorithm can often simplify code and perform better.</li>
+  <li>Complex problems for which there is no good solution at all using traditional approaches: The best ML techniques can find a solution.</li>
+  <li>Fluctuating environments: A ML system can adapt to new data.</li>
+  <li>Getting insights about complex problems and large amounts of data.</li>
+</ul>
+
+<h2 id="types-of-machine-learning-systems">Types of Machine Learning Systems</h2>
+
+<ul>
+  <li>We categorize them according to three identities:
+    <ul>
+      <li>Trained with human supervision (How much): Supervised, unsupervised, semi-supervised and reinforcement learning.</li>
+      <li>Incrementally or on the fly: Online vs Batch learning</li>
+      <li>Comparing data points or detecting patterns and build a model for predictions: Instance-based vs model-based learning</li>
+    </ul>
+  </li>
+  <li>The categories are not distinct from each other, they can be combined. ex. Online, model-based, supervised system.</li>
+</ul>
+
+<h3 id="supervisedunsupervised-learning">Supervised/Unsupervised Learning</h3>
+
+<h4 id="supervised-learning">Supervised learning</h4>
+
+<ul>
+  <li>The training data includes the desired solutions, called labels.</li>
+  <li>Classification and Regression are two typical tasks.</li>
+  <li>Some regression algorithms can be used for classification and vice versa.</li>
+  <li>Some important supervised algorithms are:
+    <ul>
+      <li>kNN</li>
+      <li>Linear Regression</li>
+      <li>Logistic Regression</li>
+      <li>SVMs</li>
+      <li>Decision Trees and Random Forests</li>
+      <li>Neural Networks</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="unsupervised-learning">Unsupervised Learning</h4>
+
+<ul>
+  <li>The training data is unlabeled</li>
+  <li>Some important unsupervised algorithms are:
+    <ul>
+      <li>Clustering: Try to detect similar groups.
+        <ul>
+          <li>k-Means</li>
+          <li>Hierarchical Cluster Analysis (HCA)</li>
+          <li>Expectation Maximization</li>
+        </ul>
+      </li>
+      <li>Visualization: Understand how the data is organized and perhaps identify some unsuspected patterns. and dimensionality reduction: Simplify the data without losing too much information.
+        <ul>
+          <li>Principal Component Analysis (PCA)</li>
+          <li>Kernel PCA</li>
+          <li>Locally-Linear Embedding (LLE)</li>
+          <li>t-distributed Stochastic Neighbor Embedding (t-SNE)</li>
+        </ul>
+      </li>
+      <li>Association rule Learning: Dig into large data and discover the interesting relation between attributes.
+        <ul>
+          <li>Apriori</li>
+          <li>Eclat</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Another important unsupervised task is anomaly detection. Helps to determine outliers and unusualities in data.</li>
+</ul>
+
+<h4 id="semisupervised-learning">Semisupervised Learning</h4>
+
+<ul>
+  <li>Semisupervised algorithms can deal with partially labeled data. ex. Google Photos</li>
+</ul>
+
+<h4 id="reinforcement-learning">Reinforcement Learning</h4>
+
+<ul>
+  <li>The learning system, called an agent, can observe the environment, select and perform actions, and get reward in return. It must learn the best strategy called policy.</li>
+  <li>ex. Deepmind - AlphaGo</li>
+</ul>
+
+<h3 id="batch-and-online-learning">Batch and Online Learning</h3>
+
+<ul>
+  <li>Whether or not the system can learn incrementally from a stream of incoming data.</li>
+</ul>
+
+<h4 id="batch-learning">Batch learning</h4>
+
+<ul>
+  <li>The system is incapable of learning incrementally; it must be trained using all the data available.</li>
+  <li>Generally takes a lot of time and computing resources.</li>
+  <li>First trained and then launched.</li>
+  <li>All the data is needed to retrain the system.</li>
+  <li>May not be able to use if the data is really huge.</li>
+</ul>
+
+<h4 id="online-learning">Online learning</h4>
+
+<ul>
+  <li>You train the system incrementally by feeding it data instances sequentially, either individually or by small groups called mini-batches. Each step is fast and cheap, so the system can learn on the fly.</li>
+  <li>Great system for continuous flow.</li>
+  <li>You can get rid of the data after using it.</li>
+  <li>One important parameter of this system is how fast they should adapt to changing data: this is called learning rate. If it is high, the system will adapt better but will forget quickly. If it is low, will learn slower, but less sensitive to noise in the new data.</li>
+  <li>With new data, your system’s performance may decrease.</li>
+</ul>
+
+<h3 id="instance-based-vs-model-based-learning">Instance-Based vs Model-Based Learning</h3>
+
+<h4 id="instance-based-learning">Instance-Based learning</h4>
+
+<ul>
+  <li>The system learns examples by heart and then generalizes to new cases using similarity measure.</li>
+</ul>
+
+<h4 id="model-based-learning">Model-Based learning</h4>
+
+<ul>
+  <li>Another way to generalize from a set of examples is to build a model of these examples, then use that to make predictions. This is called mode based learning.</li>
+  <li>How can you know which values will make your model perform best? To answer this question, you need to specify a performance measure. You can either define a utility function (fitness function) that measures how good your model is, or you can define a cost function that measures how bad it is.</li>
+  <li>Typical ML project:
+    <ul>
+      <li>You study the data</li>
+      <li>You select a model</li>
+      <li>You train in on the training data</li>
+      <li>Finally, you apply the model to make predictions on new cases (inference)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="main-challenges-of-machine-learning">Main Challenges of Machine Learning</h2>
+
+<p>Two things that can go wrong are Bad Data, Bad Algorithm…</p>
+
+<h3 id="insufficient-quantity-of-training-data">Insufficient Quantity of Training Data</h3>
+
+<ul>
+  <li>It takes a lot of data for most Machine Learning algorithms to work properly.</li>
+  <li>If you don’t have enough data, none of the other things that you can do can save your system…</li>
+</ul>
+
+<h3 id="nonrepresentative-training-data">Nonrepresentative Training Data</h3>
+
+<ul>
+  <li>In order to generalize well, it is crucial that your training data be representative of the new cases you want to generalize to.</li>
+  <li>Sampling bias: Systematic error due to a non-random sample of a population</li>
+  <li>ex. US Presidental Election 1936, the Literary Digest’s biased poll</li>
+</ul>
+
+<h3 id="poor-quality-data">Poor Quality Data</h3>
+
+<ul>
+  <li>If your training data is full of errors, outliers, and noise, it will make it harder for system to detect underlying patterns, so your system is less likely to perform well.</li>
+</ul>
+
+<h3 id="irrelevant-features">Irrelevant Features</h3>
+
+<ul>
+  <li>A critical part of the Machine Learning project is coming up with a good set of features to train on. This process called feature engineering involves:
+    <ul>
+      <li>Feature selection: Selecting the most useful features.</li>
+      <li>Feature extraction: Combining existing features to produce a more useful one.</li>
+      <li>Creating new features by gathering new data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="overfitting-the-training-data">Overfitting the Training data</h3>
+
+<ul>
+  <li>The model performs well on the training data, but it does not generalize well.</li>
+  <li>Overfitting happens when the model is too complex relative to the amount and noisiness of the training data. The possible solutions are:
+    <ul>
+      <li>To simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data or by constructing the model.</li>
+      <li>To gather more training data</li>
+      <li>To reduce the noise in the training data</li>
+    </ul>
+  </li>
+  <li>Constraining a model to make it simpler and reduce the risk of overfitting is called regularization.</li>
+  <li>You want to find the balance between fitting the data perfectly and keeping the model simple enough to ensure that it will generalize well.</li>
+  <li>The amount of regularization to apply during learning can be controlled by a hyperparameter. A hyperparameter is a parameter of a learning algorithm (not of the model).</li>
+  <li>Tuning hyperparameters is an important part of building a Machine Learning system.</li>
+</ul>
+
+<h3 id="underfitting-the-training-data">Underfitting the Training data</h3>
+
+<ul>
+  <li>Opposite of overfitting the data.</li>
+  <li>It occurs when your model is too simple to learn the underlying structure of the data.</li>
+  <li>Main options to fix this problem are:
+    <ul>
+      <li>Selecting more powerful model, with more parameters.</li>
+      <li>Feeding better features to the learning algorithm.</li>
+      <li>Reducing the constraints on the model.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="testing-and-validating">Testing and Validating</h2>
+
+<ul>
+  <li>The only way to know how well a model will generalize to new cases is to actually try it out on new cases.</li>
+  <li>Split the data: Training set and test set</li>
+  <li>The error rate on new cases is called the generalization error (or out of sample error), and by evaluating your model on the test set, you get an estimation of this error. This value tells you how well your model performs on instances that it has never seen before.</li>
+  <li>If the training error is low and generalization error is high that means that your model is overfitting.</li>
+  <li>It is common to use 80% of the data for training and hold out 20% for testing.</li>
+  <li>To solve the issue of overfitting hyperparameters for the test data, you can divide the data to 3, adding validation set to existing ones.</li>
+  <li>Train multiple models with various hyperparameters using the training set, you select the model and hyperparameters that perform best on the validation set, and when you are happy with your model you run a single final test against the test set to get an estimate of the generalization error.</li>
+  <li>To avoid ‘wasting’ too much training data in validation sets, use cross-validation: The training set is split into complementary subsets, and each model is trained against a different combination of these subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts. Next final model is trained using these hyperparameters on the full training set.</li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks</title>
+	  <link>https://nau-datascience.github.io/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2018-01-29T17:05:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Engineering-Extreme-Event-Forecasting-at-Uber-with-Recurrent-Neural-Networks</guid>
+	  <description><![CDATA[
+	     <h3 id="by-nikolay-laptev-slawek-smyl--santhosh-shanmugam"><em>By Nikolay Laptev, Slawek Smyl, &amp; Santhosh Shanmugam</em></h3>
+
+<p><a href="https://eng.uber.com/neural-networks/">Link to full post</a></p>
+
+<p>The goal of the experiment is predicted where, when, and how many rides requests Uber will receive at any given time. Creating this model is challenging because for special days in the year, there are numerous unexpected activities. For example, NYE (new years eve) is a very busy day for uber, but it is not correlated with the month or anything also this kind of days happens once in a year so hard to get in data. In addition to historical data, extreme event prediction also depends on numerous external factors, including weather, population growth etc.</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image2-2.png" alt="" /></p>
+
+<h2 id="creating-ubers-new-extreme-event-forecasting-model">Creating Uber’s new extreme event forecasting model</h2>
+
+<p>They decided to use LSTD and because of data shortages, they use data from many cities at once, which greatly improved our accuracy.</p>
+
+<h2 id="building-a-new-architecture-with-neural-networks">Building a new architecture with neural networks</h2>
+
+<p>This raw data was used in our training model to conduct simple preprocessing, including log transformation, scaling, and data detrending.</p>
+
+<h3 id="training-with-sliding-windows">Training with sliding windows</h3>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image2-e1496957521819.png" alt="" /></p>
+
+<h3 id="tailoring-our-lstm-model">Tailoring our LSTM model</h3>
+
+<p>During testing, vanilla (the not customized form of) LSTM did not perform superior performance compared to the baseline model, which included a combination of univariate forecasting and machine learning elements.</p>
+
+<p>To improve our accuracy, they incorporated an automatic feature extraction module into our model, depicted below:</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.33.18-PM-e1496957645776.png" alt="" /></p>
+
+<p>the model first primes the network by automatic, ensemble-based (combining multiple models) feature extraction. After feature vectors are extracted, they are averaged using a standard ensemble technique. The final vector is then concatenated with the input to produce the final forecast.</p>
+
+<p>During testing, they were able to achieve a 14.09 percent symmetric mean absolute percentage error (SMAPE) improvement over the base LSTM architecture.</p>
+
+<h2 id="using-the-new-forecasting-model">Using the new forecasting model</h2>
+
+<p>For the purpose of this article, they built a model using the five-year daily history of completed Uber trips across the U.S. over the course of seven days before, during, and after major holidays like Christmas Day and New Year’s Day.</p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-2.45.13-PM.png" alt="" /></p>
+
+<p><img src="http://eng.uber.com/wp-content/uploads/2017/06/image3-1.png" alt="" /></p>
+
+<p>From our experience, they define three dimensions for deciding if the neural network model is right for your use case: (a) number of time series, (b) length of time series, and (c) correlation among time series. All three of these dimensions increase the likelihood that the neural network approach will forecast more accurately relative to the classical time series model.</p>
+
+<h3 id="forecasting-in-the-future">Forecasting in the Future</h3>
+
+<p>If this type of research excites you (and you happen to be Down Under, check out Uber’s time series workshop during the International Machine Learning Convention on August 6, 2017, in Sydney.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Time Series Anomaly Detection Algorithms</title>
+	  <link>https://nau-datascience.github.io/Time-Series-Anomaly-Detection-Algorithms</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-01-27T11:49:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Time-Series-Anomaly-Detection-Algorithms</guid>
+	  <description><![CDATA[
+	     <h1 id="time-series-anomaly-detection-algorithms-blog-summary">Time Series Anomaly Detection Algorithms, Blog Summary</h1>
+
+<p>​	<em>This is a summary of a blog post, published on medium.com.</em></p>
+
+<p><strong>Original Blog Post:</strong> <a href="https://blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D">Pavel Tiunov - Jun 8, 2017</a></p>
+
+<h2 id="important-types-of-anomalies">Important Types of Anomalies</h2>
+
+<p>Anomaly detection problem for time series is usually formulated as finding outlier data points relative to some standard or usual signal. Some types of anomalies:</p>
+
+<ul>
+  <li>Additive Outliers</li>
+  <li>Temporal Changes</li>
+  <li>Level shifts or seasonal level shifts</li>
+</ul>
+
+<p>An anamoly detection algorithm should either label each time point as anomaly/not anomaly, or forecast a signal for some point and test if this point value varies from the forecasted enough to deem it as an anomaly.</p>
+
+<p>Using the second approach, you would be able to visualize a confidence interval, which will help a lot in understanding why an anomaly occurs and validate it.</p>
+
+<h2 id="stl-decomposition">STL Decomposition</h2>
+
+<ul>
+  <li>STL (Seasonal Trend Decomposition based on Loess).</li>
+  <li>Gives you ability to split your time series signal into three parts: <strong>Seasonal, Trend, Residue</strong></li>
+  <li>Suitable for seasonal time series, which is the most popular case</li>
+</ul>
+
+<p><strong>If you analyze deviation of residue and itroduce some threshold for it, you’ll get an anomaly detection algorithm</strong></p>
+
+<ul>
+  <li>You should use <strong>median absolute deviation</strong> to get a more robust detection of anomalies</li>
+  <li>Twitter Anomaly detection library (<a href="https://github.com/twitter/AnomalyDetection">AnomalyDetection</a>)</li>
+</ul>
+
+<h3 id="pros">Pros</h3>
+
+<ul>
+  <li>Simplicity</li>
+  <li>Robust</li>
+  <li>Can handle a lot of different situations</li>
+  <li>All anomalies can still be intuitively interpreted</li>
+  <li>Good for detecting <strong>Additive outliers</strong></li>
+  <li>To detect level changes you can use rolling average signal instead of the original one</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+  <li>Rigidity regarding tweaking options. All you can tweak is your confidence interval using the significance level</li>
+  <li>It doesn’t work well when characteristics of your signal have changed dramatically</li>
+</ul>
+
+<h2 id="classification-and-regression-trees">Classification and Regression Trees</h2>
+
+<h3 id="supervised-learning">Supervised Learning</h3>
+
+<ul>
+  <li>To teach trees to classify anomaly/non-anomaly data points.</li>
+  <li>You need to have <strong>labeled</strong> anomaly data points.</li>
+</ul>
+
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+
+<ul>
+  <li>To teach CART to predict next data point in your series and have some confidence interval or prediction error as in the case of STL decomposition.</li>
+  <li>Check if data points lie inside or outside of the confidence interval. (Generalized ESD test, or Grubbs’ test)</li>
+</ul>
+
+<p>Most popular implementation  to perform learning for trees is the <strong>xgboost</strong> library.</p>
+
+<h3 id="pros-1">Pros</h3>
+
+<ul>
+  <li>It is not bound in any sense, to the structre of the signal</li>
+  <li>You can introduce many feature parameters</li>
+</ul>
+
+<h3 id="cons-1">Cons</h3>
+
+<ul>
+  <li>Growing number of features can start to impact your computational performance fairly quickly. (Choose your features carefully)</li>
+</ul>
+
+<h2 id="arima">ARIMA</h2>
+
+<p>It’s based on an approach that several points from the past generate a forecast of the next point with the addition of some random variable, which is usually <strong>white noise</strong>. As you can imagine, forecasted points in the future will generate new points and so on. Its obvious effect on the forecast horizon: <strong>the signal gets smoother.</strong></p>
+
+<p>The difficult part in appliance of this method is that you should <a href="https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method">select</a> the number of <strong>differences</strong>, number of <strong>autoregressions</strong>, and <strong>forecast error coefficients</strong>.</p>
+
+<p>​	<em>PS: Each time you work with a new signal you should build a new ARIMA model.</em></p>
+
+<ul>
+  <li>Your signal shouldn’t be dependent on the time.</li>
+</ul>
+
+<p>Anomaly detection is done by creating an adjusted model of a signal by using outlier points and checking if it is a better fit than original model by using <strong>t-statistics</strong>.<img src="https://cdn-images-1.medium.com/max/1600/0*ObqneGx8Dcla8biC." alt="img" /></p>
+
+<p><em>Two time series built using original ARIMA model and adjusted for outliers ARIMA model.</em></p>
+
+<ul>
+  <li>Use tsoutliers (R Package). It is suitable to detect all types of anomalies in the case that you can find a suitable ARIMA model for your signal.</li>
+</ul>
+
+<h2 id="exponential-smoothing">Exponential Smoothing</h2>
+
+<p>Exponential Smoothing techniques are very similar to ARIMA.</p>
+
+<ul>
+  <li>Holt-Winters Seasonal method for anomaly detection. You should define your seasonal period which can be weeks, months or year, etc.</li>
+  <li>In this case you will need to track several seasonal periods such as having both week and year dependencies together. You should only select one. Usually, it will be the shortest one possible. <strong>(Drawback)</strong></li>
+  <li>Anomaly detection can be done by same statistical tests, as STL or CARTs.</li>
+</ul>
+
+<h2 id="neural-networks">Neural Networks</h2>
+
+<ul>
+  <li>The most suitable type of NN is <strong>LSTM</strong> since we are working with time series.</li>
+  <li>This type of <strong>RNN</strong> will allow you to model the <strong>most sophisticated dependencies</strong> in your time series as well as advanced <strong>seasonality dependencies</strong>.</li>
+  <li>Can be helpful if you have <strong>multiple</strong> time series <strong>coupled</strong> with each other</li>
+</ul>
+
+<h2 id="to-keep-in-minds-from-website">To Keep In Mind’s From Website</h2>
+
+<ol>
+  <li>Try the simplest model and algorithm that fit your problem the best.</li>
+  <li>Switch to more advanced techniques if it doesn’t work out.</li>
+  <li>Starting with more general solutions that cover all the cases is a tempting option, but it’s not always the best.</li>
+</ol>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] Tiunov, Pavel. “Time Series Anomaly Detection Algorithms – Stats and Bots.” <em>Stats and Bots</em>, Stats and Bots, 8 June 2017, blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Time Series Anomaly Detection</title>
+	  <link>https://nau-datascience.github.io/Time-Series-Anomaly-Detection</link>
+		
+				
+		
+				
+		
+				
+						<author>Ahmet Hamza Emra</author>
+				
+		
+	  <pubDate>2018-01-27T04:00:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Time-Series-Anomaly-Detection</guid>
+	  <description><![CDATA[
+	     <h3 id="detection-of-anomalous-drops-with-limited-features-and-sparse-examples-in-noisyhighly-periodic-data">Detection of Anomalous Drops with Limited Features and Sparse Examples in NoisyHighly Periodic Data</h3>
+
+<p><em>Dominique T. Shipmon, Jason M. Gurevitch, Paolo M. Piselli, Steve Edwards</em></p>
+
+<p><a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46283.pdf">Link to paper</a></p>
+
+<h2 id="summary"><strong>Summary</strong></h2>
+
+<h3 id="about-the-data"><u>About the data</u>:</h3>
+
+<ul>
+  <li>14 different sets of data where saved 5 min intervals. (288 each day)</li>
+</ul>
+
+<h3 id="about-the-problem"><u>About the problem</u>:</h3>
+
+<ul>
+  <li>
+    <p>When there are clear labels for anomalous data a binary classifier can be built predict anomalies and non-anomalouspoints. But in this case we dont have any label! Problem is finding anomalies without using labeled data.</p>
+  </li>
+  <li>
+    <p>Since methods like clustering analysis, isolations forests requires labeled data plus they work better when there are many features, paper provides solution using artificial neural networks.</p>
+  </li>
+  <li>
+    <p>Another problem is because what counts as an anomaly can vary based
+on the data, each problem potentially requires its own model.</p>
+  </li>
+  <li>
+    <p>One solution they propose is:</p>
+
+    <ul>
+      <li>make prediction using model</li>
+      <li>take euclidean distance between predictions and true value</li>
+      <li>set some threshold value</li>
+      <li>if distance bigger then threshold, it is anomanly</li>
+    </ul>
+
+    <p>but this could leed to numerous false positives especially with noisy data.</p>
+
+    <p>(false positive: actualy not anomaly but our prediction says it is anomaly)</p>
+  </li>
+  <li>
+    <p>Other two approach is</p>
+
+    <ul>
+      <li>using accumulator</li>
+      <li>using a probabilistic approach as outlined</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="detection-rules"><strong><u>DETECTION RULES</u>:</strong></h3>
+
+<ol>
+  <li>Accumulator:</li>
+</ol>
+
+<p>The goal of the accumulator rule was to require multiple point anomalies to occur in a short period of time before signalling a sustained anomaly. They tried two different rules for how a point anomaly is detected, and then tested both of them as part of the accumulator rule.This rule involved a counter that would grow as point anomalies are detected, and shrink in cases where the predicted value is correct. The goal of this is to prevent noise that a local anomaly detection algorithm would incur, by requiring multiple anomalies in a short timeframe to cause it to reach a threshold for signaling.</p>
+
+<ul>
+  <li>
+    <p>Threshold</p>
+
+    <p>This algorithm defined a local anomaly as any value where the actual value is more than a given delta below the expected value, when the actual value is greater than a hardcoded threshold which says any value above it is not anomalous.</p>
+  </li>
+  <li>
+    <p>Variance Based</p>
+
+    <p>We tried using local variance to determine outages by defining an outage as any value that is outside of 20 times the rolling variance from the current prediction, so that noisy areas would allow for more noise in anomalies. However, this method proved to be slightly less effective than the simple threshold.</p>
+  </li>
+</ul>
+
+<p>they found that threshold accumulator rule is working more effective on their datasets, they used that in all of anomaly detection for this paper.  observed that the accumulator rules frequently identified false positives after peaks due to an offset in the models inference compared to the ground-truth. This offset is likely due to training on a previous months where changes in periodicity could occur gradually into the next evaluation month. In an attempt to abate these false positives, we added a parameter for ‘peak values’ that would decrement the accumulator by three following a peak, and allowing the accumulator to go below 0 (down to a negative the threshold). However, we only wanted this to affect prediction immediately after peaks, so the accumulator would decay back to 0 if more non-anomalous data points are found, effectively preventing it from predicting an anomaly immediately after a peak.</p>
+
+<p>For all of our models we defined the threshold for a non-anomalous value at 0.3, a peak value at 0.35, had a an accumulator threshold at 15 and had the delta for a local outage at 0.1</p>
+
+<p>​</p>
+
+<ol>
+  <li>GaussianTailProbability</li>
+</ol>
+
+<p>The second anomaly detection rule is the Gaussian tail probability rule. The raw anomaly score calculation is simply the difference between the inference and ground-truth. Because they are only checking the lack of activity, they take out the negative scores.</p>
+
+<p>the series of resulting raw anomaly scores are used to calculate the rolling mean and varience.  The rolling mean has two windows where the length of W2 &lt; W1. The two rolling means and variance are used to calculate the tail probability which is the final anomaly likelihood score.</p>
+
+<p><strong><u>Example pipeline for Gaussian Tail Probability</u></strong></p>
+
+<p><strong>I’m by no means certain that this implementation is correct, though!</strong> Any assistance in verifying this would be most welcome !!!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Data</span>
+<span class="n">seq_len</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">4000</span><span class="p">,</span><span class="n">seq_len</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">4000</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4000</span><span class="p">)):</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">seq_len</span><span class="p">]</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">seq_len</span><span class="p">]</span>
+
+
+<span class="c"># LSTM</span>
+
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">input_data</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="n">seq_len</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">return_seq</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'elu'</span><span class="p">)</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'elu'</span><span class="p">)</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'linear'</span><span class="p">)</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">regression</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s">'adam'</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s">'mean_square'</span><span class="p">,</span>
+                       <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">tflearn</span><span class="o">.</span><span class="n">DNN</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">tensorboard_verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n_epoch</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="n">show_metric</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">snapshot_step</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/AhmetHamzaEmra/ahmethamzaemra.github.io/master/images/post5/plot1.png" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dif</span> <span class="o">=</span> <span class="p">(</span><span class="n">true_y</span> <span class="o">-</span> <span class="n">y_preds</span><span class="p">)</span>
+<span class="n">dif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">dif</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="err">!</span><span class="p">[</span><span class="n">plot2</span><span class="p">](</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">D</span><span class="o">/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">plot2</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">rolling_window</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">window</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+    <span class="n">strides</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">strides</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">strides</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">stride_tricks</span><span class="o">.</span><span class="n">as_strided</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="n">strides</span><span class="p">)</span>
+
+<span class="n">rolling_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rolling_window</span><span class="p">(</span><span class="n">dif</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">dif_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rolling_mean</span><span class="p">)</span>
+<span class="n">dif_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">rolling_mean</span><span class="p">)</span>
+<span class="n">gausian_rolling</span> <span class="o">=</span> <span class="p">(</span><span class="n">rolling_mean</span><span class="o">-</span><span class="n">dif_mean</span><span class="p">)</span><span class="o">/</span><span class="n">dif_std</span>
+<span class="n">out</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rolling_mean</span><span class="p">:</span>
+    <span class="n">ceil</span> <span class="o">=</span> <span class="p">(</span><span class="n">dif_mean</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">dif_std</span><span class="p">)</span>
+    <span class="n">floor</span><span class="o">=</span> <span class="p">(</span><span class="n">dif_mean</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">dif_std</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="n">ceil</span> <span class="ow">or</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">floor</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/AhmetHamzaEmra/ahmethamzaemra.github.io/master/images/post5/plot2.png" alt="" /></p>
+
+<h3 id="prediction-models"><strong><u>PREDICTION MODELS</u></strong></h3>
+
+<ul>
+  <li>
+    <p>Baseline = Threshold model</p>
+
+    <p>​</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Anomaly rule</strong></th>
+      <th style="text-align: center">Accumulator</th>
+      <th style="text-align: center">Tail Probabilty</th>
+      <th style="text-align: center">Intersection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">TN</td>
+      <td style="text-align: center">7833</td>
+      <td style="text-align: center">8211</td>
+      <td style="text-align: center">8211</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FN</td>
+      <td style="text-align: center">183</td>
+      <td style="text-align: center">366</td>
+      <td style="text-align: center">366</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TP</td>
+      <td style="text-align: center">246</td>
+      <td style="text-align: center">63</td>
+      <td style="text-align: center">63</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FP</td>
+      <td style="text-align: center">378</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Fourier Series (a Fourier series is a way to represent a function as the sum of simple sine waves)</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/AhmetHamzaEmra/ahmethamzaemra.github.io/master/images/post5/Screen%20Shot%202018-01-27%20at%2012.38.12%20PM.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Anomaly rule</strong></th>
+      <th style="text-align: center">Accumulator</th>
+      <th style="text-align: center">Tail Probabilty</th>
+      <th style="text-align: center">Intersection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">TN</td>
+      <td style="text-align: center">7797</td>
+      <td style="text-align: center">8009</td>
+      <td style="text-align: center">8072</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FN</td>
+      <td style="text-align: center">375</td>
+      <td style="text-align: center">429</td>
+      <td style="text-align: center">429</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TP</td>
+      <td style="text-align: center">54</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FP</td>
+      <td style="text-align: center">414</td>
+      <td style="text-align: center">202</td>
+      <td style="text-align: center">139</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>DNN</p>
+
+    <p>​	Num_layer = 10</p>
+
+    <p>​	Layer_size = 200</p>
+
+    <p>​	activation = Relu6</p>
+
+    <p>​	batchsize = 200</p>
+
+    <p>​	num_step = 1200</p>
+
+    <p>​	optimizer = Adam</p>
+
+    <p>​	learning_rate = 0.0001</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Anomaly rule</strong></th>
+      <th style="text-align: center">Accumulator</th>
+      <th style="text-align: center">Tail Probabilty</th>
+      <th style="text-align: center">Intersection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">TN</td>
+      <td style="text-align: center">7751</td>
+      <td style="text-align: center">8003</td>
+      <td style="text-align: center">8077</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FN</td>
+      <td style="text-align: center">348</td>
+      <td style="text-align: center">410</td>
+      <td style="text-align: center">415</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TP</td>
+      <td style="text-align: center">81</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">14</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FP</td>
+      <td style="text-align: center">460</td>
+      <td style="text-align: center">208</td>
+      <td style="text-align: center">134</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>RNN</p>
+
+    <p>​	Num_layer = 10</p>
+
+    <p>​	Layer_size = 75</p>
+
+    <p>​	activation =  ELU</p>
+
+    <p>​	batchsize = 200</p>
+
+    <p>​	num_step = 2500</p>
+
+    <p>​	optimizer = Adam</p>
+
+    <p>​	learning_rate = 0.0001</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Anomaly rule</strong></th>
+      <th style="text-align: center">Accumulator</th>
+      <th style="text-align: center">Tail Probabilty</th>
+      <th style="text-align: center">Intersection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">TN</td>
+      <td style="text-align: center">6889</td>
+      <td style="text-align: center">8056</td>
+      <td style="text-align: center">8100</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FN</td>
+      <td style="text-align: center">409</td>
+      <td style="text-align: center">416</td>
+      <td style="text-align: center">418</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TP</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">13</td>
+      <td style="text-align: center">11</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FP</td>
+      <td style="text-align: center">1322</td>
+      <td style="text-align: center">155</td>
+      <td style="text-align: center">111</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>LSTM</p>
+
+    <p>Num_layer = 10</p>
+
+    <p>​Layer_size = 70</p>
+
+    <p>​activation =  ELU</p>
+
+    <p>​batchsize = 200</p>
+
+    <p>​num_step = 2500</p>
+
+    <p>​optimizer = Adam</p>
+
+    <p>​learning_rate = 0.001</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Anomaly rule</strong></th>
+      <th style="text-align: center">Accumulator</th>
+      <th style="text-align: center">Tail Probabilty</th>
+      <th style="text-align: center">Intersection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">TN</td>
+      <td style="text-align: center">7801</td>
+      <td style="text-align: center">7951</td>
+      <td style="text-align: center">8083</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FN</td>
+      <td style="text-align: center">388</td>
+      <td style="text-align: center">419</td>
+      <td style="text-align: center">420</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TP</td>
+      <td style="text-align: center">41</td>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FP</td>
+      <td style="text-align: center">410</td>
+      <td style="text-align: center">260</td>
+      <td style="text-align: center">128</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="findings"><strong><u>Findings</u></strong></h3>
+
+<ol>
+  <li>The first is that in every instance, the intersection between the accumulator method and the tail probability method reduced the amount of false positives flagged by the model. However, since the intersection makes a tighter bound around anomalous regions, the true positive rate is also decreased.</li>
+  <li>The second important finding is that there is a very small difference between all of our neural network models with regards to their detection confusion matrices.</li>
+</ol>
+
+<h3 id="conclusion"><strong><u>Conclusion</u></strong></h3>
+
+<ul>
+  <li>the Fourier was slightly more effective than the others, this can also be due to the data itself</li>
+  <li>With access to more features, deep learning could provide even more accurate results. Results
+  suggest that due to the limited set of features available it didn’t provide significant advantages to simpler periodic models.</li>
+  <li>Room for further experimentation can be done by trying even more anomaly detection methods and seeing if another combination can work even better than the two we propose here.</li>
+</ul>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Anomaly Detection of Time Series Data using Machine Learning & Deep Learning</title>
+	  <link>https://nau-datascience.github.io/Anomaly-Detection-using-ml</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-01-27T03:00:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Anomaly-Detection-using-ml</guid>
+	  <description><![CDATA[
+	     <p><em>This is a summary of a blog post, published on medium.com.</em></p>
+
+<p><strong>Original Blog Post:</strong> <a href="https://medium.com/@xenonstack/anomaly-detection-of-time-series-data-using-machine-learning-deep-learning-c248061ea4f5?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D">XenonStack - Jul 3, 2017</a></p>
+
+<h2 id="what-is-time-series-data">What is Time Series Data</h2>
+
+<p>Time series data is informations taken at a particular duration. For instance, having a set of sensor data observed at particular equal paces, each sensor can be classified as time series. If the data is collected without any order in time, or at once, it is not time series data.</p>
+
+<p>There are two types of time series data:</p>
+
+<p><strong>1- Stock Series</strong> (Measure of attribute, in particular point of time)</p>
+
+<p><strong>2- Flow Series</strong> (Measure of activity, in a time interval)</p>
+
+<p><strong>PS:</strong> Most common application of time series, is forecasting.</p>
+
+<h2 id="components-of-time-series-data">Components of Time Series Data</h2>
+
+<p>For us to analyse time series data, we need to know the different pattern types. These patterns will together create the set of observations on time series.</p>
+
+<p><strong>1- Trend</strong>: A long pattern present in the time series. It represents the variations of low, medium and high frequency filtered out from the time series. (-)</p>
+
+<p>If there is no increasing or decreasing pattern in the time series data, it is taken as <strong>stationary</strong> in the mean.</p>
+
+<p>There are two types of trend pattern:</p>
+
+<ul>
+  <li><strong>Deterministic</strong> In this case, the effects of shocks present in the time series are eliminated. (-)</li>
+  <li><strong>Stochastic</strong> It is the process in which the effects of shocks are never eliminated as they have permanently changed the level of the time series.</li>
+</ul>
+
+<p><strong>2- Cyclic:</strong> The pattern exhibit up and down movements around a specified trend. The period of time is not fixed and usually composed of at least 2 months in duration.</p>
+
+<p><strong>3- Seasonal:</strong> Pattern that reflects regular fluctuations. These short-term movements occur due to the seasonal and custom factors of people. The data faces regular and predictable changes which occurs on regular intervals of calendar. It always consist of fixed and known period.</p>
+
+<p>The main sources of seasonality:</p>
+
+<ul>
+  <li>Climate</li>
+  <li>Institutions</li>
+  <li>Social habits and practices</li>
+  <li>Calendar</li>
+</ul>
+
+<p><strong>Models</strong> to create a seasonal component in time series:</p>
+
+<ul>
+  <li><strong>Additive Model </strong>— It is the model in which the seasonal component is added with the trend component.</li>
+  <li><strong>Multiplicative</strong> <strong>Model </strong>— In this model seasonal component is multiplied with the intercept if trend component is not present in the time series.</li>
+</ul>
+
+<p><strong>4- Irregular:</strong>  It is an unpredictable component of time series.</p>
+
+<h2 id="time-series-data-vs-cross-section-data">Time Series Data vs Cross-Section Data</h2>
+
+<p>Time Series Data is composed of collection of data of one specific variable at particular interval of time. On the other hand, Cross-Section Data is consist of collection of data on multiple variables from different sources at a particular interval of time.</p>
+
+<p>Collection of company’s stock market data at regular interval of year is an example of time series data. But when the collection of company’s sales revenue, sales volume is collected for the past 3 months then it is taken as an example of cross-section data.</p>
+
+<p>Time series data is mainly used for obtaining results over an extended period of time but, cross-section data focuses on the information received from surveys at a particular time.</p>
+
+<h2 id="what-is-time-series-analysis">What is Time Series Analysis?</h2>
+
+<p>Analysis is performed in order to understand the structure and functions produced by the time series.</p>
+
+<p>Two approaches are used for analyzing time series data are -</p>
+
+<ul>
+  <li>In the time domain</li>
+  <li>In the frequency domain</li>
+</ul>
+
+<p>Time series analysis is mainly used for -</p>
+
+<ul>
+  <li>Decomposing the time series</li>
+  <li>Identifying and modeling the time-based dependencies</li>
+  <li>Forecasting</li>
+  <li>Identifying and model the system variation</li>
+</ul>
+
+<h2 id="need-of-time-series-analysis">Need of Time Series Analysis</h2>
+
+<p>In order to model successfully, the time series is important in machine learning and deep learning. Time series analysis is used to understand the internal structure and functions that are used for producing the observations. Time Series analysis is used for -</p>
+
+<ul>
+  <li><strong>Descriptive </strong>  Patterns are identified in correlated data. In other words, the variations in trends and seasonality in the time series are identified.</li>
+  <li><strong>Explanation </strong> Understanding and modeling of data is performed.</li>
+  <li><strong>Forecasting </strong> The prediction from previous observations are performed for short term trends.</li>
+  <li><strong>Invention An alysis </strong> Effect performed by any event in time series data, is analyzed.</li>
+  <li><strong>Quality Control </strong>  When the specific size deviates, it provides an alert. (-)</li>
+</ul>
+
+<h2 id="applications-of-time-series-analysis">Applications of Time Series Analysis</h2>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*LxaU50nxL1Kx6M_0K49JOg.jpeg" alt="img" /></p>
+
+<h2 id="time-series-database">Time Series Database</h2>
+
+<p>Time series database is a software which is used for handling the time series data. Highly complex data such as higher transactional data, is not feasible for the relational database management system. Many relational systems does not work properly for time series data. Therefore, time series databases are optimised for the time series data. Various time series databases are given below -</p>
+
+<ul>
+  <li>CrateDB</li>
+  <li>Graphite</li>
+  <li>InfluxDB</li>
+  <li>Informix TimeSeries</li>
+  <li>Kx kdb+</li>
+  <li>Riak-TS</li>
+  <li>RRDtool</li>
+  <li>OpenTSDB</li>
+</ul>
+
+<h2 id="what-is-anomaly">What is Anomaly?</h2>
+
+<p><strong>Anomaly</strong> is defined as something that deviates from the normal behaviour or what is expected. The anomaly is a kind of contradictory observation in the data. It gives the proof that certain model or assumption does not fit into the problem statement.</p>
+
+<h3 id="different-types-of-anomalies">Different Types of Anomalies</h3>
+
+<ul>
+  <li><strong>Point Anomalies </strong> If the specific value within the dataset is anomalous with respect to the complete data then it is known as Point Anomalies.</li>
+  <li><strong>Contextual Anomalies </strong> If the occurrence of data is anomalous for specific circumstances, then it is known as Contextual Anomalies. For example, the anomaly occurs at a specific interval of period.</li>
+  <li><strong>Collective Anomalies  </strong>If the collection of occurrence of data is anomalous with respect to the rest of the dataset then it is known as Collective Anomalies. For example, breaking the trend observed in ECG.</li>
+</ul>
+
+<h2 id="models-of-time-series-data">Models of Time Series Data</h2>
+
+<p><strong>ARIMA Model </strong>  ARIMA stands for Autoregressive Integrated Moving Average. Auto Regressive (AR) refers as lags of the differenced series, Moving Average (MA) is lags of errors and it represents the number of difference used to make the time series stationary. (-)</p>
+
+<p><strong>Assumptions</strong> followed while implementing ARIMA Model</p>
+
+<ul>
+  <li><strong>Time series data should posses stationary property:</strong> this means that the data should be independent of time. Time series consist of cyclic behaviour and white noise is also taken as stationary.</li>
+  <li><strong>ARIMA model is used for a single variable.</strong> The process is meant for regression with the past values. (-)</li>
+</ul>
+
+<p>In order to <strong>remove non-stationarity</strong> from the time series data the steps given below are followed</p>
+
+<ul>
+  <li>Find the difference between the consecutive observations.</li>
+  <li>For stabilizing the variance log or square root of the time series data is computed.</li>
+  <li>If the time series consists of the trend, then the residual from the fitted curve is modulated.</li>
+</ul>
+
+<p>ARIMA model is used for predicting the future values by taking the linear combination of past values and past errors. The ARIMA models are used for modeling time series having random walk processes and characteristics such as trend, seasonal and nonseasonal time series.</p>
+
+<p><strong>Holt-Winters </strong>  It is a model which is used for <strong>forecasting</strong> the <strong>short term period</strong>. It is usually applied to achieve exponential smoothing using additive and multiplicative models along with increasing or decreasing trends and seasonality. Smoothing is measured by beta and gamma parameters in the holt’s method.</p>
+
+<ul>
+  <li>When the beta parameter is set to FALSE, the function performs exponential smoothing.</li>
+  <li>The gamma parameter is used for the seasonal component. If the gamma parameter is set to FALSE, a non-seasonal model is fitted.</li>
+</ul>
+
+<h2 id="how-to-find-anomaly-in-time-series-data">How to find Anomaly in Time Series Data</h2>
+
+<p>**AnomalyDetection R package **</p>
+
+<p>It is a robust open source package used to find anomalies in the presence of seasonality and trend. This package is build on Generalised E-Test and uses Seasonal Hybrid ESD (S-H-ESD) algorithm. S-H-ESD is used to find both local and global anomalies. This package is also used to detect anomalies present in a vector of numerical variables. Is also provides better visualization such that the user can specify the direction of anomalies.</p>
+
+<p>**Principal Component Analysis **</p>
+
+<p><strong>It is a statistical technique used to reduce higher dimensional data into lower dimensional data without any loss of information.</strong> Therefore, this technique can be used for developing the model of anomaly detection. This technique is <strong>useful</strong> at that time of situation <strong>when sufficient samples are difficult to obtain</strong>. So, PCA is used in which model is trained using available features to obtain a normal class and then distance metrics is used to determine the anomalies.</p>
+
+<p>**Chisq Square distribution **</p>
+
+<p>It is a kind of statistical distribution that constitutes 0 as minimum value and no bound for the maximum value. Chisq square test is implemented for detecting outliers from univariate variables. It detects both lowest and highest values due to the presence of outliers on both side of the data.</p>
+
+<h2 id="what-are-breakouts-in-time-series-data">What are Breakouts in Time Series Data?</h2>
+
+<ul>
+  <li><strong>Mean shift </strong>  Sudden change in time series. For example the usage of CPU is increased from 35% to 70%. It is added when the time series move from one steady state to another state.</li>
+  <li><strong>Ramp Up </strong> Sudden increase in the value of the metric from one steady state to another. It is a slow process as compared with the mean shift. It is a slow transition process from one stable state to another.</li>
+</ul>
+
+<p><strong>PS:</strong> In Time series often more than one breakouts are observed.</p>
+
+<h2 id="how-to-detect-breakouts-in-time-series-data">How to detect Breakouts in Time Series Data?</h2>
+
+<p>In order to detect breakouts in time series <strong>Twitter</strong> has introduced a package known as <strong>BreakoutDetection</strong> package (opensource). It uses E-Divisive with Medians (EDM) algorithm to detect the divergence within the mean.</p>
+
+<h2 id="need-of-machine-learning-and-deep-learning-in-time-series-data">Need of Machine Learning and Deep Learning in Time Series Data</h2>
+
+<p>Machine learning techniques are more effective as compared with the statistical techniques. This is because machine learning have two important features such as feature engineering and prediction. The feature engineering aspect is used to address the trend and seasonality issues of time series data. The issues of fitting the model to time series data can also be resolved by it.</p>
+
+<p>Deep Learning is used to combine the feature extraction of time series with the non-linear autoregressive model for higher level prediction. It is used to extract the useful information from the features automatically without using any human effort or complex statistical techniques.</p>
+
+<h2 id="anomaly-detection-using-machine-learning">Anomaly Detection using Machine Learning</h2>
+
+<p>Firstly, supervised learning is performed for training data points so that they can be classified into anomalous and non-anomalous data points. But, for supervised learning, there should be labeled anomalous data points.</p>
+
+<p><strong>Another approach for detecting anomaly is unsupervised learning. One can apply unsupervised learning to train CART so that prediction of next data points in the series could be made. To implement this, confidence interval or prediction error is made. Therefore, to detect anomalous data points Generalised ESD-Test is implemented to check which data points are present within or outside the confidence interval</strong></p>
+
+<p>The most common supervised learning algorithms are</p>
+
+<ul>
+  <li>Supervised neural networks</li>
+  <li>Support vector machine</li>
+  <li>K-nearest neighbors</li>
+  <li>Bayesian networks</li>
+  <li>Decision trees</li>
+</ul>
+
+<p>The most common unsupervised algorithms are</p>
+
+<ul>
+  <li>Self-organizing maps (SOM)</li>
+  <li>K-means</li>
+  <li>C-means</li>
+  <li>Expectation-maximization meta-algorithm (EM)</li>
+  <li>Adaptive resonance theory (ART)</li>
+  <li>One-class support vector machine</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*FWN896X6mtQLOdq77KqNog.jpeg" alt="img" /></p>
+
+<h3 id="anomaly-detection-using-deep-learning">Anomaly Detection using Deep Learning</h3>
+
+<p>Recurrent neural network is one of the deep learning algorithm for detecting anomalous data points within the time series. It consist of input layer, hidden layer and output layer. The nodes within hidden layer are responsible for handling internal state and memory. They both will be updated as the new input is fed into the network.  The internal state of RNN is used to process the sequence of inputs. <strong>The important feature of memory is that it can automatically learn the time-dependent features.</strong></p>
+
+<p><img src="https://www.xenonstack.com/blog/static/public/uploads/media/Anamoly-detection-using-Deep-learning.jpg" alt="Anomaly Detection using Deep Learning" /></p>
+
+<h2 id="summary-from-website">Summary from website</h2>
+
+<ul>
+  <li>Time Series is defined as the sequence of data points. The components of time series are responsible for the understanding of patterns of data. In time series, anomalous data points can also be there.</li>
+  <li>Therefore, there is a need to detect them. Various statistical techniques are mentioned in the blog that is used but machine learning and deep learning are essential.</li>
+  <li>In machine learning, supervised learning and unsupervised learning is used for detecting anomalous data. On the other hand, in deep learning recurrent neural network is used.</li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] XenonStack. “Anomaly Detection of Time Series Data using Machine Learning &amp; Deep Learning.” <em>Medium</em>, Medium, 3 July 2017, medium.com/@xenonstack/anomaly-detection-of-time-series-data-using-machine-learning-deep-learning-c248061ea4f5?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Anomaly Detection</title>
+	  <link>https://nau-datascience.github.io/Anomaly-Detection</link>
+		
+				
+		
+				
+						<author>Nadide Pasali</author>
+				
+		
+				
+		
+	  <pubDate>2018-01-27T02:00:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Anomaly-Detection</guid>
+	  <description><![CDATA[
+	     <p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/anomaly-detection">LINK</a></p>
+
+<ul>
+  <li>Rare events, finding unusual data points</li>
+  <li>Encompasses many important tasks in ML
+    <ul>
+      <li>Identifying transactions that are potentially fraudulent</li>
+      <li>Learning patterns that indicate a network intrusion has occurred</li>
+      <li>Finding abnormal clusters of patients</li>
+      <li>Checking values input to a system</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="modules-for-an-anomaly-detection-model">Modules for an anomaly detection model</h4>
+<ul>
+  <li><a href="### One-Class Support Vector Machine">One-Class Support Vector Machine</a>: Creates a one-class Support Vector Machine model for anomaly detection, &gt;100features, aggressive boundary</li>
+  <li><a href="### PCA-Based Anomaly Detection">PCA-Based Anomaly Detection</a>: Creates an anomaly detection model using Principal Component Analysis, Fast training</li>
+</ul>
+
+<hr />
+
+<h3 id="one-class-support-vector-machine">One-Class Support Vector Machine</h3>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/one-class-support-vector-machine">LINK</a></p>
+
+<ul>
+  <li>Particularly useful in scenarios where you have a lot of “normal” data and not many cases of the anomalies you are trying to detect (Ex: fraudulent transactions)</li>
+</ul>
+
+<blockquote>
+  <p>Note: The module creates a kernel-SVM model, which means that it is not very scalable. If training time is limited, or you have too much data, you can use other methods such as PCA-Based Anomaly Detection.</p>
+</blockquote>
+
+<h4 id="understanding">Understanding</h4>
+
+<ul>
+  <li>Support vector machines (SVMs)
+    <ul>
+      <li>Supervised learning, used for both classification and regression tasks</li>
+      <li>The SVM algorithm is given a set of training examples labeled as belonging to one of two classes</li>
+      <li>Oversampling is used to replicate the existing samples so that you can create a two-class model, but it is impossible to predict all the new patterns of fraud or system faults from limited examples</li>
+    </ul>
+  </li>
+  <li>Therefore, in <strong>one-class SVM</strong>, has only one class, which is the “normal” class</li>
+  <li>From normal class properties can predict which examples are unlike the normal examples.</li>
+</ul>
+
+<h4 id="configuration">Configuration</h4>
+
+<ul>
+  <li>η, represents the upper bound on the fraction of outliers (<a href="https://www.microsoft.com/en-us/research/publication/estimating-the-support-of-a-high-dimensional-distribution/?from=http%3A%2F%2Fresearch.microsoft.com%2Fpubs%2F69731%2Ftr-99-87.pdf">nu-property</a>)
+    <ul>
+      <li>lets you control the trade-off between outliers and normal cases</li>
+    </ul>
+  </li>
+  <li>ε (epsilon), value to use as the stopping tolerance.
+    <ul>
+      <li>affects the number of iterations used when optimizing the model, and depends on the stopping criterion value</li>
+    </ul>
+  </li>
+</ul>
+
+<p><em>Single Parameter</em>, a specific set of values as arguments<br />
+ <em>Parameter Range</em>, specifying multiple values and using a parameter sweep to find the optimal configuration</p>
+
+<hr />
+
+<h3 id="pca-based-anomaly-detection">PCA-Based Anomaly Detection</h3>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/pca-based-anomaly-detection">LINK</a></p>
+
+<ul>
+  <li>Use in scenarios where it is easy to obtain training data from one class, such as valid transactions, but difficult to obtain sufficient samples of the targeted anomalies.</li>
+  <li>By using the PCA-Based Anomaly Detection module, you can train the model using the available features to determine what constitutes a “normal” class, and then use distance metrics to identify cases that represent anomalies.</li>
+</ul>
+
+<h4 id="understanding-1">Understanding</h4>
+
+<ul>
+  <li>Principal Component Analysis (PCA)
+    <ul>
+      <li>ML technique can be applied to feature selection and classification</li>
+      <li>Used in exploratory data analysis, reveals the inner structure of the data and explains the variance in the data</li>
+      <li>Analyze data that contains multiple variables, all possibly correlated, and determine some combination of values that best captures the differences in outcomes. Then outputs the combination of values into a new set of values called <em>principal components</em>.</li>
+      <li>In the case of <strong>anomaly detection</strong>,
+        <ul>
+          <li>First computes projection on the eigenvectors, then computes the normalized reconstruction error.</li>
+          <li>This normalized error is the anomaly score.</li>
+          <li>The higher the error, the more anomalous the instance is.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="configuration-1">Configuration</h4>
+
+<ul>
+  <li>Number of components to use in PCA (or Range)
+    <ul>
+      <li>The decision of how many components to include is an important part of experiment design using PCA</li>
+      <li>Should not include the same number of PCA components as there are variables. Start with some smaller number of components and increase them until some criteria is met
+        <ul>
+          <li>If you are unsure of what the optimum value, use parameter range</li>
+          <li>If you manually specify a value, make sure that the number of output components is less than the number of feature columns available in the dataset.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Amount of oversampling
+    <ul>
+      <li>A single integer that represents the ratio of oversampling of the minority class over the normal class (series of interger, range)</li>
+      <li>Imbalanced data makes it difficult to apply standard PCA techniques. By specifying some amount of oversampling, you can increase the number of target instances.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>If you specify 1, no oversampling is performed.
+If you specify any value higher than 1, additional samples are  generated to use in training the model.
+However, you cannot view the oversampled data set.</p>
+</blockquote>
+
+<ul>
+  <li>Enable input feature mean normalization, to normalize all input features to a mean of zero</li>
+  <li>Normalization or scaling to zero is generally recommended for PCA, because the goal of PCA is to maximize variance among variables.</li>
+  <li>Some additional steps
+    <ul>
+      <li>Ensure that a score column is available in both datasets</li>
+      <li>Ensure that label columns are marked</li>
+      <li>Normalize scores from different model types</li>
+    </ul>
+  </li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

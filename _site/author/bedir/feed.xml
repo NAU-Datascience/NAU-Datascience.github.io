@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>https://nau-datascience.github.io/</title>
+   
+   <link>https://nau-datascience.github.io/</link>
+   <description>Academic Paper Summaries</description>
+   <language>en-uk</language>
+   
+      
+            
+               
+               
+                  <managingEditor>Bedir Tapkan</managingEditor>
+            
+      
+            
+      
+            
+      
+   
+   <title>
+   <![CDATA[ Bedir Tapkan - NAU-DataScience ]]>
+   </title>
+   <description>
+   <![CDATA[ Academic Paper Summaries ]]>
+   </description>
+   <link>https://nau-datascience.github.io/</link>
+   <image>
+   <url>https://nau-datascience.github.io/assets/images/favicon.png</url>
+   <title>Bedir Tapkan - NAU-DataScience</title>
+   <link>https://nau-datascience.github.io/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="https://nau-datascience.github.io/author/bedir/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Book Summary Ch 1: The Machine Learning Landscape</title>
+	  <link>https://nau-datascience.github.io/Chapter-1-The-Machine-Learning-Landscape</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-02-19T10:55:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Chapter-1-The-Machine-Learning-Landscape</guid>
+	  <description><![CDATA[
+	     <h1 id="summary-hands-on-machine-learning-with-scikit-learn--tensorflow">Summary: Hands-On Machine Learning with Scikit-Learn &amp; TensorFlow</h1>
+
+<p>I am thinking of creating series of blog posts throughout my journey following this wonderful book. I will try to include everything that I find interesting, useful or really important. I will not change the content a lot, mostly I will summarize with authors (Aurelien Geron) own words, but in places that I see that needs additional comments or if the part is too long to take into summary I will add my own words (I will try to do it as less as possible.) Enjoy…</p>
+
+<h1 id="chapter-1-the-machine-learning-landscape">Chapter 1: The Machine Learning Landscape</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#What is Machine Learning">What is Machine Learning</a></li>
+  <li><a href="#Why use Machine Learning">Why use Machine Learning</a></li>
+  <li><a href="#Types of Machine Learning Systems">Types of Machine Learning Systems</a>
+    <ol>
+      <li><a href="#Supervised/Unsupervised Learning">Supervised/Unsupervised Learning</a>
+        <ol>
+          <li><a href="#Supervised learning">Supervised learning</a></li>
+          <li><a href="#Unsupervised Learning">Unsupervised Learning</a></li>
+          <li><a href="#Semisupervised Learning">Semisupervised Learning</a></li>
+          <li><a href="#Reinforcement Learning">Reinforcement Learning</a></li>
+        </ol>
+      </li>
+      <li><a href="#Batch and Online Learning">Batch and Online Learning</a>
+        <ol>
+          <li><a href="#Batch learning">Batch learning</a></li>
+          <li><a href="#Batch learning">Online learning</a></li>
+        </ol>
+      </li>
+      <li><a href="#Instance Based vs Model Based Learning">Instance Based vs Model Based Learning</a>
+        <ol>
+          <li><a href="#Instance Based learning">Instance Based learning</a></li>
+          <li><a href="#Model Based Learning">Model Based Learning</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#Main Challenges of Machine Learning">Main Challenges of Machine Learning</a>
+    <ol>
+      <li><a href="#Insufficient Quantity of Training Data">Insufficient Quantity of Training Data</a></li>
+      <li><a href="#Nonrepresentative Training Data">Nonrepresentative Training Data</a></li>
+      <li><a href="#Poor Quality Data">Poor Quality Data</a></li>
+      <li><a href="#Irrelevant Features">Irrelevant Features</a></li>
+      <li><a href="#Overfitting the Training data">Overfitting the Training data</a></li>
+      <li><a href="#Underfitting the Training data">Underfitting the Training data</a></li>
+    </ol>
+  </li>
+  <li><a href="#Testing and Validating">Testing and Validating</a></li>
+</ol>
+
+<h2 id="what-is-machine-learning">What is Machine Learning</h2>
+
+<blockquote>
+  <p>Field of study that gives computer the ability to learn without being explicitly programmed.</p>
+
+  <p>​												<em>— Arthur Samuel, 1959</em></p>
+</blockquote>
+
+<h2 id="why-use-machine-learning">Why use Machine Learning</h2>
+
+<ul>
+  <li>Problems for which existing solutions require a lot of hand tuning or long list of rules: One ML algorithm can often simplify code and perform better.</li>
+  <li>Complex problems for which there is no good solution at all using traditional approaches: The best ML techniques can find a solution.</li>
+  <li>Fluctuating environments: A ML system can adapt to new data.</li>
+  <li>Getting insights about complex problems and large amounts of data.</li>
+</ul>
+
+<h2 id="types-of-machine-learning-systems">Types of Machine Learning Systems</h2>
+
+<ul>
+  <li>We categorize them according to three identities:
+    <ul>
+      <li>Trained with human supervision (How much): Supervised, unsupervised, semi-supervised and reinforcement learning.</li>
+      <li>Incrementally or on the fly: Online vs Batch learning</li>
+      <li>Comparing data points or detecting patterns and build a model for predictions: Instance-based vs model-based learning</li>
+    </ul>
+  </li>
+  <li>The categories are not distinct from each other, they can be combined. ex. Online, model-based, supervised system.</li>
+</ul>
+
+<h3 id="supervisedunsupervised-learning">Supervised/Unsupervised Learning</h3>
+
+<h4 id="supervised-learning">Supervised learning</h4>
+
+<ul>
+  <li>The training data includes the desired solutions, called labels.</li>
+  <li>Classification and Regression are two typical tasks.</li>
+  <li>Some regression algorithms can be used for classification and vice versa.</li>
+  <li>Some important supervised algorithms are:
+    <ul>
+      <li>kNN</li>
+      <li>Linear Regression</li>
+      <li>Logistic Regression</li>
+      <li>SVMs</li>
+      <li>Decision Trees and Random Forests</li>
+      <li>Neural Networks</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="unsupervised-learning">Unsupervised Learning</h4>
+
+<ul>
+  <li>The training data is unlabeled</li>
+  <li>Some important unsupervised algorithms are:
+    <ul>
+      <li>Clustering: Try to detect similar groups.
+        <ul>
+          <li>k-Means</li>
+          <li>Hierarchical Cluster Analysis (HCA)</li>
+          <li>Expectation Maximization</li>
+        </ul>
+      </li>
+      <li>Visualization: Understand how the data is organized and perhaps identify some unsuspected patterns. and dimensionality reduction: Simplify the data without losing too much information.
+        <ul>
+          <li>Principal Component Analysis (PCA)</li>
+          <li>Kernel PCA</li>
+          <li>Locally-Linear Embedding (LLE)</li>
+          <li>t-distributed Stochastic Neighbor Embedding (t-SNE)</li>
+        </ul>
+      </li>
+      <li>Association rule Learning: Dig into large data and discover the interesting relation between attributes.
+        <ul>
+          <li>Apriori</li>
+          <li>Eclat</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Another important unsupervised task is anomaly detection. Helps to determine outliers and unusualities in data.</li>
+</ul>
+
+<h4 id="semisupervised-learning">Semisupervised Learning</h4>
+
+<ul>
+  <li>Semisupervised algorithms can deal with partially labeled data. ex. Google Photos</li>
+</ul>
+
+<h4 id="reinforcement-learning">Reinforcement Learning</h4>
+
+<ul>
+  <li>The learning system, called an agent, can observe the environment, select and perform actions, and get reward in return. It must learn the best strategy called policy.</li>
+  <li>ex. Deepmind - AlphaGo</li>
+</ul>
+
+<h3 id="batch-and-online-learning">Batch and Online Learning</h3>
+
+<ul>
+  <li>Whether or not the system can learn incrementally from a stream of incoming data.</li>
+</ul>
+
+<h4 id="batch-learning">Batch learning</h4>
+
+<ul>
+  <li>The system is incapable of learning incrementally; it must be trained using all the data available.</li>
+  <li>Generally takes a lot of time and computing resources.</li>
+  <li>First trained and then launched.</li>
+  <li>All the data is needed to retrain the system.</li>
+  <li>May not be able to use if the data is really huge.</li>
+</ul>
+
+<h4 id="online-learning">Online learning</h4>
+
+<ul>
+  <li>You train the system incrementally by feeding it data instances sequentially, either individually or by small groups called mini-batches. Each step is fast and cheap, so the system can learn on the fly.</li>
+  <li>Great system for continuous flow.</li>
+  <li>You can get rid of the data after using it.</li>
+  <li>One important parameter of this system is how fast they should adapt to changing data: this is called learning rate. If it is high, the system will adapt better but will forget quickly. If it is low, will learn slower, but less sensitive to noise in the new data.</li>
+  <li>With new data, your system’s performance may decrease.</li>
+</ul>
+
+<h3 id="instance-based-vs-model-based-learning">Instance-Based vs Model-Based Learning</h3>
+
+<h4 id="instance-based-learning">Instance-Based learning</h4>
+
+<ul>
+  <li>The system learns examples by heart and then generalizes to new cases using similarity measure.</li>
+</ul>
+
+<h4 id="model-based-learning">Model-Based learning</h4>
+
+<ul>
+  <li>Another way to generalize from a set of examples is to build a model of these examples, then use that to make predictions. This is called mode based learning.</li>
+  <li>How can you know which values will make your model perform best? To answer this question, you need to specify a performance measure. You can either define a utility function (fitness function) that measures how good your model is, or you can define a cost function that measures how bad it is.</li>
+  <li>Typical ML project:
+    <ul>
+      <li>You study the data</li>
+      <li>You select a model</li>
+      <li>You train in on the training data</li>
+      <li>Finally, you apply the model to make predictions on new cases (inference)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="main-challenges-of-machine-learning">Main Challenges of Machine Learning</h2>
+
+<p>Two things that can go wrong are Bad Data, Bad Algorithm…</p>
+
+<h3 id="insufficient-quantity-of-training-data">Insufficient Quantity of Training Data</h3>
+
+<ul>
+  <li>It takes a lot of data for most Machine Learning algorithms to work properly.</li>
+  <li>If you don’t have enough data, none of the other things that you can do can save your system…</li>
+</ul>
+
+<h3 id="nonrepresentative-training-data">Nonrepresentative Training Data</h3>
+
+<ul>
+  <li>In order to generalize well, it is crucial that your training data be representative of the new cases you want to generalize to.</li>
+  <li>Sampling bias: Systematic error due to a non-random sample of a population</li>
+  <li>ex. US Presidental Election 1936, the Literary Digest’s biased poll</li>
+</ul>
+
+<h3 id="poor-quality-data">Poor Quality Data</h3>
+
+<ul>
+  <li>If your training data is full of errors, outliers, and noise, it will make it harder for system to detect underlying patterns, so your system is less likely to perform well.</li>
+</ul>
+
+<h3 id="irrelevant-features">Irrelevant Features</h3>
+
+<ul>
+  <li>A critical part of the Machine Learning project is coming up with a good set of features to train on. This process called feature engineering involves:
+    <ul>
+      <li>Feature selection: Selecting the most useful features.</li>
+      <li>Feature extraction: Combining existing features to produce a more useful one.</li>
+      <li>Creating new features by gathering new data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="overfitting-the-training-data">Overfitting the Training data</h3>
+
+<ul>
+  <li>The model performs well on the training data, but it does not generalize well.</li>
+  <li>Overfitting happens when the model is too complex relative to the amount and noisiness of the training data. The possible solutions are:
+    <ul>
+      <li>To simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data or by constructing the model.</li>
+      <li>To gather more training data</li>
+      <li>To reduce the noise in the training data</li>
+    </ul>
+  </li>
+  <li>Constraining a model to make it simpler and reduce the risk of overfitting is called regularization.</li>
+  <li>You want to find the balance between fitting the data perfectly and keeping the model simple enough to ensure that it will generalize well.</li>
+  <li>The amount of regularization to apply during learning can be controlled by a hyperparameter. A hyperparameter is a parameter of a learning algorithm (not of the model).</li>
+  <li>Tuning hyperparameters is an important part of building a Machine Learning system.</li>
+</ul>
+
+<h3 id="underfitting-the-training-data">Underfitting the Training data</h3>
+
+<ul>
+  <li>Opposite of overfitting the data.</li>
+  <li>It occurs when your model is too simple to learn the underlying structure of the data.</li>
+  <li>Main options to fix this problem are:
+    <ul>
+      <li>Selecting more powerful model, with more parameters.</li>
+      <li>Feeding better features to the learning algorithm.</li>
+      <li>Reducing the constraints on the model.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="testing-and-validating">Testing and Validating</h2>
+
+<ul>
+  <li>The only way to know how well a model will generalize to new cases is to actually try it out on new cases.</li>
+  <li>Split the data: Training set and test set</li>
+  <li>The error rate on new cases is called the generalization error (or out of sample error), and by evaluating your model on the test set, you get an estimation of this error. This value tells you how well your model performs on instances that it has never seen before.</li>
+  <li>If the training error is low and generalization error is high that means that your model is overfitting.</li>
+  <li>It is common to use 80% of the data for training and hold out 20% for testing.</li>
+  <li>To solve the issue of overfitting hyperparameters for the test data, you can divide the data to 3, adding validation set to existing ones.</li>
+  <li>Train multiple models with various hyperparameters using the training set, you select the model and hyperparameters that perform best on the validation set, and when you are happy with your model you run a single final test against the test set to get an estimate of the generalization error.</li>
+  <li>To avoid ‘wasting’ too much training data in validation sets, use cross-validation: The training set is split into complementary subsets, and each model is trained against a different combination of these subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts. Next final model is trained using these hyperparameters on the full training set.</li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Time Series Anomaly Detection Algorithms</title>
+	  <link>https://nau-datascience.github.io/Time-Series-Anomaly-Detection-Algorithms</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-01-27T11:49:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Time-Series-Anomaly-Detection-Algorithms</guid>
+	  <description><![CDATA[
+	     <h1 id="time-series-anomaly-detection-algorithms-blog-summary">Time Series Anomaly Detection Algorithms, Blog Summary</h1>
+
+<p>​	<em>This is a summary of a blog post, published on medium.com.</em></p>
+
+<p><strong>Original Blog Post:</strong> <a href="https://blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D">Pavel Tiunov - Jun 8, 2017</a></p>
+
+<h2 id="important-types-of-anomalies">Important Types of Anomalies</h2>
+
+<p>Anomaly detection problem for time series is usually formulated as finding outlier data points relative to some standard or usual signal. Some types of anomalies:</p>
+
+<ul>
+  <li>Additive Outliers</li>
+  <li>Temporal Changes</li>
+  <li>Level shifts or seasonal level shifts</li>
+</ul>
+
+<p>An anamoly detection algorithm should either label each time point as anomaly/not anomaly, or forecast a signal for some point and test if this point value varies from the forecasted enough to deem it as an anomaly.</p>
+
+<p>Using the second approach, you would be able to visualize a confidence interval, which will help a lot in understanding why an anomaly occurs and validate it.</p>
+
+<h2 id="stl-decomposition">STL Decomposition</h2>
+
+<ul>
+  <li>STL (Seasonal Trend Decomposition based on Loess).</li>
+  <li>Gives you ability to split your time series signal into three parts: <strong>Seasonal, Trend, Residue</strong></li>
+  <li>Suitable for seasonal time series, which is the most popular case</li>
+</ul>
+
+<p><strong>If you analyze deviation of residue and itroduce some threshold for it, you’ll get an anomaly detection algorithm</strong></p>
+
+<ul>
+  <li>You should use <strong>median absolute deviation</strong> to get a more robust detection of anomalies</li>
+  <li>Twitter Anomaly detection library (<a href="https://github.com/twitter/AnomalyDetection">AnomalyDetection</a>)</li>
+</ul>
+
+<h3 id="pros">Pros</h3>
+
+<ul>
+  <li>Simplicity</li>
+  <li>Robust</li>
+  <li>Can handle a lot of different situations</li>
+  <li>All anomalies can still be intuitively interpreted</li>
+  <li>Good for detecting <strong>Additive outliers</strong></li>
+  <li>To detect level changes you can use rolling average signal instead of the original one</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+  <li>Rigidity regarding tweaking options. All you can tweak is your confidence interval using the significance level</li>
+  <li>It doesn’t work well when characteristics of your signal have changed dramatically</li>
+</ul>
+
+<h2 id="classification-and-regression-trees">Classification and Regression Trees</h2>
+
+<h3 id="supervised-learning">Supervised Learning</h3>
+
+<ul>
+  <li>To teach trees to classify anomaly/non-anomaly data points.</li>
+  <li>You need to have <strong>labeled</strong> anomaly data points.</li>
+</ul>
+
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+
+<ul>
+  <li>To teach CART to predict next data point in your series and have some confidence interval or prediction error as in the case of STL decomposition.</li>
+  <li>Check if data points lie inside or outside of the confidence interval. (Generalized ESD test, or Grubbs’ test)</li>
+</ul>
+
+<p>Most popular implementation  to perform learning for trees is the <strong>xgboost</strong> library.</p>
+
+<h3 id="pros-1">Pros</h3>
+
+<ul>
+  <li>It is not bound in any sense, to the structre of the signal</li>
+  <li>You can introduce many feature parameters</li>
+</ul>
+
+<h3 id="cons-1">Cons</h3>
+
+<ul>
+  <li>Growing number of features can start to impact your computational performance fairly quickly. (Choose your features carefully)</li>
+</ul>
+
+<h2 id="arima">ARIMA</h2>
+
+<p>It’s based on an approach that several points from the past generate a forecast of the next point with the addition of some random variable, which is usually <strong>white noise</strong>. As you can imagine, forecasted points in the future will generate new points and so on. Its obvious effect on the forecast horizon: <strong>the signal gets smoother.</strong></p>
+
+<p>The difficult part in appliance of this method is that you should <a href="https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method">select</a> the number of <strong>differences</strong>, number of <strong>autoregressions</strong>, and <strong>forecast error coefficients</strong>.</p>
+
+<p>​	<em>PS: Each time you work with a new signal you should build a new ARIMA model.</em></p>
+
+<ul>
+  <li>Your signal shouldn’t be dependent on the time.</li>
+</ul>
+
+<p>Anomaly detection is done by creating an adjusted model of a signal by using outlier points and checking if it is a better fit than original model by using <strong>t-statistics</strong>.<img src="https://cdn-images-1.medium.com/max/1600/0*ObqneGx8Dcla8biC." alt="img" /></p>
+
+<p><em>Two time series built using original ARIMA model and adjusted for outliers ARIMA model.</em></p>
+
+<ul>
+  <li>Use tsoutliers (R Package). It is suitable to detect all types of anomalies in the case that you can find a suitable ARIMA model for your signal.</li>
+</ul>
+
+<h2 id="exponential-smoothing">Exponential Smoothing</h2>
+
+<p>Exponential Smoothing techniques are very similar to ARIMA.</p>
+
+<ul>
+  <li>Holt-Winters Seasonal method for anomaly detection. You should define your seasonal period which can be weeks, months or year, etc.</li>
+  <li>In this case you will need to track several seasonal periods such as having both week and year dependencies together. You should only select one. Usually, it will be the shortest one possible. <strong>(Drawback)</strong></li>
+  <li>Anomaly detection can be done by same statistical tests, as STL or CARTs.</li>
+</ul>
+
+<h2 id="neural-networks">Neural Networks</h2>
+
+<ul>
+  <li>The most suitable type of NN is <strong>LSTM</strong> since we are working with time series.</li>
+  <li>This type of <strong>RNN</strong> will allow you to model the <strong>most sophisticated dependencies</strong> in your time series as well as advanced <strong>seasonality dependencies</strong>.</li>
+  <li>Can be helpful if you have <strong>multiple</strong> time series <strong>coupled</strong> with each other</li>
+</ul>
+
+<h2 id="to-keep-in-minds-from-website">To Keep In Mind’s From Website</h2>
+
+<ol>
+  <li>Try the simplest model and algorithm that fit your problem the best.</li>
+  <li>Switch to more advanced techniques if it doesn’t work out.</li>
+  <li>Starting with more general solutions that cover all the cases is a tempting option, but it’s not always the best.</li>
+</ol>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] Tiunov, Pavel. “Time Series Anomaly Detection Algorithms – Stats and Bots.” <em>Stats and Bots</em>, Stats and Bots, 8 June 2017, blog.statsbot.co/time-series-anomaly-detection-algorithms-1cef5519aef2?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Anomaly Detection of Time Series Data using Machine Learning & Deep Learning</title>
+	  <link>https://nau-datascience.github.io/Anomaly-Detection-using-ml</link>
+		
+				
+						<author>Bedir Tapkan</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-01-27T03:00:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Anomaly-Detection-using-ml</guid>
+	  <description><![CDATA[
+	     <p><em>This is a summary of a blog post, published on medium.com.</em></p>
+
+<p><strong>Original Blog Post:</strong> <a href="https://medium.com/@xenonstack/anomaly-detection-of-time-series-data-using-machine-learning-deep-learning-c248061ea4f5?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D">XenonStack - Jul 3, 2017</a></p>
+
+<h2 id="what-is-time-series-data">What is Time Series Data</h2>
+
+<p>Time series data is informations taken at a particular duration. For instance, having a set of sensor data observed at particular equal paces, each sensor can be classified as time series. If the data is collected without any order in time, or at once, it is not time series data.</p>
+
+<p>There are two types of time series data:</p>
+
+<p><strong>1- Stock Series</strong> (Measure of attribute, in particular point of time)</p>
+
+<p><strong>2- Flow Series</strong> (Measure of activity, in a time interval)</p>
+
+<p><strong>PS:</strong> Most common application of time series, is forecasting.</p>
+
+<h2 id="components-of-time-series-data">Components of Time Series Data</h2>
+
+<p>For us to analyse time series data, we need to know the different pattern types. These patterns will together create the set of observations on time series.</p>
+
+<p><strong>1- Trend</strong>: A long pattern present in the time series. It represents the variations of low, medium and high frequency filtered out from the time series. (-)</p>
+
+<p>If there is no increasing or decreasing pattern in the time series data, it is taken as <strong>stationary</strong> in the mean.</p>
+
+<p>There are two types of trend pattern:</p>
+
+<ul>
+  <li><strong>Deterministic</strong> In this case, the effects of shocks present in the time series are eliminated. (-)</li>
+  <li><strong>Stochastic</strong> It is the process in which the effects of shocks are never eliminated as they have permanently changed the level of the time series.</li>
+</ul>
+
+<p><strong>2- Cyclic:</strong> The pattern exhibit up and down movements around a specified trend. The period of time is not fixed and usually composed of at least 2 months in duration.</p>
+
+<p><strong>3- Seasonal:</strong> Pattern that reflects regular fluctuations. These short-term movements occur due to the seasonal and custom factors of people. The data faces regular and predictable changes which occurs on regular intervals of calendar. It always consist of fixed and known period.</p>
+
+<p>The main sources of seasonality:</p>
+
+<ul>
+  <li>Climate</li>
+  <li>Institutions</li>
+  <li>Social habits and practices</li>
+  <li>Calendar</li>
+</ul>
+
+<p><strong>Models</strong> to create a seasonal component in time series:</p>
+
+<ul>
+  <li><strong>Additive Model </strong>— It is the model in which the seasonal component is added with the trend component.</li>
+  <li><strong>Multiplicative</strong> <strong>Model </strong>— In this model seasonal component is multiplied with the intercept if trend component is not present in the time series.</li>
+</ul>
+
+<p><strong>4- Irregular:</strong>  It is an unpredictable component of time series.</p>
+
+<h2 id="time-series-data-vs-cross-section-data">Time Series Data vs Cross-Section Data</h2>
+
+<p>Time Series Data is composed of collection of data of one specific variable at particular interval of time. On the other hand, Cross-Section Data is consist of collection of data on multiple variables from different sources at a particular interval of time.</p>
+
+<p>Collection of company’s stock market data at regular interval of year is an example of time series data. But when the collection of company’s sales revenue, sales volume is collected for the past 3 months then it is taken as an example of cross-section data.</p>
+
+<p>Time series data is mainly used for obtaining results over an extended period of time but, cross-section data focuses on the information received from surveys at a particular time.</p>
+
+<h2 id="what-is-time-series-analysis">What is Time Series Analysis?</h2>
+
+<p>Analysis is performed in order to understand the structure and functions produced by the time series.</p>
+
+<p>Two approaches are used for analyzing time series data are -</p>
+
+<ul>
+  <li>In the time domain</li>
+  <li>In the frequency domain</li>
+</ul>
+
+<p>Time series analysis is mainly used for -</p>
+
+<ul>
+  <li>Decomposing the time series</li>
+  <li>Identifying and modeling the time-based dependencies</li>
+  <li>Forecasting</li>
+  <li>Identifying and model the system variation</li>
+</ul>
+
+<h2 id="need-of-time-series-analysis">Need of Time Series Analysis</h2>
+
+<p>In order to model successfully, the time series is important in machine learning and deep learning. Time series analysis is used to understand the internal structure and functions that are used for producing the observations. Time Series analysis is used for -</p>
+
+<ul>
+  <li><strong>Descriptive </strong>  Patterns are identified in correlated data. In other words, the variations in trends and seasonality in the time series are identified.</li>
+  <li><strong>Explanation </strong> Understanding and modeling of data is performed.</li>
+  <li><strong>Forecasting </strong> The prediction from previous observations are performed for short term trends.</li>
+  <li><strong>Invention An alysis </strong> Effect performed by any event in time series data, is analyzed.</li>
+  <li><strong>Quality Control </strong>  When the specific size deviates, it provides an alert. (-)</li>
+</ul>
+
+<h2 id="applications-of-time-series-analysis">Applications of Time Series Analysis</h2>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*LxaU50nxL1Kx6M_0K49JOg.jpeg" alt="img" /></p>
+
+<h2 id="time-series-database">Time Series Database</h2>
+
+<p>Time series database is a software which is used for handling the time series data. Highly complex data such as higher transactional data, is not feasible for the relational database management system. Many relational systems does not work properly for time series data. Therefore, time series databases are optimised for the time series data. Various time series databases are given below -</p>
+
+<ul>
+  <li>CrateDB</li>
+  <li>Graphite</li>
+  <li>InfluxDB</li>
+  <li>Informix TimeSeries</li>
+  <li>Kx kdb+</li>
+  <li>Riak-TS</li>
+  <li>RRDtool</li>
+  <li>OpenTSDB</li>
+</ul>
+
+<h2 id="what-is-anomaly">What is Anomaly?</h2>
+
+<p><strong>Anomaly</strong> is defined as something that deviates from the normal behaviour or what is expected. The anomaly is a kind of contradictory observation in the data. It gives the proof that certain model or assumption does not fit into the problem statement.</p>
+
+<h3 id="different-types-of-anomalies">Different Types of Anomalies</h3>
+
+<ul>
+  <li><strong>Point Anomalies </strong> If the specific value within the dataset is anomalous with respect to the complete data then it is known as Point Anomalies.</li>
+  <li><strong>Contextual Anomalies </strong> If the occurrence of data is anomalous for specific circumstances, then it is known as Contextual Anomalies. For example, the anomaly occurs at a specific interval of period.</li>
+  <li><strong>Collective Anomalies  </strong>If the collection of occurrence of data is anomalous with respect to the rest of the dataset then it is known as Collective Anomalies. For example, breaking the trend observed in ECG.</li>
+</ul>
+
+<h2 id="models-of-time-series-data">Models of Time Series Data</h2>
+
+<p><strong>ARIMA Model </strong>  ARIMA stands for Autoregressive Integrated Moving Average. Auto Regressive (AR) refers as lags of the differenced series, Moving Average (MA) is lags of errors and it represents the number of difference used to make the time series stationary. (-)</p>
+
+<p><strong>Assumptions</strong> followed while implementing ARIMA Model</p>
+
+<ul>
+  <li><strong>Time series data should posses stationary property:</strong> this means that the data should be independent of time. Time series consist of cyclic behaviour and white noise is also taken as stationary.</li>
+  <li><strong>ARIMA model is used for a single variable.</strong> The process is meant for regression with the past values. (-)</li>
+</ul>
+
+<p>In order to <strong>remove non-stationarity</strong> from the time series data the steps given below are followed</p>
+
+<ul>
+  <li>Find the difference between the consecutive observations.</li>
+  <li>For stabilizing the variance log or square root of the time series data is computed.</li>
+  <li>If the time series consists of the trend, then the residual from the fitted curve is modulated.</li>
+</ul>
+
+<p>ARIMA model is used for predicting the future values by taking the linear combination of past values and past errors. The ARIMA models are used for modeling time series having random walk processes and characteristics such as trend, seasonal and nonseasonal time series.</p>
+
+<p><strong>Holt-Winters </strong>  It is a model which is used for <strong>forecasting</strong> the <strong>short term period</strong>. It is usually applied to achieve exponential smoothing using additive and multiplicative models along with increasing or decreasing trends and seasonality. Smoothing is measured by beta and gamma parameters in the holt’s method.</p>
+
+<ul>
+  <li>When the beta parameter is set to FALSE, the function performs exponential smoothing.</li>
+  <li>The gamma parameter is used for the seasonal component. If the gamma parameter is set to FALSE, a non-seasonal model is fitted.</li>
+</ul>
+
+<h2 id="how-to-find-anomaly-in-time-series-data">How to find Anomaly in Time Series Data</h2>
+
+<p>**AnomalyDetection R package **</p>
+
+<p>It is a robust open source package used to find anomalies in the presence of seasonality and trend. This package is build on Generalised E-Test and uses Seasonal Hybrid ESD (S-H-ESD) algorithm. S-H-ESD is used to find both local and global anomalies. This package is also used to detect anomalies present in a vector of numerical variables. Is also provides better visualization such that the user can specify the direction of anomalies.</p>
+
+<p>**Principal Component Analysis **</p>
+
+<p><strong>It is a statistical technique used to reduce higher dimensional data into lower dimensional data without any loss of information.</strong> Therefore, this technique can be used for developing the model of anomaly detection. This technique is <strong>useful</strong> at that time of situation <strong>when sufficient samples are difficult to obtain</strong>. So, PCA is used in which model is trained using available features to obtain a normal class and then distance metrics is used to determine the anomalies.</p>
+
+<p>**Chisq Square distribution **</p>
+
+<p>It is a kind of statistical distribution that constitutes 0 as minimum value and no bound for the maximum value. Chisq square test is implemented for detecting outliers from univariate variables. It detects both lowest and highest values due to the presence of outliers on both side of the data.</p>
+
+<h2 id="what-are-breakouts-in-time-series-data">What are Breakouts in Time Series Data?</h2>
+
+<ul>
+  <li><strong>Mean shift </strong>  Sudden change in time series. For example the usage of CPU is increased from 35% to 70%. It is added when the time series move from one steady state to another state.</li>
+  <li><strong>Ramp Up </strong> Sudden increase in the value of the metric from one steady state to another. It is a slow process as compared with the mean shift. It is a slow transition process from one stable state to another.</li>
+</ul>
+
+<p><strong>PS:</strong> In Time series often more than one breakouts are observed.</p>
+
+<h2 id="how-to-detect-breakouts-in-time-series-data">How to detect Breakouts in Time Series Data?</h2>
+
+<p>In order to detect breakouts in time series <strong>Twitter</strong> has introduced a package known as <strong>BreakoutDetection</strong> package (opensource). It uses E-Divisive with Medians (EDM) algorithm to detect the divergence within the mean.</p>
+
+<h2 id="need-of-machine-learning-and-deep-learning-in-time-series-data">Need of Machine Learning and Deep Learning in Time Series Data</h2>
+
+<p>Machine learning techniques are more effective as compared with the statistical techniques. This is because machine learning have two important features such as feature engineering and prediction. The feature engineering aspect is used to address the trend and seasonality issues of time series data. The issues of fitting the model to time series data can also be resolved by it.</p>
+
+<p>Deep Learning is used to combine the feature extraction of time series with the non-linear autoregressive model for higher level prediction. It is used to extract the useful information from the features automatically without using any human effort or complex statistical techniques.</p>
+
+<h2 id="anomaly-detection-using-machine-learning">Anomaly Detection using Machine Learning</h2>
+
+<p>Firstly, supervised learning is performed for training data points so that they can be classified into anomalous and non-anomalous data points. But, for supervised learning, there should be labeled anomalous data points.</p>
+
+<p><strong>Another approach for detecting anomaly is unsupervised learning. One can apply unsupervised learning to train CART so that prediction of next data points in the series could be made. To implement this, confidence interval or prediction error is made. Therefore, to detect anomalous data points Generalised ESD-Test is implemented to check which data points are present within or outside the confidence interval</strong></p>
+
+<p>The most common supervised learning algorithms are</p>
+
+<ul>
+  <li>Supervised neural networks</li>
+  <li>Support vector machine</li>
+  <li>K-nearest neighbors</li>
+  <li>Bayesian networks</li>
+  <li>Decision trees</li>
+</ul>
+
+<p>The most common unsupervised algorithms are</p>
+
+<ul>
+  <li>Self-organizing maps (SOM)</li>
+  <li>K-means</li>
+  <li>C-means</li>
+  <li>Expectation-maximization meta-algorithm (EM)</li>
+  <li>Adaptive resonance theory (ART)</li>
+  <li>One-class support vector machine</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*FWN896X6mtQLOdq77KqNog.jpeg" alt="img" /></p>
+
+<h3 id="anomaly-detection-using-deep-learning">Anomaly Detection using Deep Learning</h3>
+
+<p>Recurrent neural network is one of the deep learning algorithm for detecting anomalous data points within the time series. It consist of input layer, hidden layer and output layer. The nodes within hidden layer are responsible for handling internal state and memory. They both will be updated as the new input is fed into the network.  The internal state of RNN is used to process the sequence of inputs. <strong>The important feature of memory is that it can automatically learn the time-dependent features.</strong></p>
+
+<p><img src="https://www.xenonstack.com/blog/static/public/uploads/media/Anamoly-detection-using-Deep-learning.jpg" alt="Anomaly Detection using Deep Learning" /></p>
+
+<h2 id="summary-from-website">Summary from website</h2>
+
+<ul>
+  <li>Time Series is defined as the sequence of data points. The components of time series are responsible for the understanding of patterns of data. In time series, anomalous data points can also be there.</li>
+  <li>Therefore, there is a need to detect them. Various statistical techniques are mentioned in the blog that is used but machine learning and deep learning are essential.</li>
+  <li>In machine learning, supervised learning and unsupervised learning is used for detecting anomalous data. On the other hand, in deep learning recurrent neural network is used.</li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] XenonStack. “Anomaly Detection of Time Series Data using Machine Learning &amp; Deep Learning.” <em>Medium</em>, Medium, 3 July 2017, medium.com/@xenonstack/anomaly-detection-of-time-series-data-using-machine-learning-deep-learning-c248061ea4f5?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BUw%2FGWSJaTCysr0hAzNNPbw%3D%3D.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

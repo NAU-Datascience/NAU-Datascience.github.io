@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>https://nau-datascience.github.io/</title>
+   
+   <link>https://nau-datascience.github.io/</link>
+   <description>Academic Paper Summaries</description>
+   <language>en-uk</language>
+   
+      
+            
+      
+            
+               
+               
+                  <managingEditor>Nadide Pasali</managingEditor>
+            
+      
+            
+      
+   
+   <title>
+   <![CDATA[ Nadide Pasali - NAU-DataScience ]]>
+   </title>
+   <description>
+   <![CDATA[ Academic Paper Summaries ]]>
+   </description>
+   <link>https://nau-datascience.github.io/</link>
+   <image>
+   <url>https://nau-datascience.github.io/assets/images/favicon.png</url>
+   <title>Nadide Pasali - NAU-DataScience</title>
+   <link>https://nau-datascience.github.io/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="https://nau-datascience.github.io/author/nadide/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Anomaly Detection</title>
+	  <link>https://nau-datascience.github.io/Anomaly-Detection</link>
+		
+				
+		
+				
+						<author>Nadide Pasali</author>
+				
+		
+				
+		
+	  <pubDate>2018-01-27T02:00:00-06:00</pubDate>
+	  <guid>https://nau-datascience.github.io/Anomaly-Detection</guid>
+	  <description><![CDATA[
+	     <p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/anomaly-detection">LINK</a></p>
+
+<ul>
+  <li>Rare events, finding unusual data points</li>
+  <li>Encompasses many important tasks in ML
+    <ul>
+      <li>Identifying transactions that are potentially fraudulent</li>
+      <li>Learning patterns that indicate a network intrusion has occurred</li>
+      <li>Finding abnormal clusters of patients</li>
+      <li>Checking values input to a system</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="modules-for-an-anomaly-detection-model">Modules for an anomaly detection model</h4>
+<ul>
+  <li><a href="### One-Class Support Vector Machine">One-Class Support Vector Machine</a>: Creates a one-class Support Vector Machine model for anomaly detection, &gt;100features, aggressive boundary</li>
+  <li><a href="### PCA-Based Anomaly Detection">PCA-Based Anomaly Detection</a>: Creates an anomaly detection model using Principal Component Analysis, Fast training</li>
+</ul>
+
+<hr />
+
+<h3 id="one-class-support-vector-machine">One-Class Support Vector Machine</h3>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/one-class-support-vector-machine">LINK</a></p>
+
+<ul>
+  <li>Particularly useful in scenarios where you have a lot of “normal” data and not many cases of the anomalies you are trying to detect (Ex: fraudulent transactions)</li>
+</ul>
+
+<blockquote>
+  <p>Note: The module creates a kernel-SVM model, which means that it is not very scalable. If training time is limited, or you have too much data, you can use other methods such as PCA-Based Anomaly Detection.</p>
+</blockquote>
+
+<h4 id="understanding">Understanding</h4>
+
+<ul>
+  <li>Support vector machines (SVMs)
+    <ul>
+      <li>Supervised learning, used for both classification and regression tasks</li>
+      <li>The SVM algorithm is given a set of training examples labeled as belonging to one of two classes</li>
+      <li>Oversampling is used to replicate the existing samples so that you can create a two-class model, but it is impossible to predict all the new patterns of fraud or system faults from limited examples</li>
+    </ul>
+  </li>
+  <li>Therefore, in <strong>one-class SVM</strong>, has only one class, which is the “normal” class</li>
+  <li>From normal class properties can predict which examples are unlike the normal examples.</li>
+</ul>
+
+<h4 id="configuration">Configuration</h4>
+
+<ul>
+  <li>η, represents the upper bound on the fraction of outliers (<a href="https://www.microsoft.com/en-us/research/publication/estimating-the-support-of-a-high-dimensional-distribution/?from=http%3A%2F%2Fresearch.microsoft.com%2Fpubs%2F69731%2Ftr-99-87.pdf">nu-property</a>)
+    <ul>
+      <li>lets you control the trade-off between outliers and normal cases</li>
+    </ul>
+  </li>
+  <li>ε (epsilon), value to use as the stopping tolerance.
+    <ul>
+      <li>affects the number of iterations used when optimizing the model, and depends on the stopping criterion value</li>
+    </ul>
+  </li>
+</ul>
+
+<p><em>Single Parameter</em>, a specific set of values as arguments<br />
+ <em>Parameter Range</em>, specifying multiple values and using a parameter sweep to find the optimal configuration</p>
+
+<hr />
+
+<h3 id="pca-based-anomaly-detection">PCA-Based Anomaly Detection</h3>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/pca-based-anomaly-detection">LINK</a></p>
+
+<ul>
+  <li>Use in scenarios where it is easy to obtain training data from one class, such as valid transactions, but difficult to obtain sufficient samples of the targeted anomalies.</li>
+  <li>By using the PCA-Based Anomaly Detection module, you can train the model using the available features to determine what constitutes a “normal” class, and then use distance metrics to identify cases that represent anomalies.</li>
+</ul>
+
+<h4 id="understanding-1">Understanding</h4>
+
+<ul>
+  <li>Principal Component Analysis (PCA)
+    <ul>
+      <li>ML technique can be applied to feature selection and classification</li>
+      <li>Used in exploratory data analysis, reveals the inner structure of the data and explains the variance in the data</li>
+      <li>Analyze data that contains multiple variables, all possibly correlated, and determine some combination of values that best captures the differences in outcomes. Then outputs the combination of values into a new set of values called <em>principal components</em>.</li>
+      <li>In the case of <strong>anomaly detection</strong>,
+        <ul>
+          <li>First computes projection on the eigenvectors, then computes the normalized reconstruction error.</li>
+          <li>This normalized error is the anomaly score.</li>
+          <li>The higher the error, the more anomalous the instance is.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="configuration-1">Configuration</h4>
+
+<ul>
+  <li>Number of components to use in PCA (or Range)
+    <ul>
+      <li>The decision of how many components to include is an important part of experiment design using PCA</li>
+      <li>Should not include the same number of PCA components as there are variables. Start with some smaller number of components and increase them until some criteria is met
+        <ul>
+          <li>If you are unsure of what the optimum value, use parameter range</li>
+          <li>If you manually specify a value, make sure that the number of output components is less than the number of feature columns available in the dataset.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Amount of oversampling
+    <ul>
+      <li>A single integer that represents the ratio of oversampling of the minority class over the normal class (series of interger, range)</li>
+      <li>Imbalanced data makes it difficult to apply standard PCA techniques. By specifying some amount of oversampling, you can increase the number of target instances.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>If you specify 1, no oversampling is performed.
+If you specify any value higher than 1, additional samples are  generated to use in training the model.
+However, you cannot view the oversampled data set.</p>
+</blockquote>
+
+<ul>
+  <li>Enable input feature mean normalization, to normalize all input features to a mean of zero</li>
+  <li>Normalization or scaling to zero is generally recommended for PCA, because the goal of PCA is to maximize variance among variables.</li>
+  <li>Some additional steps
+    <ul>
+      <li>Ensure that a score column is available in both datasets</li>
+      <li>Ensure that label columns are marked</li>
+      <li>Normalize scores from different model types</li>
+    </ul>
+  </li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
