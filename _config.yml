@@ -5,7 +5,7 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
+# baseurl: /
 
 # Website info
 title: NAU-DataScience
@@ -14,7 +14,7 @@ cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
+production_url: https://nau-datascience.github.io
 source_url: https://github.com/NAU-Datascience/NAU-Datascience.github.io
 baseurl: https://nau-datascience.github.io
 
